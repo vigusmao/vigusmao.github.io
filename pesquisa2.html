@@ -1,0 +1,987 @@
+<html>
+
+  <head>
+
+    <script type="text/javascript">
+
+      function english() {
+        var tags = document.getElementsByTagName('*');
+        for(i=0,j=0; i<tags.length; i++) {
+          if (tags[i].className.indexOf("pt") != -1)
+            tags[i].style.display="none";
+          if (tags[i].className.indexOf("en") != -1)
+            tags[i].style.display="block";
+        }
+        document.cookie = "vigusmaoLanguage=english"+"; path=/";
+      }
+
+      function portuguese() {
+        var tags = document.getElementsByTagName('*');
+        for(i=0,j=0; i<tags.length; i++) {
+          if (tags[i].className.indexOf("en") != -1)
+            tags[i].style.display="none";
+          if (tags[i].className.indexOf("pt") != -1)
+            tags[i].style.display="block";
+        }
+        document.cookie = "vigusmaoLanguage=portuguese"+"; path=/";
+      }
+
+      function readCookieLang() {
+        if (document.cookie.indexOf("vigusmaoLanguage=english")>=0) return "english";
+        if (document.cookie.indexOf("vigusmaoLanguage=portuguese")>=0) return "portuguese";
+        return "";
+      }
+
+      function autoLanguage() {
+        if (readCookieLang() == "english") english();
+        else if(readCookieLang() == "portuguese") portuguese();
+        else if(navigator.language.indexOf("pt")>=0) portuguese();
+        else if(navigator.userLanguage.indexOf("pt")>=0) portuguese();
+        else english();
+      }
+
+      function toggleAbstract(name) {
+        var elem = document.getElementById(name);
+        if(elem.style.display=='block') elem.style.display='none';
+        else elem.style.display='block';
+      }
+
+      function showAbstracts() {
+        var tags = document.getElementsByTagName('*');
+        var newstyle;
+        for(i=0,j=0; i<tags.length; i++) {
+          if (tags[i].className.indexOf("abstract") != -1) {
+            if(tags[i].style.display == "block") newstyle = "none";
+            else newstyle = "block";
+            break;
+          }
+        }
+        for(i=0,j=0; i<tags.length; i++) {
+        if (tags[i].className.indexOf("abstract") != -1)
+          tags[i].style.display = newstyle;
+        }
+      }
+
+    </script>
+
+    <meta http-equiv="Content-Type"
+     content="text/html; charset=ISO-8859-1"><link type="text/css" rel="stylesheet"
+     href="estilo.css"><title>Vin&iacute;cius Gusm&atilde;o Pereira de S&aacute;</title>
+
+  </head> 
+ 
+  <body onload="autoLanguage()"> 
+
+    <h2 class="en">Vin&iacute;cius Gusm&atilde;o Pereira de S&aacute;&nbsp;  &#8212;  &nbsp;Research</h2>
+    <h2 class="pt">Vin&iacute;cius Gusm&atilde;o Pereira de S&aacute;&nbsp;  &#8212;  &nbsp;Pesquisa</h2>
+    
+          <p>
+        <img title="Vers&atilde;o em português" src="bandeira_br.gif" alt="Vers&atilde;o em português" style="width: 34px; height: 21px;" onclick="portuguese()" cursor="pointer" class="flag">
+        &nbsp;&nbsp;
+        <img title="English version" src="english_language_flag.jpg" alt="English version" style="width: 34px; height: 21px;" onclick="english()" class="flag">
+      </p>
+
+    <p class="en"><a href="http://dcc.ufrj.br/~vigusmao">Main page</a><br><br>
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#journals">Papers in refereed journals</a><br>
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#conferences">Papers in refereed conferences</a><br>
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#conferences_abstracts">Conference presentations (abstracts and posters)</a><br>                  
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#books">Books, chapters, monographs, other publications</a><br>
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#submitted">Papers submitted for publication</a><br>
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#advisory-concluded">Academic advisory - concluded</a><br>
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#advisory-current">Academic advisory - current</a>
+
+    <p class="pt"><a href="http://dcc.ufrj.br/~vigusmao">P&aacute;gina principal</a><br><br>
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#periodicos">Artigos em peri&oacute;dicos</a><br>
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#conferencias">Artigos completos em conferências</a><br>
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#conferencias_resumos">Apresenta&ccedil;&otilde;es em conferências (resumos e pôsteres)</a><br>                  
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#livros">Livros, cap&iacute;tulos, monografias, outras publica&ccedil;&otilde;es</a><br>
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#submetidos">Artigos submetidos para publica&ccedil;&atilde;o</a><br>
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#orientacoes-concluidas">Orienta&ccedil;&otilde;es conclu&iacute;das</a><br>
+                  <a href="http://dcc.ufrj.br/~vigusmao/pesquisa.html#orientacoes-em-andamento">Orienta&ccedil;&otilde;es em andamento</a>
+                  
+    <p class="en"><button onclick="showAbstracts()" class="but"><img src="preview.png" alt=""> Show/hide all abstracts</button></p>
+    <p class="pt"><button onclick="showAbstracts()" class="but"><img src="preview.png" alt=""> Mostrar/ocultar todos os abstracts</button></p>
+
+    <h3 class="en" id="journals">Papers in refereed journals</h3>
+    <h3 class="pt" id="periodicos">Artigos em peri&oacute;dicos</h3>
+    
+    <ol class="reversed">
+      <li> <a target="_blank" href="manuscripts/integrity.pdf"><b>A tight bound for exhaustive key search attacks against message authentication codes</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/integrity.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('integrity')">
+        <div class="pt">Com Davidson Boccardo, Luiz Fernando Rust e Raphael Machado.</div>
+        <div class="en">With Davidson Boccardo, Luiz Fernando Rust and Raphael Machado.</div>	
+        <div class="pt">A ser publicado no peri&oacute;dico <em>RAIRO Theoretical Informatics and Applications</em>.</div>	
+        <div class="en">To appear in journal <em>RAIRO Theoretical Informatics and Applications</em>.</div>	
+        <p id="integrity" class="abstract">A message authentication code (MAC) is a function that takes a message and a key as parameters
+         and outputs an authentication of the message. MAC are used to guarantee the legitimacy of messages exchanged through a network,
+         since generating a correct authentication requires the knowledge of the key defined secretly by trusted parties.
+         However, an attacker with access to a sufficiently large number of message/authentication pairs
+         may use a brute force algorithm to infer the secret key:
+         from a set containing initially all possible key candidates,
+         subsequently remove those that yield an incorrect authentication,
+         proceeding this way for each intercepted message/authentication pair
+         until a single key remains.
+         In this paper, we determine an exact formula for the expected number of
+         message/authentication pairs that must be used
+         before such form of attack is successful, along with an asymptotical bound that is both simple and tight.
+         We conclude by illustrating a modern application where this bound comes in handy,
+         namely the estimation of security levels in reflection-based verification of software integrity.</p>
+    </li>
+
+       <li> <a target="_blank" target="_blank" href="manuscripts/Geodetic_Radon_Number_Grids_31_08_2012.pdf"><b>On the geodetic Radon number of grids</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/Geodetic_Radon_Number_Grids_31_08_2012.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <a target="_blank" href="http://dx.doi.org/10.1016/j.disc.2012.09.007"><img src="doi.png" alt="doi" title="doi"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('geodetic_radon_grids')">
+        <div class="pt">Com Mitre Dourado, Dieter Rautenbach e Jayme Luiz Szwarcfiter.</div>
+        <div class="en">With Mitre Dourado, Dieter Rautenbach and Jayme Luiz Szwarcfiter.</div>
+        <em>Discrete Mathematics</em> <b>313</b> (2013), 111-121.</div>	
+        <p id="geodetic_radon_grids" class="abstract">
+             It is NP-hard to determine the Radon number of graphs in the geodetic convexity.
+             However, for certain classes of graphs, this well-known convexity parameter can be determined efficiently.
+             In this paper, we focus on geodetic convexity spaces built upon <em>d</em>-dimensional grids,
+             which are the Cartesian products of <em>d</em> paths.
+             After revisiting a result of Eckhoff concerning the Radon number of R<sup><em>d</em></sup>
+             in the convexity defined by Manhattan distance,
+             we present a series of theoretical findings
+             that disclose some very nice combinatorial aspects of the problem for grids.
+             We also give closed expressions for the Radon number of the product of P<sub>2</sub>'s
+             and the product of P<sub>3</sub>'s,
+             as well as computer-aided results covering the Radon number of all possible
+             Cartesian products of <em>d</em> paths for <em>d</em>&leq; 9.
+          </p>
+      </li>
+
+   
+	<li> <a target="_blank" href="manuscripts/partial_grids_TCS.pdf"><b>Complexity dichotomy on partial grid recognition</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/partial_grids_TCS.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <a target="_blank" href="http://dx.doi.org/10.1016/j.tcs.2011.01.018"><img src="doi.png" alt="doi" title="doi"></a>
+        <a target="_blank" href="http://arxiv.org/abs/1006.3541"><img src="arxiv.png" alt="arXiv" title="arXiv"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('pgrid')">
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:partial-grids')">        
+        <div class="pt">Com Celina Figueiredo, Guilherme Fonseca e Raphael Machado.</div>		
+        <div class="en">With Celina Figueiredo, Guilherme Fonseca and Raphael Machado.</div>		
+        <em>Theoretical Computer Science</em> <b>412</b> (2011), 2370-2379.
+        <pre id="bib:partial-grids" class="bib">
+          @article{deSa2011,
+           title = {Complexity dichotomy on partial grid recognition},
+           journal = {Theoretical Computer Science},
+           volume = {412},
+           number = {22},
+           pages = {2370--2379},
+           year = {2011},
+           issn = {0304-3975},
+           doi = {10.1016/j.tcs.2011.01.018},
+           author = {Pereira de S\'{a}, V.~G. and da Fonseca, G.~D. and Machado, R.~C.~S. and de Figueiredo, C.~M.~H.},
+           keywords = {Graph embedding},
+           keywords = {VLSI layout},
+           keywords = {Partial grid},
+           keywords = {NP-completeness}
+           } 
+        </pre>
+       <p id="pgrid" class="abstract">Deciding whether a graph can be embedded in a grid using only unit-length edges 
+		is NP-complete, even when restricted to binary trees. However, it is not difficult to devise a number of graph 
+		classes for which the problem is polynomial, even trivial. A natural step, outstanding thus far, 
+		was to provide a broad classification of graphs that make for polynomial or NP-complete instances. 
+		We provide such a classification based on the set of allowed vertex degrees in the input graphs, 
+		yielding a full dichotomy on the complexity of the problem. 
+		As byproducts, the previous NP-completeness result for binary trees was strengthened to strictly binary trees, 
+		and the three-dimensional version of the problem was for the first time proven to be NP-complete. 
+		Our results were made possible by introducing the concepts of consistent orientations and robust gadgets, 
+		and by showing how the former allows NP-completeness proofs by local replacement even in the absence of the latter.</p>
+      </li>
+
+	 <li> <a target="_blank" href="manuscripts/pair_completion_IPL.pdf"><b>The pair completion algorithm for the homogeneous set sandwich problem</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/pair_completion_IPL.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <a target="_blank" href="http://dx.doi.org/10.1016/j.ipl.2005.12.010"><img src="doi.png" alt="doi" title="doi"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('pair-completion')">
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:pair-completion')">
+        <div class="pt">Com Claudson Bornstein e Celina Figueiredo.</div>
+        <div class="en">With Claudson Bornstein and Celina Figueiredo.</div>		
+		<em>Information Processing Letters</em> <b>98</b> (2006), 87-91.
+        <pre id="bib:pair-completion" class="bib">
+          @article{BFS06,
+            author = {Bornstein, C. and de Figueiredo, C.~M.~H. and Pereira de S\'{a}, V.~G.},
+            doi = {10.1016/j.ipl.2005.12.010},
+            journal = {Information Processing Letters},
+            pages = {87--91},
+            title = {The pair completion algorithm for the homogeneous set sandwich problem},
+            volume = {98},
+            year = {2006},
+          }
+        </pre>
+        <p id="pair-completion" class="abstract">
+		  A homogeneous set is a non-trivial module of a graph, i.e.&nbsp;
+		  a non-empty, non-unitary, proper vertex subset such that all its elements 
+		  present the same outer neighborhood. Given two graphs 
+		  <em>G</em><sub>1</sub>(<em>V</em>,<em>E</em><sub>1</sub>) 
+		  and <em>G</em><sub>2</sub>(<em>V</em>,<em>E</em><sub>2</sub>), 
+		  the Homogeneous Set Sandwich Problem asks whether there exists a graph 
+		  <em>G<sub>S</sub></em>(<em>V</em>,<em>E<sub>S</sub></em>), 
+		  <em>E</em><sub>1</sub>&sube;<em>E</em><sub><em>S</em></sub>&sube;<em>E</em><sub>2</sub>, 
+		  which has a homogeneous set. This paper presents an algorithm that uses the concept of <em>bias graph</em> 
+		  to solve the problem in O(<em>n</em> min{|<em>E</em><sub>1</sub>|, 
+		  |<font style="text-decoration: overline"><em>E</em></font><sub>2</sub>|} log <em>n</em>) time, 
+		  thus outperforming the other known HSSP deterministic algorithms for inputs 
+		  where max{|<em>E</em><sub>1</sub>|, 
+		  |<font style="text-decoration: overline"><em>E</em></font><sub>2</sub>|} = &#937;(<em>n</em> log <em>n</em>).</p>
+      </li>
+
+	  
+      <li> <a target="_blank" href="manuscripts/hssp_algorithmica.pdf"><b>Algorithms for the homogeneous set sandwich problem</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/hssp_algorithmica.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <a target="_blank" href="http://dx.doi.org/10.1007/s00453-005-1198-2" target="_blank"><img src="doi.png" alt="doi" title="doi"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('hssp_algorithmica')">
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:hssp_algorithmica')">
+        <div class="pt">Com Celina Figueiredo, Guilherme Fonseca e Jeremy Spinrad.</div>
+        <div class="en">With Celina Figueiredo, Guilherme Fonseca and Jeremy Spinrad.</div>		
+		<em>Algorithmica</em> <b>46</b> 2 (2006), 149-180.
+        <pre id="bib:hssp_algorithmica" class="bib">
+          @article{FFSS06,
+            author = {de Figueiredo, C.~M.~H. and da Fonseca, G.~D. and Pereira de S\'{a}, V.~G. and Spinrad, J.},
+            doi = {10.1007/s00453-005-1198-2},
+            issn = {0178-4617},
+            journal = {Algorithmica},
+            number = {2},
+            pages = {149--180},
+            title = {Algorithms for the homogeneous set sandwich problem},
+            volume = {46},
+            year = {2006},
+          }
+        </pre>
+        <p id="hssp_algorithmica" class="abstract">A homogeneous set is a non-trivial module of a graph, i.e.&nbsp;
+		a non-empty, non-unitary, proper subset of a graph's vertices such that all its elements present exactly 
+		the same outer neighborhood. Given two graphs <em>G</em><sub>1</sub>(<em>V</em>,<em>E</em><sub>1</sub>), 
+		<em>G</em><sub>2</sub>(<em>V</em>,<em>E</em><sub>2</sub>), the Homogeneous Set Sandwich Problem asks 
+		whether there exists a sandwich graph <em>G</em><sub><em>S</em></sub>(<em>V</em>,<em>E</em><sub><em>S</em></sub>), 
+		<em>E</em><sub>1</sub>&sube;<em>E</em><sub><em>S</em></sub>&sube;<em>E</em><sub>2</sub>, 
+		which has a homogeneous set. In 2001, Tang et al. published an all-fast O(<em>n</em><sup>2</sup> &#916;<sub>2</sub>) 
+		algorithm which was recently proven wrong, so that the HSSP's known upper bound would have been reset thereafter 
+		at former O(<em>n</em><sup>4</sup>) determined by Cerioli et al. in 1998. We present, notwithstanding, 
+		new deterministic algorithms which have it established at O(<em>n</em><sup>3</sup> log <em>m</em>/<em>n</em>). 
+		We give as well two even faster O(<em>n</em><sup>3</sup>) randomized algorithms, whose simplicity might lend them 
+		didactic usefulness. We believe that, besides providing efficient easy-to-implement procedures to solve it, 
+		the study of these new approaches allows a fairly thorough understanding of the problem.</p>
+      </li>
+
+      <li> <a target="_blank" href="manuscripts/hssp-ipl2005.pdf"><b>Note on the homogeneous set sandwich problem</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/hssp-ipl2005.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <a target="_blank" href="http://dx.doi.org/10.1016/j.ipl.2004.09.022" target="_blank"><img src="doi.png" alt="doi" title="doi"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('hssp-ipl2005')">
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:hssp-ipl2005')">
+        <div class="pt">Com Celina Figueiredo.</div>
+        <div class="en">With Celina Figueiredo.</div>		
+		<em>Information Processing Letters</em> <b>93</b> (2005), 75-81.
+        <pre id="bib:hssp-ipl2005" class="bib">
+          @article{FS05,
+            author = {de Figueiredo, C.~M.~H. and Pereira de S\'{a}, V.~G.},
+            doi = {10.1016/j.ipl.2004.09.022},
+            journal = {Information Processing Letters},
+            pages = {75--81},
+            title = {Note on the homogeneous set sandwich problem},
+            volume = {93},
+            year = {2005},
+          }
+        </pre>
+        <p id="hssp-ipl2005" class="abstract">
+		  A homogeneous set is a non-trivial module of a graph, i.e.&nbsp;
+		  a non-unitary, proper subset <i>H</i> of a graph's vertices 
+		  such that all vertices in <i>H</i> have the same neighbors outside <i>H</i>. 
+		  Given two graphs <i>G</i><sub>1</sub>(<i>V</i>,<i>E</i><sub>1</sub>)</a>, 
+		  <i>G</i><sub>2</sub>(<i>V</i>,<i>E</i><sub>2</sub>)</a>, 
+		  the Homogeneous Set Sandwich Problem asks whether there exists a sandwich graph 
+		  <i>G</i><sub><i>S</i></sub>(<i>V</i>,<i>E</i><sub><i>S</i></sub>)</a>, 
+		  <i>E</i><sub>1</sub> &sube; <i>E</i><sub><i>S</i></sub> &sube; <i>E</i><sub>2</sub></a>, 
+		  which has a homogeneous set. Recently, Tang et al. proposed an interesting 
+		  O(&#916;<sub>1</sub>  <em>n</em><sup>2</sup>) algorithm for this problem, 
+		  which has been considered its most efficient algorithm since. 
+		  We show the incorrectness of their algorithm by presenting three counterexamples.
+      </li>
+
+    </ol> 
+    
+    		<p class="pt">
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+        <p class="en">
+        <a href=#><img title="Back to top" style="height: 35px" src="seta_voltar.jpeg" alt="Back to top" ></a>
+        </p>
+		
+
+    <h3 class="en" id="conferences">Papers in refereed conferences</h3>
+    <h3 class="pt" id="conferencias">Artigos completos em conferências</h3>
+	
+    <ol class="reversed">
+      <li> <a target="_blank" href="manuscripts/hashing_SBPO.pdf"><b>Hashing na solu&ccedil;&atilde;o de problemas at&iacute;picos</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/hashing_SBPO.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('hashing')">
+        <div class="pt">Com Lucila Bento e Jayme Luiz Szwarcfiter.</div>
+        <div class="en">With Lucila Bento and Jayme Luiz Szwarcfiter.</div>
+        <div class="pt"><em>Pré-anais do XVI Congresso Latino-Iberoamericano de Investigaci&oacute;n Operativa / Simp&oacute;sio Brasileiro de Pesquisa Operacional</em><br>
+        (<a href="http://www.sobrapo.org.br/claiosbpo2012/" target="_blank">CLAIO/SBPO 2012</a>, 
+        Rio de Janeiro/RJ, Brasil, 24-28/09/12),<br>
+        edi&ccedil;&atilde;o online em <a target="_blank" href="http://www2.claiosbpo2012.iltc.br/pdf/101042.pdf">http://www2.claiosbpo2012.iltc.br/pdf/101042.pdf</a>.</div>
+        <div class="en"><em>Pre-proceedings of the XVI Congresso Latino-Iberoamericano de Investigaci&oacute;n Operativa / Simp&oacute;sio Brasileiro de Pesquisa Operacional</em><br>
+        (<a href="http://www.sobrapo.org.br/claiosbpo2012/" target="_blank">CLAIO/SBPO 2012</a>, 
+        Rio de Janeiro/RJ, Brazil, 24-28/09/12),<br>
+        online edition in <a target="_blank" href="http://www2.claiosbpo2012.iltc.br/pdf/101042.pdf">http://www2.claiosbpo2012.iltc.br/pdf/101042.pdf</a>.</div>
+        <p id="hashing" class="abstract">
+             The organization of data into hash tables is a well-known technique 
+             in which the persistent values correspond to search keys upon which their storage addresses are calculated. 
+             Since they provide good performance for the so-called dictionary operations (insertion, lookup, deletion) 
+             without requiring exorbitant space, hash tables are very often employed in the indexation of 
+             large amounts of data and in typical applications related to search and handling of information. 
+             Nevertheless, there are problems of rather different nature that can be solved in elegant fashion by 
+             employing hash tables, yielding significant economy of time and space. 
+             This paper illustrates the power of such technique in situations it is not usually associated to.        
+        </p>
+      </li>
+
+      <li> <a target="_blank" href="manuscripts/dom_udg_waoa_submission.pdf"><b>Linear time approximations for dominating sets and independent dominating sets in unit disk graphs</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/dom_udg_waoa_submission.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('dom_udg_waoa')">
+        <div class="pt">Com Guilherme Fonseca, Celina Figueiredo e Raphael Machado.</div>
+        <div class="en">With Guilherme Fonseca, Celina Figueiredo and Raphael Machado.</div>
+        <div class="pt"><em>Anais do 10th Workshop on Approximation and Online Algorithms</em><br>
+        (<a href="https://sites.google.com/site/wg2012conf/" target="_blank">WAOA 2012</a>,
+         Ljubljana, Eslovênia, 13-14/09/12),<br>
+         a ser publicado na s&eacute;rie <em>Lecture Notes in Computer Science</em>.</div>	
+        <div class="en"><em>Proceedings of the 10th Workshop on Approximation and Online Algorithms</em><br>
+        (<a href="https://sites.google.com/site/wg2012conf/" target="_blank">WAOA 2012</a>,
+         Ljubljana, Slovenia, 13-14/09/12),<br>
+        to appear in the <em>Lecture Notes in Computer Science</em> series.</div>	
+        <p id="dom_udg_waoa" class="abstract">
+             A unit disk graph is the intersection graph of <em>n</em> congruent
+             disks in the plane. Dominating sets in unit disk graphs are widely studied
+             due to their application in wireless ad-hoc networks. Since the minimum
+             dominating set problem for unit disk graphs is NP-hard, several approximation
+             algorithms with different merits have been proposed in the
+             literature. On one extreme, there is a linear time 5-approximation algorithm.
+             On another extreme, there are two PTAS whose running times
+             are polynomials of very high degree. We introduce a linear time approximation
+             algorithm that takes the usual adjacency representation of the
+             graph as input and attains a 44/9 approximation factor. This approximation
+             factor is also attained by a second algorithm we present, which
+             takes the geometric representation of the graph as input and runs in
+             O(<em>n</em> log <em>n</em>) time, regardless of the number of edges. The analysis of the
+             approximation factor of the algorithms, both of which are based on local
+             improvements, exploits an assortment of results from discrete geometry
+             to prove that certain graphs cannot be unit disk graphs. It is noteworthy
+             that the dominating sets obtained by our algorithms are also independent
+             sets.
+        </p>
+      </li>      
+      
+      
+       <li> <a target="_blank" href="manuscripts/WG_2012-paper_26-4_7_2012.pdf"><b>Immediate versus eventual conversion: comparing geodetic and hull numbers in <em>P</em><sub>3</sub> convexity</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/WG_2012-paper_26-4_7_2012.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <a target="_blank" href="http://dx.doi.org/10.1007/978-3-642-34611-8_27" target="_blank"><img src="doi.png" alt="doi" title="doi"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('geodeticXhullP3')">
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:p3-wg')">
+        <div class="pt">Com Carmen Centeno, Lucia Penso e Dieter Rautenbach.</div>
+        <div class="en">With Carmen Centeno, Lucia Penso and Dieter Rautenbach.</div>
+        <div class="pt"><em>Anais do 38th International Workshop on Graph Theoretic Concepts in Computer Science </em><br>
+         (<a href="https://sites.google.com/site/wg2012conf/" target="_blank">WG 2012</a>, Jerusal&eacute;m, Israel, 26-28/06/12),<br>
+         <em>Lecture Notes in Computer Science</em> <b>7551</b> (2012), 262-273.</div>
+        <div class="en"><em>Proceedings of the 38th International Workshop on Graph Theoretic Concepts in Computer Science </em><br>
+         (<a href="https://sites.google.com/site/wg2012conf/" target="_blank">WG 2012</a>, Jerusalem, Israel, 26-28/06/12),<br>
+         <em>Lecture Notes in Computer Science</em> <b>7551</b> (2012), 262-273.</div>
+       <pre id="bib:p3-wg" class="bib">
+          @inproceedings{CPRS12,
+            author = {Centeno, C. and Penso, L. and Rautenbach, D. and Pereira de S\'{a} and V.~G.},
+            booktitle = {Graph-Theoretic Concepts in Computer Science},
+            series = {Lecture Notes in Computer Science},
+            title = {Immediate versus eventual conversion: comparing geodetic and hull numbers in P3 convexity},
+            volume = {7551},
+            pages = {262--273},
+            doi = {10.1007/978-3-642-34611-8_27},
+            year = {2012},
+          }
+        </pre>
+        <p id="geodeticXhullP3" class="abstract">
+             We study the graphs <em>G</em> for which the hull number <em>h</em>(<em>G</em>) and the geodetic number <em>g</em>(<em>G</em>) 
+             with respect to <em>P</em><sub>3</sub> convexity coincide. These
+             two parameters correspond to the minimum cardinality of a set <em>U</em> of vertices of <em>G</em>
+             such that the simple expansion process that iteratively adds
+             to <em>U</em>, all vertices outside of <em>U</em> that have two neighbors in <em>U</em>, produces the
+             whole vertex set of <em>G</em> either eventually or after one iteration, respectively.
+             We establish numerous structural properties of the graphs <em>G</em> with <em>h</em>(<em>G</em>) =
+             <em>g</em>(<em>G</em>), which allow the constructive characterization as well as the efficient
+             recognition of all triangle-free such graphs. Furthermore, we characterize
+             the graphs <em>G</em> that satisfy <em>h</em>(<em>H</em>) = <em>g</em>(<em>H</em>) for every induced subgraph <em>H</em> of
+             <em>G</em> in terms of forbidden induced subgraphs.
+        </p>
+      </li>
+    
+      <li> <a target="_blank" href="manuscripts/vlsi_isco.pdf"><b>Complexity dichotomy on degree-constrained VLSI layouts with unit-length edges</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/vlsi_isco.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <a target="_blank" href="http://dx.doi.org/10.1016/j.endm.2010.05.050" target="_blank"><img src="doi.png" alt="doi" title="doi"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('vlsi_isco')">
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:vlsi_isco')">
+        <div class="pt">Com Celina Figueiredo, Guilherme Fonseca e Raphael Machado.</div>
+        <div class="en">With Celina Figueiredo, Guilherme Fonseca and Raphael Machado.</div>		
+	<div class="pt">Anais do International Symposium on Combinatorial Optimization<br>
+              (<a href="http://www.lamsade.dauphine.fr/~isco/" target="_blank">ISCO 2010</a>, Hammamet, Tun&iacute;sia, 24-26/03/10),<br>
+        <em>Electronic Notes in Discrete Mathematics</em> <b>36</b> (2010), 391-398.</div>
+	<div class="en"><em>Proceedings of the International Symposium on Combinatorial Optimization</em><br>
+              (<a href="http://www.lamsade.dauphine.fr/~isco/" target="_blank">ISCO 2010</a>, Hammamet, Tunisia, 24-26/03/10),<br>
+        <em>Electronic Notes in Discrete Mathematics</em> <b>36</b> (2010), 391-398.</div>
+        <pre id="bib:vlsi_isco" class="bib">
+          @inproceedings{SFFM10,
+            author = {Pereira de S\'{a}, V.~G. and de Figueiredo, C.~M.~H. and da Fonseca, G.~D. and Machado, R.~C.~S.},
+            booktitle = {International Symposium on Combinatorial Optimization},
+            series = {Electronic Notes in Discrete Mathematics},
+            title = {Complexity dichotomy on degree-cconstrained VLSI layouts with unit-length edges},
+            volume = {36},
+            pages = {391--398},
+            doi = {10.1016/j.endm.2010.05.050},
+            year = {2010},
+          }
+        </pre>
+        <p id="vlsi_isco" class="abstract">Deciding whether an arbitrary graph admits a VLSI layout with unit-length edges is NP-complete,
+        even when restricted to binary trees. However, for certain graphs, the problem is polynomial or even trivial. 
+        A natural step, outstanding thus far, was to provide a broader classification of graphs that make for polynomial
+        or NP-complete instances. We provide such a classification based on the set of vertex degrees in the input graphs, 
+        yielding a comprehensive dichotomy on the complexity of the problem, with and without the restriction to trees.</p>
+      </li>
+
+
+      <li><a target="_blank" href="manuscripts/hssp-mcd.pdf"><b>Faster deterministic and randomized algorithms on the homogeneous set sandwich problem</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/hssp-mcd.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <a target="_blank" href="http://dx.doi.org/10.1007/b97914" target="_blank"><img src="doi.png" alt="doi" title="doi"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('hssp_mcd')">
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:hssp_mcd')">
+        <div class="pt">Com Celina Figueiredo, Guilherme Fonseca e Jeremy Spinrad.</div>
+        <div class="en">With Celina Figueiredo, Guilherme Fonseca and Jeremy Spinrad.</div>
+        <div class="pt"><em>Anais do III Workshop on Efficient and Experimental Algorithms</em><br>
+         (<a target="_blank" href="http://wea2004.inf.puc-rio.br/">WEA 2004</a>, Angra dos Reis/RJ, Brasil, 25-28/05/04),<br>
+         <em>Lecture Notes in Computer Science</em> <b>3058</b> (2004), 243-252.</div>
+        <div class="en"><em>Proceedings of the III Workshop on Efficient and Experimental Algorithms</em><br>
+         (<a target="_blank" href="http://wea2004.inf.puc-rio.br/">WEA 2004</a>, Angra dos Reis/RJ, Brasil, 25-28/05/04),<br>
+         <em>Lecture Notes in Computer Science</em> <b>3058</b> (2004), 243-252.</div>
+
+        <pre id="bib:hssp_mcd" class="bib">
+          @inproceedings{FFSS04,
+            author = {de Figueiredo, Celina M.~H. and da Fonseca, G.~D. and Pereira de S\'{a}, V.~G. and Spinrad, J.},
+            series = {Lecture Notes in Computer Science},
+            booktitle = {Proceedings of the III Workshop on Efficient and Experimental Algorithms},
+            pages = {243--252},
+            title = {Faster deterministic and randomized algorithms on the hHmogeneous set sandwich problem},
+            doi = {10.1007/b97914},
+            year = {2004}
+          }
+        </pre>
+        <p id="hssp_mcd" class="abstract">A homogeneous set is a non-trivial, proper subset of a graph's vertices 
+		such that all its elements present exactly the same outer neighborhood. Given two graphs, 
+		<em>G</em><sub>1</sub>(<em>V</em>,<em>E</em><sub>1</sub>), 
+		<em>G</em><sub>2</sub>(<em>V</em>,<em>E</em><sub>2</sub>), 
+		we consider the problem of finding a sandwich graph 
+		<em>G</em><sub><em>S</em></sub>(<em>V</em>,<em>E</em><sub><em>S</em></sub>), 
+		with <em>E</em><sub>1</sub>&sube;<em>E</em><sub><em>S</em></sub>&sube;<em>E</em><sub>2</sub>, 
+		which contains a homogeneous set, in case such a graph exists. 
+		This is called the Homogeneous Set Sandwich Problem (HSSP). 
+		We give an O(<em>n</em><sup>3.5</sup>) deterministic algorithm, 
+		which updates the known upper bounds for this problem, and an O(<em>n</em><sup>3</sup>) Monte Carlo 
+		algorithm as well. Both algorithms, which share the same underlying idea, are quite easy to be implemented 
+		on the computer.</p>
+      </li>
+
+ 	</ol>
+	
+			<p class="pt">
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+        <p class="en">
+        <a href=#><img title="Back to top" style="height: 35px" src="seta_voltar.jpeg" alt="Back to top" ></a>
+        </p>
+		
+
+    <h3 class="en" id="conferences_abstracts">Conference presentations (abstracts and posters)</h3>
+    <h3 class="pt" id="conferencias_resumos">Apresenta&ccedil;&otilde;es em conferências (resumos e pôsteres)</h3>
+    <ol class="reversed">
+      <li><a target="_blank" href="manuscripts/resumo_cnmac2012.pdf">Hashing na solu&ccedil;&atilde;o de problemas combinat&oacute;rios dif&iacute;ceis</a>.&nbsp;
+          <a target="_blank" href="manuscripts/resumo_cnmac2012.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+          <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('cnmac2012')"><br>
+        <div class="pt">Com Lucila Bento e Jayme Luiz Szwarcfiter.</div>
+        <div class="en">With Lucila Bento and Jayme Luiz Szwarcfiter.</div>
+	    <div class="pt"><em>XXXIV Congresso Nacional de Matem&aacute;tica Aplicada e Computacional</em> (<a href="http://www.cnmac2012.org.br/" target="_blank">CNMAC</a>), <br>
+	    &Aacute;guas de Lind&oacute;ia/SP, Brasil, setembro de 2012.<br></div>
+        <div class="en"><em>XXXIV Congresso Nacional de Matem&aacute;tica Aplicada e Computacional</em> (<a href="http://www.cnmac2012.org.br/" target="_blank">CNMAC</a>), <br>
+        &Aacute;guas de Lind&oacute;ia/SP, Brazil, September 2012.<br></div>
+        <p id="cnmac2012" class="abstract">
+        Problemas de otimiza&ccedil;&atilde;o combinat&oacute;ria possuem grande importância pr&aacute;tica, aparecendo em
+		diversas aplica&ccedil;&otilde;es. Muitos s&atilde;o dif&iacute;ceis de se resolver, pois requerem a busca de uma solu&ccedil;&atilde;o
+		num espa&ccedil;o exponencialmente grande, sem que algoritmos eficientes sejam conhecidos, ou mesmo
+		poss&iacute;veis. Neste trabalho, &eacute; apresentada uma t&eacute;cnica que, utilizando <em>hashing</em> como coadjuvante
+		à busca exaustiva (<em>backtracking</em>), oferece ganhos consider&aacute;veis de tempo e espa&ccedil;o em muitas
+		situa&ccedil;&otilde;es. Os problemas Carga da Balsa e Quebra-cabe&ccedil;a do 15 ser&atilde;o abordados para
+		ilustrar seu uso.
+		</p>
+    </li>
+    
+      <li><a target="_blank" href="manuscripts/SBC2007.pdf">Ten algorithms for the homogeneous set sandwich problem</a>.&nbsp;
+        <a target="_blank" href="manuscripts/SBC2007.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('SBC2007')"><br>
+        <div class="pt"><em>XXVII Congresso da Sociedade Brasileira de Computa&ccedil;&atilde;o</em> (<a href="http://www.de9.ime.eb.br/~sousamaf/cd/frame/index.htm" target="_blank">CTD-SBC</a>), <br>
+        Rio de Janeiro/RJ, Brasil, julho de 2007.<br></div>    
+        <div class="en"><em>XXVII Congresso da Sociedade Brasileira de Computa&ccedil;&atilde;o</em> (<a href="http://www.de9.ime.eb.br/~sousamaf/cd/frame/index.htm" target="_blank">CTD-SBC</a>), <br>
+        Rio de Janeiro/RJ, Brasil, July 2007.<br></div>    
+        <p id="SBC2007" class="abstract">
+        Sandwich problems are generalizations of graph recognition problems
+		where the input instance is provided with a set of <em>optional</em>
+		edges. Originally arisen from Computational Biology applications,
+		they have long encompassed other research areas. Many sandwich
+		problems considered in the literature have been found to be
+		NP-complete. Among those which are polynomial, the most interesting
+		&#8212; from the standpoint of algorithm development and analysis &#8212;
+		are those which have not yet been as efficiently solved as their
+		non-sandwich counterparts. To this latter group belongs the
+		Homogeneous Set Sandwich Problem, the subject of this thesis.
+		After the two first algorithms (not ours) published for the HSSP,
+		the most recent of which proven incorrect by the author, there
+		followed a sequence of six faster algorithms (ours) in a continuous
+		refinement of ideas and techniques, culminating at the establishment
+		of the problem's currently accepted upper bound. We introduce as
+		well two efficient &#8212; and quite didactic, as experience has shown
+		&#8212; randomized algorithms for the problem.
+		</p>		
+      </li>
+      
+      <li>The Growing Cliques algorithm for the homogeneous set sandwich problem.&nbsp;
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('growingcliques')">
+        <div class="pt">Com Celina Figueiredo e Guilherme Fonseca.</div>
+        <div class="en">With Celina Figueiredo e Guilherme Fonseca.</div>
+	    <div class="pt"><em>2nd Latin-American Workshop on Cliques in Graphs</em> (<a href="http://www.mate.unlp.edu.ar/~liliana/cw06.html" target="_blank">Lawcliques</a>), <br>
+	    La Plata, Argentina, outubro de 2006.<br></div>
+        <div class="en"><em>2nd Latin-American Workshop on Cliques in Graphs</em> (<a href="http://www.mate.unlp.edu.ar/~liliana/cw06.html" target="_blank">Lawcliques</a>), <br>
+        La Plata, Argentina, October 2006.<br></div>
+        <p id="growingcliques" class="abstract">A homogeneous set is a non-trivial module of a graph, i.e.~a non-empty,
+		non-unitary, proper subset of a graphs vertices such that all its elements
+		present exactly the same outer neighborhood. Given two graphs <em>G</em><sub>1</sub>(<em>V</em>,<em>E</em><sub>1</sub>),
+        <em>G</em><sub>2</sub>(<em>V</em>,<em>E</em><sub>2</sub>), the Homogeneous Set Sandwich Problem (HSSP) asks whether
+		there exists a sandwich graph <em>G</em><sub><em>S</em></sub>(<em>V</em>,<em>E</em><sub><em>S</em></sub>), 
+		<em>E</em><sub>1</sub> &sube; <em>E</em><sub><em>S</em></sub>&sube; <em>E</em><sub>2</sub>, which has a homogeneous
+		set.
+		In 2001, Tang et al. published an all-fast O(<em>n</em><sup>2</sup>&#916;<sub>2</sub>) algorithm which was
+		afterwards proven wrong, so that the HSSP's known upper bound would
+		have been reset at former O(<em>n</em><sup>4</sup>) determined by Cerioli et al. in 1998. However,
+		an O(<em>n</em><sup>3.5</sup>) algorithm, based on the balancing technique, and an O(<em>n</em><sup>3</sup>)
+		randomized Monte Carlo algorithm were devised shortly thereafter.
+		We present the concept of enemy vertices, which establishes a relationship
+		between sandwich homogeneous sets and independent sets. It is the
+		underlying principle of the approach in which clique covers are employed
+		to bound the size of the maximum independent set in an auxiliary graph,
+		therefore imposing the best possible upper bound to the size of sandwich
+		homogeneous sets we shall search for at each iteration of a new O(<em>n</em><sup>3</sup> log <em>n</em>)
+		deterministic algorithm.</p>      
+      </li>      
+
+      <li><a target="_blank" href="manuscripts/SBC2004.pdf">The homogeneous set sandwich problem</a>.&nbsp;
+        <a target="_blank" href="manuscripts/SBC2004.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('SBC2004')"><br>
+        <div class="pt"><em>XXIV Congresso da Sociedade Brasileira de Computa&ccedil;&atilde;o</em> (<a href="http://www.sbc2004.ufba.br/" target="_blank">CTD-SBC</a>), <br>
+        Salvador/BA, Brasil, agosto de 2004.<br></div>    
+        <div class="en"><em>XXIV Congresso da Sociedade Brasileira de Computa&ccedil;&atilde;o</em> (<a href="http://www.sbc2004.ufba.br/" target="_blank">CTD-SBC</a>), <br>
+        Salvador/BA, Brasil, August 2004.<br></div>    
+        <p id="SBC2004" class="abstract">
+        Homogeneous sets have proved useful for the construction of graph
+		decomposition procedures. Sandwich graphs are obtained from two
+		pre-defined graphs which provide them with both mandatory and
+		optional edges. Given such a pair of graphs, the Homogeneous Set
+		Sandwich Problem (HSSP) searches for a sandwich graph which
+		contains a homogeneous set. This thesis presents the development
+		of techniques for solving the HSSP and culminates in the
+		correction of the established upper bounds for its time
+		complexity. Such results comprise the description of thoroughly
+		depicted counterexamples which prove the incorrectness of the (so
+		far) best published HSSP algorithm, along with the proposal of a
+		new, faster algorithm.
+		</p>		
+      </li>
+      
+     <li><a target="_blank" href="manuscripts/MonteCarloHSSP.pdf">A fast Monte Carlo algorithm for the homogeneous set sandwich problem</a>.&nbsp;
+          <a target="_blank" href="manuscripts/MonteCarloHSSP.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+          <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('MonteCarloHSSP')">
+<!--          <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:MonteCarloHSSP')">          -->
+        <div class="pt">Com Celina Figueiredo e Guilherme Fonseca.</div>
+        <div class="en">With Celina Figueiredo e Guilherme Fonseca.</div>
+	    <div class="pt"><em>Mathematical Programming in Rio: a Conference in Honour of Nelson Maculan</em> (<a href="http://www-di.inf.puc-rio.br/~poggi/mprio/mprio.htm" target="_blank">MP in Rio</a>), <br>
+	    Arma&ccedil;&atilde;o dos B&uacute;zios/RJ, Brasil, novembro de 2003.<br></div>
+        <div class="en"><em>Mathematical Programming in Rio: a Conference in Honour of Nelson Maculan</em> (<a href="http://www-di.inf.puc-rio.br/~poggi/mprio/mprio.htm" target="_blank">MP in Rio</a>), <br>
+        Arma&ccedil;&atilde;o dos B&uacute;zios/RJ, Brasil, November 2003.<br></div>
+        <pre id="bib:MonteCarloHSSP" class="bib">
+          @inproceedings{FFS03,
+            author = {de Figueiredo, C.~M.~H. and da Fonseca, G.~D. and Pereira de S\'{a}, V.~G.},
+            booktitle = {Proceedings of Mathematical Programming in Rio: a Conference in Honor of Nelson Maculan},
+            title = {A fast Monte Carlo algorithm for the homogeneous set sandwich problem},
+            url = {http://dcc.ufrj.br/~vigusmao/manuscripts/MonteCarloHSSP.pdf}
+            year = {2003}
+          }
+        </pre>
+        <p id="MonteCarloHSSP" class="abstract">
+        A homogeneous set is a non-trivial, proper subset of a graph's
+		vertices such that all its elements present exactly the same outer
+		neighborhood. Given two graphs, <em>G</em><sub>1</sub>(<em>V</em>,<em>E</em><sub>1</sub>), 
+		<em>G</em><sub>2</sub>(<em>V</em>,<em>E</em><sub>2</sub>), we
+		consider the problem of finding a sandwich graph <em>G</em><sub><em>S</em></sub>(<em>V</em>,<em>E</em><sub><em>S</em></sub>),
+		<em>E</em><sub>1</sub> &sube; <em>E</em><sub><em>S</em></sub> &sube; <em>E</em><sub>2</sub>, 
+		which contains a homogeneous
+		set, in case such a graph exists. This is called the Homogeneous
+		Set Sandwich Problem (HSSP). We give a simple O(<em>n</em><sup>3</sup>) Monte Carlo
+		algorithm which is asymptotically more efficient than all
+		deterministic HSSP algorithms known so far.
+		</p>		 
+      </li>
+
+      <li><a target="_blank" href="manuscripts/new_upper_bound_HSSP.pdf">A new upper bound for the homogeneous set sandwich problem</a>.&nbsp;
+        <a target="_blank" href="manuscripts/new_upper_bound_HSSP.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('WCAA2003')"><br>
+        <div class="pt">Com Celina Figueiredo.</div>
+        <div class="en">With Celina Figueiredo.</div>
+        <div class="pt"><em>Workshop on Combinatorics, Algorithms and Applications</em> (<a href="http://www.ime.usp.br/~yoshi/pronex/Workshop/" target="_blank">WCAA</a>), <br>
+        Ubatuba/SP, Brasil, agosto de 2003.<br> </div>   
+        <div class="en"><em>Workshop on Combinatorics, Algorithms and Applications</em> (<a href="http://www.ime.usp.br/~yoshi/pronex/Workshop/" target="_blank">WCAA</a>), <br>
+        Ubatuba/SP, Brasil, August 2003.<br></div>    
+        <p id="WCAA2003" class="abstract">
+        A homogeneous set is a non-trivial module of a graph, i.e.&nbsp;
+		a non-empty, non-unitary, proper subset <em>H</em> of a graph's vertices such that all vertices in <em>H</em> 
+		have the same neighbors outside <em>H</em>.. Given two graphs <em>G</em><sub>1</sub>(<em>V</em>,<em>E</em><sub>1</sub>), 
+		<em>G</em><sub>2</sub>(<em>V</em>,<em>E</em><sub>2</sub>), the Homogeneous Set Sandwich Problem asks 
+		whether there exists a sandwich graph <em>G</em><sub><em>S</em></sub>(<em>V</em>,<em>E</em><sub><em>S</em></sub>), 
+		<em>E</em><sub>1</sub>&sube;<em>E</em><sub><em>S</em></sub>&sube;<em>E</em><sub>2</sub>, 
+		which has a homogeneous set. Two years ago, Tang et al. proposed an interesting O(&#916;<sub>1</sub> <em>n</em><sup>2</sup>) 
+		algorithm for this problem, which has been considered its most efficient algorithm since. We show the incorrectness
+		of their algorithm and present a new deterministic algorithm for the Homogeneous Set Sandwich Problem, whose 
+		O(<em>m</em><sub>1</sub> <em>m'</em><sub>2</sub>) time complexity becomes its current upper bound.
+		</p>		
+      </li>      
+    </ol>
+    
+  		<p class="pt">
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+        <p class="en">
+        <a href=#><img title="Back to top" style="height: 35px" src="seta_voltar.jpeg" alt="Back to top" ></a>
+        </p>
+		        
+
+    <h3 class="en" id="books">Books, chapters, monographs, other publications</h3>
+    <h3 class="pt" id="livros">Livros, cap&iacute;tulos, monografias, outras publica&ccedil;&otilde;es</h3>
+
+    <ol class="reversed">
+    
+	<li><a target="_blank" href="manuscripts/duas_vezes_cem.pdf">Duas vezes cem &eacute; igual a duzentos?&nbsp;</a>
+        <a target="_blank" href="manuscripts/duas_vezes_cem.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:2x100')">        
+        <div class="pt">Com Ilydio Pereira de S&aacute;.</div>		
+        <div class="en">With Ilydio Pereira de S&aacute;.</div>		
+        <em>Revista do Professor de Matem&aacute;tica</em> 70:13-14, 2009.
+        <pre id="bib:2x100" class="bib">
+          @article{PereiraDeSa09,
+           title = {Duas vezes 100 \'{e} igual a 200?},
+           journal = {Revista do Professor de Matem&aacute;tica},
+           volume = {70},
+           pages = {13--14},
+           year = {2009},
+           issn = {0102-4981},
+           author = {Pereira de S\'{a}, I. and Pereira de S\'{a}, V.~G.},
+          }
+        </pre>
+    </li>
+      
+	<li>Desafio: a Porta dos Desesperados (parte 2).&nbsp;
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:porta2')">        
+        <div class="pt">Com Ilydio Pereira de S&aacute;.</div>		
+        <div class="en">With Ilydio Pereira de S&aacute;.</div>		
+        <em>Boletim GEPEM</em> 52:105-107, 2008.
+        <pre id="bib:porta2" class="bib">
+          @article{PereiraDeSa08,
+           title = {Desafio: a Porta dos Desesperados (parte 2)},
+           journal = {Boletim GEPEM},
+           volume = {52},
+           pages = {105--107},
+           year = {2008},
+           issn = {0104-9739},
+           author = {Pereira de S\'{a}, I. and Pereira de S\'{a}, V.~G.},
+          }
+        </pre>
+      </li>
+
+
+	<li>Desafio: a Porta dos Desesperados (parte 1).&nbsp;
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:porta1')">        
+        <div class="pt">Com Ilydio Pereira de S&aacute;.</div>		
+        <div class="en">With Ilydio Pereira de S&aacute;.</div>		
+        <em>Boletim GEPEM</em> 51:102-103, 2007.
+        <pre id="bib:porta1" class="bib">
+          @article{PereiraDeSa07,
+           title = {Desafio: a Porta dos Desesperados (parte 1)},
+           journal = {Boletim GEPEM},
+           volume = {51},
+           pages = {102--103},
+           year = {2007},
+           issn = {0104-9739},
+           author = {Pereira de S\'{a}, I. and Pereira de S\'{a}, V.~G.},
+          }
+        </pre>
+      </li>
+	      
+    
+      <li> <a target="_blank" href="manuscripts/randomizados.pdf">Introdu&ccedil;&atilde;o aos Algoritmos Randomizados</a>.&nbsp;
+        <a target="_blank" href="manuscripts/randomizados.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:randomizados')">
+        <div class="pt">Com Celina Figueiredo, Guilherme Fonseca e Manoel Lemos.</div>
+        <div class="en">With Celina Figueiredo, Guilherme Fonseca and Manoel Lemos.</div>		
+		Livro resultante do mini-curso oferecido no 26&#176; Col&oacute;quio Brasileiro de Matem&aacute;tica.<br>
+		IMPA, Rio de Janeiro, 2007.
+        <pre id="bib:randomizados" class="bib">
+          @book{randomizados,
+            author = {de Figueiredo, Celina M.~H. and da Fonseca, G.~D. and Lemos, M.~J.~M.~S. and Pereira de S\'{a}, V.~G.},
+            publisher = {Instituto Nacional de Matem\'{a}tica Pura e Aplicada},
+            title =  {Introdu&ccedil;&atilde;o aos Algoritmos Randomizados},
+            year = {2007},
+          }
+        </pre>
+      </li>
+	
+      <li> <a target="_blank" href="manuscripts/tese.pdf">Dez algoritmos para o problema-sandu&iacute;che do conjunto homogêneo</a>.&nbsp;
+        <a target="_blank" href="manuscripts/tese.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('tese')">
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:tese')">
+        <div class="pt">Tese de doutorado.</div>
+        <div class="en">D.Sc. thesis.</div>		
+		COPPE, Universidade Federal do Rio de Janeiro, 2006.
+        <pre id="bib:tese" class="bib">
+          @book{PereiraDeSa06,
+            author = {Pereira de S\'{a}, V.~G.},
+            title =  {Dez algoritmos para o problema-sandu&iacute;che do conjunto homogêneo},
+            publisher = {COPPE, Universidade Federal do Rio de Janeiro},
+            year = {2006},
+          }
+        </pre>
+        <p id="tese" class="abstract">Sandwich problems are generalizations of graph recognition problems,
+		where the input instance graph &#8212; which will be investigated as for
+		the existence of a certain property &#8212; is provided with a set of
+		<em>optional</em> edges. This class of problems originally arose due
+		to some Computational Biology practical applications, but it has
+		long encompassed other research fields. Many sandwich problems considered in the literature have been found
+		to be NP-complete. Among those which are polynomial, the most
+		interesting &#8212; from the standpoint of algorithm development and
+		analysis &#8212; are those which are not yet solvable with an efficiency
+		close to that achieved for their counterpart classical recognition
+		problems. To this latter group belongs the Homogeneous Set
+		Sandwich Problem, the subject of this thesis, and for which we present ten distinct algorithms 
+		(eight of them authored by us). We believe that the text allows not only a thorough understanding 
+		of the problem and its singularities, but also provides the reader with a broad - and quite didactic - 
+		portrayal of the more general process of creation and refinement of techniques, 
+		in the constant search for the optimum algorithm.
+		</p>		
+      </li>
+
+      <li> <a target="_blank" href="manuscripts/dissertacao.pdf">O problema-sandu&iacute;che para conjuntos homogêneos em grafos</a>.&nbsp;
+        <a target="_blank" href="manuscripts/dissertacao.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('dissertacao')">
+        <img src="bibtex.png" alt="Bibtex" title="Bibtex" class="but" onClick="toggleAbstract('bib:dissertacao')">
+        <div class="pt">Disserta&ccedil;&atilde;o de mestrado.</div>
+        <div class="en">M.Sc. dissertation.</div>		
+		COPPE, Universidade Federal do Rio de Janeiro, 2003.
+        <pre id="bib:dissertacao" class="bib">
+          @book{PereiraDeSa03,
+            author = {Pereira de S\'{a}, V.~G.},
+            title =  {O problema-sandu&iacute;che para conjuntos homogêneos em grafos},
+            publisher = {COPPE, Universidade Federal do Rio de Janeiro},
+            year = {2003},
+          }
+        </pre>
+        <p id="dissertacao" class="abstract">The concept of homogeneous sets has proved itself useful for the construction 
+		of graph decomposition procedures. Sandwich graphs are obtained from two pre-defined graphs that provide them with 
+		both mandatory and optional edges. In the Homogeneous Set Sandwich Problem (HSSP), one wants to find out whether 
+		there exists an instance of a sandwich graph, for a given pair of graphs, which contains some homogeneous set. 
+		Notwithstanding the existence of linear-time algorithms for solving the problem of finding homogeneous sets in a 
+		single graph, the HSSP still remains a subject for research, not only because of the rather high time complexities 
+		of current algorithms but also motivated by the increasing importance of sandwich-graph modelling to many practical 
+		applications. This thesis presents the development of techniques for solving this problem, as well as the author’s 
+		efforts to find a more efficient solution to it, which culminate in the correction of the established upper bounds 
+		for its time complexity.</p>		
+      </li>
+  
+	</ol>
+	
+		<p class="pt">
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+        <p class="en">
+        <a href=#><img title="Back to top" style="height: 35px" src="seta_voltar.jpeg" alt="Back to top" ></a>
+        </p>
+		
+
+    <h3 class="en" id="submitted">Papers submitted for publication</h3>
+    <h3 class="pt" id="submetidos">Artigos submetidos para publica&ccedil;&atilde;o</h3>
+    <ol class="reversed"> 
+      <li> <a target="_blank" href="manuscripts/GeodeticRadonGridsPolyAlgorithm.pdf">Polynomial time algorithm for the Radon number of grids in the geodetic convexity</a>.&nbsp;
+        <a target="_blank" href="manuscripts/GeodeticRadonGridsPolyAlgorithm.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('lagos2013')">
+        <div class="pt">Com Mitre Dourado, Dieter Rautenbach e Jayme Luiz Szwarcfiter.</div>
+        <div class="en">With Mitre Dourado, Dieter Rautenbach e Jayme Luiz Szwarcfiter.</div>	
+        <div class="pt">Submetido ao <em>VII Latin-American Algorithms, Graphs and Optimization Symposium</em> em outubro de 2012.</div>	
+        <div class="en">Submitted to <em>VII Latin-American Algorithms, Graphs and Optimization Symposium</em> in October 2012.</div>	
+        <p id="lagos2013" class="abstract">
+             The Radon number of a graph is the minimum integer <em>r</em> such that all sets of 
+             at least <em>r</em> vertices of the graph can be partitioned into two subsets whose 
+             convex hulls intersect. We present a near-linear <em>O(d log d)</em> time algorithm to 
+             calculate the Radon number of <em>d</em>-dimensional grids in the geodetic convexity. 
+             To date, no polynomial time algorithm was known for this problem.          
+         </p>
+      </li>
+
+      <li> <a target="_blank" href="manuscripts/udg_tcs.pdf">Linear-time sub-5 approximation for dominating sets in unit disk graphs</a>.&nbsp;
+        <a target="_blank" href="manuscripts/udg_tcs.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <a target="_blank" href="http://arxiv.org/abs/1204.3488"><img src="arxiv.png" alt="arXiv" title="arXiv"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('udg_tcs')">
+        <div class="pt">Com Guilherme Fonseca, Celina Figueiredo e Raphael Machado.</div>
+        <div class="en">With Guilherme Fonseca, Celina Figueiredo e Raphael Machado.</div>	
+        <div class="pt">Submetido ao peri&oacute;dico <em>Theoretical Computer Science</em> em setembro de 2012.</div>	
+        <div class="en">Submitted to journal <em>Theoretical Computer Science</em> in September 2012.</div>	
+        <p id="udg_tcs" class="abstract">
+             A unit disk graph is the intersection graph of $n$ congruent disks in the plane. 
+             Dominating sets in unit disk graphs are widely studied due to their application in wireless ad-hoc networks. 
+             Because the minimum dominating set problem for unit disk graphs is NP-hard, numerous approximation algorithms 
+             have been proposed in the literature, including some PTAS.
+             However, since the proposal of a linear-time $5$-approximation algorithm in 1995, 
+             the lack of efficient algorithms attaining better approximation factors has aroused attention.
+             We introduce a linear-time $O(n+m)$ approximation algorithm that takes the usual 
+             adjacency representation of the graph as input and outputs a $44/9$-approximation. 
+             This approximation factor is also attained by a second algorithm, 
+             which takes the geometric representation of the graph as input and runs in $O(n \log n)$ time 
+             regardless of the number of edges.
+             Additionally, we propose a $43/9$-approximation which can be obtained in $O(n^2 m)$ time 
+             given only the graph's adjacency representation. 
+             It is noteworthy that the dominating sets obtained by our algorithms are also independent sets.          
+         </p>
+      </li>
+
+      <li> <a target="_blank" href="manuscripts/hull_vs_geodetic_p3_SIDMA.pdf">Geodetic number versus hull number in <em>P</em><sub>3</sub> convexity</a>.&nbsp;
+        <a target="_blank" href="manuscripts/hull_vs_geodetic_p3_SIDMA.pdf"><img src="pdf.png" alt="pdf" title="Pdf"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleAbstract('hull_vs_geodetic_sidma')">
+        <div class="pt">Com Carmen Centeno, Lucia Penso e Dieter Rautenbach.</div>
+        <div class="en">With Carmen Centeno, Lucia Penso and Dieter Rautenbach.</div>	
+        <div class="pt">Submetido ao peri&oacute;dico <em>SIAM Journal on Discrete Mathematics</em> em dezembro de 2011.</div>	
+        <div class="en">Submitted to journal <em>SIAM Journal on Discrete Mathematics</em> in December 2011.</div>	
+        <p id="hull_vs_geodetic_sidma" class="abstract">
+             We study the graphs <em>G</em> for which the hull number <em>h</em>(<em>G</em>) 
+             and the geodetic number <em>g</em>(<em>G</em>) with respect to <em>P</em><sub>3</sub> convexity coincide. 
+             These two parameters correspond to the minimum cardinality of a set <em>U</em> of vertices of <em>G</em>
+             such that the simple expansion process that iteratively adds to <em>U</em>, all vertices outside of <em>U</em>
+             that have two neighbors in <em>U</em>, produces the whole vertex set of <em>G</em> either eventually or 
+             after one iteration, respectively. We establish numerous structural properties of the graphs <em>G</em>
+             with <em>h</em>(<em>G</em>)=<em>g</em>(<em>G</em>), which allow the constructive characterization 
+             as well as the efficient recognition of all triangle-free such graphs. 
+             Furthermore, we characterize the graphs <em>G</em> that satisfy <em>h</em>(<em>H</em>)=<em>g</em>(<em>H</em>) 
+             for every induced subgraph <em>H</em> of <em>G</em> in terms of forbidden induced subgraphs.          
+         </p>
+      </li>
+  </ol>	
+    
+  		<p class="pt">
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+        <p class="en">
+        <a href=#><img title="Back to top" style="height: 35px" src="seta_voltar.jpeg" alt="Back to top" ></a>
+        </p>
+  
+    <h3 class="en" id="advisory-concluded">Academic Advisory - concluded</h3>
+    <h3 class="pt" id="orientacoes-concluidas">Orienta&ccedil;&otilde;es conclu&iacute;das</h3>
+	
+    <ol class="reversed">
+      <li><div>Lucila Maria de Souza Bento.</div>
+          <div class="pt"><em>Aplica&ccedil;&otilde;es de hashing.</em></div>
+          <div class="en"><em>Applications of hashing.</em></div>
+          <div class="pt">Orientadores: Vin&iacute;cius / Jayme Luiz Szwarcfiter.</div> 
+          <div class="en">Advisors: Vin&iacute;cius / Jayme Luiz Szwarcfiter.</div>          
+          <div class="pt">Mestrado. Defendida em 1 de agosto de 2012.</div>
+          <div class="en">M.Sc. Presented on August 1st, 2012.</div>
+      </li>
+    </ol>
+    
+  		<p class="pt">
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+        <p class="en">
+        <a href=#><img title="Back to top" style="height: 35px" src="seta_voltar.jpeg" alt="Back to top" ></a>
+        </p>
+
+    <h3 class="en" id="advisory-current">Academic Advisory - current</h3>
+    <h3 class="pt" id="orientacoes-em-andamento">Orienta&ccedil;&otilde;es em andamento</h3>
+	
+    <ol>
+      <li><div>Abrahim Senra Abrah&atilde;o.</div>     
+          <div class="pt"><em>Algoritmos certificadores.</em></div>
+          <div class="en"><em>Certifying algorithms.</em></div>
+          <div class="pt">Orientador: Vin&iacute;cius.</div> 
+          <div class="en">Advisor: Vin&iacute;cius.</div>          
+          <div class="pt">Mestrado. In&iacute;cio em dezembro de 2011.</div>
+          <div class="en">M.Sc. Started in December, 2011.</div>          
+      </li>
+
+      <li><div>Adalton Sena.</div>
+          <div class="pt"><em>&Aacute;rvores geradoras com n&uacute;mero m&iacute;nimo de v&eacute;rtices branch.</em></div>
+          <div class="en"><em>Spanning trees with minimum number of branch vertices.</em></div>
+          <div class="pt">Orientadores: Vin&iacute;cius / Loana Nogueira.</div> 
+          <div class="en">Advisors: Vin&iacute;cius / Loana Nogueira.</div>          
+          <div class="pt">Doutorado. In&iacute;cio em dezembro de 2011.</div>
+          <div class="en">D.Sc. Started in December, 2011.</div>          
+      </li>
+
+      <li><div>Felipe Guerreiro Barbosa Ruiz.</div>
+          <div class="pt"><em>Protótipo de sistema de recomenda&ccedil;&atilde;o.</em></div>
+          <div class="en"><em>Recommendation system prototype.</em></div>
+          <div class="pt">Orientador: Vin&iacute;cius.</div> 
+          <div class="en">Advisor: Vin&iacute;cius.</div>          
+          <div class="pt">Projeto Final de Curso. In&iacute;cio em dezembro de 2011.</div>
+          <div class="en">B.Sc. Started in December, 2011.</div>              
+      </li>
+
+      <li><div>Guilherme Carneiro Antonio.</div>
+          <div class="pt"><em>Protótipo de sistema de recomenda&ccedil;&atilde;o.</em></div>
+          <div class="en"><em>Recommendation system prototype.</em></div>
+          <div class="pt">Orientador: Vin&iacute;cius.</div> 
+          <div class="en">Advisor: Vin&iacute;cius.</div>          
+          <div class="pt">Projeto Final de Curso. In&iacute;cio em dezembro de 2011.</div>
+          <div class="en">B.Sc. Started in December, 2011.</div>              
+      </li>
+
+     <li><div>Lucila Maria de Souza Bento.</div>
+          <div class="pt"><em>Marcas-d'&aacute;gua baseadas em grafos.</em></div>
+          <div class="en"><em>Graph-based waterproofing.</em></div>
+          <div class="pt">Orientadores: Vin&iacute;cius / Jayme Luiz Szwarcfiter.</div> 
+          <div class="en">Advisors: Vin&iacute;cius / Jayme Luiz Szwarcfiter.</div>          
+          <div class="pt">Doutorado. In&iacute;cio em agosto de 2012.</div>
+          <div class="en">D.Sc. Started in August, 2012.</div>          
+      </li>
+
+      <li><div>Vitor Silva Costa.</div>
+          <div class="pt"><em>Heur&iacute;sticas para o passeio do cavalo em </em>d<em> dimens&otilde;es.</em></div>
+          <div class="en"><em>Heuristics for the </em>d<em>-dimensional knight's tour.</em></div>
+          <div class="pt">Orientador: Vin&iacute;cius.</div> 
+          <div class="en">Advisor: Vin&iacute;cius.</div>          
+          <div class="pt">Inicia&ccedil;&atilde;o Cient&iacute;fica. In&iacute;cio em julho de 2012.</div>
+          <div class="en">Undergraduate research. Started in July, 2012.</div>    
+      </li>
+    </ol>
+		
+		<p class="pt">
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+        <p class="en">
+        <a href=#><img title="Back to top" style="height: 35px" src="seta_voltar.jpeg" alt="Back to top" ></a>
+        </p>
+		
+		<script type="text/javascript" src="reorder.js"></script>
+        <script type="text/javascript">
+          reverse_lists();
+        </script>
+		
+  </body>
+
+</html>
+

@@ -1,0 +1,505 @@
+<html>
+
+  <head>
+    <script type="text/javascript" src="../language.js"></script>
+
+    <meta http-equiv="Content-Type"
+     content="text/html; charset=ISO-8859-1"><link type="text/css" rel="stylesheet"
+     href="../estilo.css"><title>Vin&iacute;cius Gusm&atilde;o Pereira de S&aacute;</title>
+
+  </head> 
+ 
+  <body onload="autoLanguage()">    
+
+    <h2>Estruturas de Dados / Organiza&ccedil;&atilde;o de Dados I&nbsp;  &#8212;  &nbsp;2014/2</h2>
+    
+    <p><a href="..">P&aacute;gina principal</a><br>
+                  
+<!--    <p>&nbsp;</p>  -->
+
+    <div><h3>Informa&ccedil;&otilde;es</h3></div>
+    
+    <ul>
+        <li><div>Local: Sala F2-014.<br>
+                        Hor&aacute;rio: 2as e 4as, das 8h &agrave;s 10h.<br>
+                        In&iacute;cio: 11 de agosto de 2014.<br><br>
+                        
+        <li>
+                        Reposit&oacute;rio do c&oacute;digo criado em sala de aula: <br><a target="_blank" href="https://github.com/vigusmao/ED_2014_2">https://github.com/vigusmao/ED_2014_2</a>
+                       <br><br>
+                       
+         <li>              Monitores:<br>
+                       - Jullyana Vycas<br>
+                       - Fabiano Martins<br><br>
+                       
+          <li>             Ementa aproximada:<br>
+                       - &nbsp; Breve nivelamento em linguagem Python;<br>
+                       - &nbsp; No&ccedil;&otilde;es de an&aacute;lise de complexidade de algoritmos;<br>
+                       - &nbsp; Listas lineares: aloca&ccedil;&atilde;o sequencial e aloca&ccedil;&atilde;o encadeada;<br>
+                       - &nbsp; Filas e pilhas;<br>
+                       - &nbsp; Hashing;<br>
+                       - &nbsp; &Aacute;rvores, &aacute;rvore bin&aacute;ria de busca, &aacute;rvores bin&aacute;rias de busca balanceadas; <br>
+                       - &nbsp; Programa&ccedil;&atilde;o din&acirc;mica e memoiza&ccedil;&atilde;o;<br>
+                       - &nbsp; Conjuntos disjuntos;<br>
+                       - &nbsp; Heaps;<br>
+                       - &nbsp; Algoritmos de ordena&ccedil;&atilde;o.
+
+
+
+                    <br><br>
+        <li>		Avalia&ccedil;&atilde;o:<br>
+                                     
+                        M = (P1 + P2) / 2 &ge; 6.0 --> aprova&ccedil;&atilde;o direta; <br>
+                        do contr&aacute;rio, MF = (M + PF) / 2 &ge; 5.0 --> aprova&ccedil;&atilde;o; <br>
+                        MF < 5.0 --> reprova&ccedil;&atilde;o.
+                        
+                        
+                    <br><br>
+                    
+
+        <li>             <font color="black">Provas:<br>
+                            - &nbsp; P1: 15/10<br>
+                            - &nbsp; P2: 03/12<br>
+                            - &nbsp; PF: 10/12<br>
+                            - &nbsp; SEGUNDA CHAMADA (apenas para quem perdeu alguma prova): 17/12</font>
+                    
+                    	<br>
+        <li>           <font color="red"><a target="_blank" href="/../listas/ED_2014_2_Lista_1.pdf">Primeira lista de exerc&iacute;cios</a></font>.
+                        
+                        	
+        <li>           <font color="red"><a target="_blank" href="/../listas/ED_2014_2_Lista_2.pdf">Segunda lista de exerc&iacute;cios</a></font>.
+                        <br><br>
+    </ul>
+
+
+    <div><h3>Bibliografia sugerida</h3></div>
+    
+    <table>  
+     
+        <tr>
+            <td><a target="_blank" href="http://www.livrariasaraiva.com.br/produto/3065790/estruturas-de-dados-e-seus-algoritmos-3-ed-2010/">Estruturas de Dados e seus Algoritmos</a></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><a target="_blank" href="http://books.google.com.br/books?id=NLngYyWFl_YC">Introduction to Algorithms</a></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr> 
+        <tr> 
+            <td>(J. L. Szwarcfiter, L. Markenzon)</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>(Cormen, Leiserson, Rivest &amp; Stein)</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td><a target="_blank" href="http://www.livrariasaraiva.com.br/produto/3065790/estruturas-de-dados-e-seus-algoritmos-3-ed-2010/"><img style="height: 180px" src="../images/books/estruturadedados.jpg"/></a></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><a target="_blank" href="http://books.google.com.br/books?id=NLngYyWFl_YC"><img style="height: 180px" src="../images/books/cormen.jpg"/></a></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+    </table>
+    
+<br><br>
+
+
+
+                       
+          
+                        
+ 
+<div><h3>Conte&uacute;do das aulas</h3></div>
+		
+
+<h4><font color="blue">11/08</font></h4>
+<br>
+Primeira conversa sobre o curso: derrotando o c&oacute;digo alheio.<br>
+(Comparem a ementa deste curso com o <a target="_blank" href="google_interview_tips.pdf">e-mail do Google</a> com dicas para se preparar para uma entrevista para trabalhar com eles.)
+<br><br>
+Probleminha pra quebrar o gelo: dados dois arrays (listas) de inteiros, encontrar sua interse&ccedil;&atilde;o. 
+<br>C&oacute;digo (em Python) feito em sala de aula no <a href="https://github.com/vigusmao/ED_2014_2/blob/master/intersecao.c" target="_blank">GitHub</a>.
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">13/08</font></h4>
+<br>
+Python para quem j&aacute; programa: conversa r&aacute;pida sobre alguns aspectos da linguagem.
+<br><br>
+Por que entender de estruturas de dados e complexidade de algoritmos? 
+<br><br>
+Um exemplo: o problema de se determinar o caracter (ou n&uacute;mero)
+que ocorre com maior frequ&ecirc;ncia em um texto (ou lista).
+<br>
+C&oacute;digo (em Python) feito em sala de aula no <a href="https://github.com/vigusmao/ED_2014_2/blob/master/python_exemplos.py" target="_blank">GitHub</a>.
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">18/08</font></h4>
+<br>
+Lista linear: a estrutura mais simples. Aloca&ccedil;&atilde;o sequencial e encadeada. Opera&ccedil;&otilde;es mais comuns.
+Localizando o <em>k</em>-&eacute;simo elemento na lista nas duas implementa&ccedil;&otilde;es. Inserindo no come&ccedil;o da lista nas duas implementa&ccedil;&otilde;es.
+<br><br>
+An&aacute;lise de algoritmos: discuss&atilde;o sobre o n&uacute;mero de &quot;passos&quot; de um programa, i.e., a quantidade de opera&ccedil;&otilde;es b&aacute;sicas que s&atilde;o executadas, 
+ou, equivalentemente, de blocos com n&uacute;mero constante de opera&ccedil;&otilde;es de tempo constante que s&atilde;o executados.
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+	
+<h4><font color="blue">20/08</font></h4>
+<br>
+Inserindo no fim da lista (<em>append</em>). 
+<br>Como retornar o tamanho de uma lista encadeada em tempo constante (i.e., sem ter que percorrer a lista inteira).
+<br>Pol&iacute;ticas de crescimento de listas em aloca&ccedil;&atilde;o sequencial (arrays): crescimento em P.A. 
+(tempo total quadr&aacute;tico) e em P.G. (tempo total linear).
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+	
+<h4><font color="blue">25/08</font></h4>
+<br>
+Mais compara&ccedil;&otilde;es entre aloca&ccedil;&atilde;o sequencial e encadeada: concatenando duas listas, removendo elementos.
+<br>
+Busca de elemento em array ordenado: (1) parando entes de chegar ao fim; (2) busca bin&aacute;ria!
+<br><br>
+Implementa&ccedil;&atilde;o baixo n&iacute;vel de listas encadeadas. 
+C&oacute;digo (em C) feito em sala de aula no <a href="https://github.com/vigusmao/ED_2014_2/blob/master/listas_encadeadas.c" target="_blank">GitHub</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+
+<h4><font color="blue">27/08</font></h4>
+<br>
+O problema da ordena&ccedil;&atilde;o topol&oacute;gica: dado um grafo direcionado ac&iacute;clico, encontrar uma sequ&ecirc;ncia de seus v&eacute;rtices de forma que, para toda aresta (<em>v</em>,<em>w</em>) do grafo, <em>v</em> apare&ccedil;a antes de <em>w</em> na sequ&ecirc;ncia. Quatro implementa&ccedil;&otilde;es distintas de um mesmo algoritmo, usando listas lineares de diversas maneiras, partindo de uma ideia inicial de tempo c&uacute;bico no n&uacute;mero de v&eacute;rtices at&eacute; chegar ao &oacute;timo em tempo linear.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">01/09</font></h4>
+<br>
+An&aacute;lise de complexidade de algoritmos: caso m&eacute;dio, pior caso. Complexidade assint&oacute;tica. A nota&ccedil;&atilde;o <b>O</b>.
+<br><br>
+Exemplo: o problema da sele&ccedil;&atilde;o dos <em>k</em> maiores elementos de uma lista de <em>n</em> elementos.<br>
+Algoritmo <b>O</b>(<em>n</em> log <em>n</em>) usando ordena&ccedil;&atilde;o. <br>
+Algoritmo <b>O</b>(<em>n k</em>) implementando buffer de <em>k</em> maiores usando array ordenado.<br>
+Algoritmo <b>O</b>(<em>n</em> log <em>k</em>) implementando buffer de <em>k</em> maiores usando heap.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">03/09</font></h4>
+<br>
+Pilhas e filas em aloca&ccedil;&atilde;o sequencial.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">08/09</font></h4>
+<br>
+Pilhas e filas em aloca&ccedil;&atilde;o encadeada.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+
+<h4><font color="blue">10/09</font></h4>
+<br>
+&Aacute;rvores. &Aacute;rvores bin&aacute;rias.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">15/09</font></h4>
+<br>
+Percursos em &aacute;rvores. Convers&atilde;o de florestas e &aacute;rvores <em>m</em>-&aacute;rias em &aacute;rvores bin&aacute;rias.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">17/09</font></h4>
+<br>
+&Aacute;rvores bin&aacute;rias de busca.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">22/09</font></h4>
+<br>
+&Aacute;rvores bin&aacute;rias de busca &oacute;timas para chaves com frequ&ecirc;ncias de acesso distintas.
+<br>
+Entrada: uma lista ordenada <em>k</em><sub>1</sub> &lt; <em>k</em><sub>2</sub> &lt; ... &lt <em>k<sub>n</sub></em> de chaves,
+e uma lista <em>f</em><sub>1</sub>, <em>f</em><sub>2</sub>, ... , <em>f<sub>n</sub></em> com as frequ&ecirc;ncias relativas de cada chave.
+<br>
+Sa&iacute;da: uma &aacute;rvore bin&aacute;ria de busca &oacute;tima <em>T<sup>*</sup>(1,n)</em> para essas chaves, isto &eacute;, uma que minimize a fun&ccedil;&atilde;o
+custo(T) = Somat&oacute;rio<sub>t = 1, ... , n</sub> (n&iacute;vel(<em>k<sub>t</sub></em>) * <em>f<sub>t</sub></em>).
+<br>
+Dividir e conquistar. Formula&ccedil;&atilde;o recursiva de um algoritmo para resolver esse problema.
+<br><br>
+O inconveniente de algumas solu&ccedil;&otilde;es recursivas: o mesmo sub-problema sendo resolvido muitas vezes. Compara&ccedil;&atilde;o entre fatorial n&atilde;o-recursivo e recursivo (ok!), 
+e compara&ccedil;&atilde;o entre fibonacci n&atilde;o-recursivo e recursivo (diferen&ccedil;a absurda!).
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">24/09</font></h4>
+<br>
+Programa&ccedil;&atilde;o Din&acirc;mica. Memoiza&ccedil;&atilde;o. Implementa&ccedil;&atilde;o do fibonacci recursivo usando memoiza&ccedil;&atilde;o. :-)
+<br>
+Outro exemplo: o problema do &quot;3n+1&quot;. Implementa&ccedil;&atilde;o recursiva sem memoiza&ccedil;&atilde;o (terr&iacute;vel) e com memoiza&ccedil;&atilde;o (simples e eficiente).
+<br><br>
+Como resolver o problema da &aacute;rvore bin&aacute;ria de busca &oacute;tima para chaves com frequ&ecirc;ncias de acesso distintas usando memoiza&ccedil;&atilde;o.
+<br><br>
+C&oacute;digo (em Python) feito em sala de aula no <a href="https://github.com/vigusmao/ED_2014_2/commit/3e9e23d3c06dfcccdf6bad45319da36e4a0cff72" target="_blank">GitHub</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">29/09</font></h4>
+<br>
+Programa&ccedil;&atilde;o Din&acirc;mica cl&aacute;ssica (bottom-up). O problema da &aacute;rvore bin&aacute;ria de busca &oacute;tima para chaves com frequ&ecirc;ncias de acesso distintas via PD cl&aacute;ssica.
+<br><br>
+C&oacute;digo (em Python) feito em sala de aula no <a href="https://github.com/vigusmao/ED_2014_2/blob/master/optimal_bst.py" target="_blank">GitHub</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+
+
+<h4><font color="blue">01/10</font></h4>
+<br>
+Estruturas para Conjuntos Disjuntos (Union/Find).
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">06/10</font></h4>
+<br>
+N&atilde;o houve aula por conta da JIC.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+	
+<h4><font color="blue">08/10</font></h4>
+<br>
+N&atilde;o houve aula por conta da JIC.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+
+<h4><font color="blue">13/10</font></h4>
+<br>
+Resolu&ccedil;&atilde;o da Primeira Lista de Exerc&iacute;cios em sala de aula. Revis&atilde;o para a P1.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+	
+	
+<h4><font color="blue">15/10</font></h4>
+<br>
+Primeira Prova.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+
+<h4><font color="blue">20/10</font></h4>
+<br>
+Entrega das provas corrigidas. Resolu&ccedil;&atilde;o da Primeira Prova em sala de aula. 
+<br>
+C&oacute;digo (em Python) feito em sala de aula (para a quest&atilde;o 5 da prova) no <a href="https://github.com/vigusmao/ED_2014_2/blob/master/prova_q5.py" target="_blank">GitHub</a>.
+<br><br>
+&Aacute;rvores AVL.
+
+	&nbsp;<br>
+	&nbsp;<br>
+
+<h4><font color="blue">22/10</font></h4>
+<br>
+Introdu&ccedil;&atilde;o a Hashing. Fun&ccedil;&otilde;es de dispers&atilde;o, resolu&ccedil;&atilde;o de colis&otilde;es, fator de carga.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">27/10</font></h4>
+<br>
+Recesso oficial pelo Dia do Funcion&aacute;rio P&uacute;blico.
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+	
+<h4><font color="blue">29/10</font></h4>
+<br>
+An&aacute;lise do tempo m&eacute;dio de acesso a chaves presentes e ausentes em uma tabela hash com encadeamento.
+<br>
+Discuss&atilde;o sobre aplicabilidade de hashing: vantagens e desvantagens. 
+<br><br>
+O problema dos pares complementares.
+<br>
+C&oacute;digo (em Python) feito em sala de aula no <a href="https://github.com/vigusmao/ED_2014_2/blob/master/soma1000.py" target="_blank">GitHub</a>.
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">03/11</font></h4>
+<br>
+	Fun&ccedil;&otilde;es hash: algumas t&eacute;cnicas. Mudan&ccedil;a de base.
+	<br>
+	Mapeamento chave-valor versus mero armazenamento de chaves. Chaves externas e chaves como parte do objeto. Quando os objetos s&atilde;o listas e coisas quetais.
+	<br>
+	Problema dos pares de pontos colineares (em R<sup>2</sup>).
+	<br>
+	Problema da soma dos pares de fun&ccedil;&otilde;es.
+	<br>
+	C&oacute;digo (em Python) feito em sala de aula no <a href="https://github.com/vigusmao/ED_2014_2/blob/master/soma_dos_pares_no_array.py" target="_blank">GitHub</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">05/11</font></h4>
+<br>
+	Quando n&atilde;o usar hashing: inexist&ecirc;ncia de ordem, incerteza de que para uma inst&acirc;ncia espec&iacute;fica a distribui&ccedil;&atilde;o das chaves ser&aacute; t&atilde;o boa quanto o caso m&eacute;dio; 
+	muitas vezes &eacute; overkill em rela&ccedil;&atilde;o ao simples endere&ccedil;amento direto em um array.
+	<br><br>
+	Momento filos&oacute;fico: &eacute; fundamental conhecer as estruturas de dados e seus algoritmos; mas &eacute; preciso estar atento &agrave; possibilidade de n&atilde;o se usar nada pronto, fechar o livro-texto e usar a pura criatividade.
+	<br>
+	Problema do mercado financeiro: hashing, hashing duplo e solu&ccedil;&atilde;o &quot;fora da caixa&quot;.
+	<br>
+	Problema do &quot;n&uacute;mero que falta&quot; (com limita&ccedil;&atilde;o de mem&oacute;ria).
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">10/11</font></h4>
+<br>
+	N&atilde;o houve aula em fun&ccedil;&atilde;o do <a href="http://www.inf.ufg.br/lawcg14/" target="_blank">LAWCG2014</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">12/11</font></h4>
+<br>
+	N&atilde;o houve aula em fun&ccedil;&atilde;o do <a href="http://www.inf.ufg.br/lawcg14/" target="_blank">LAWCG2014</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">17/11</font></h4>
+<br>
+	Trello challenge (apenas o enunciado do problema, n&atilde;o a solu&ccedil&atilde;o): 
+	encontre a palavra P de 9 letras, 
+	contendo apenas as letras &quot;acdegilmnoprstuw&quot;,
+	tal que hash(P) = 956446786872726, onde hash &eacute; dada pelo seguinte c&oacute;digo:
+	<br><br>
+	&nbsp;Int64 hash (String s) {<br>
+    &nbsp;&nbsp;&nbsp;Int64 h = 7<br>
+    &nbsp;&nbsp;&nbsp;String letters = &quot;acdegilmnoprstuw&quot;<br>
+    &nbsp;&nbsp;&nbsp;for(Int32 i = 0; i < s.length; i++) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h = (h * 37 + letters.indexOf(s[i]))<br>
+    &nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;return h<br>
+    &nbsp;}<br>
+	<br>
+	
+	Implementa&ccedil;&atilde;o from scratch de uma tabela hash para armazenar objetos do tipo ALUNO, 
+	onde a chave &eacute; o DRE do aluno. C&oacute;digo (em C) no <a href="https://github.com/vigusmao/ED_2014_2/blob/master/hash_from_scratch.c" target="_blank">GitHub</a>.
+	
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">19/11</font></h4>
+<br>
+
+	Algoritmos de ordena&ccedil;&atilde;o: BubbleSort, MergeSort, QuickSort, perguntas pertinentes sobre a natureza dos elementos e sua distribui&ccedil;&atilde;o. Como ordenar, por exemplo, as idades de todos os brasileiros? BucketSort.
+	<br>
+	Implementa&ccedil;&otilde;es in-place versus uso de mem&oacute;ria adicional. Piores casos. Casos m&eacute;dios.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+	
+
+<h4><font color="blue">24/11</font></h4>
+<br>
+
+    Heap. Heap sort.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+		
+		
+<h4><font color="blue">26/11</font></h4>
+<br>
+
+    k-Selection. Quick Select. Mediana das medianas.
+
+	&nbsp;<br>
+	&nbsp;<br>		
+	
+	
+<h4><font color="blue">01/12</font></h4>
+<br>
+
+    Resolu&ccedil;&atilde;o da Segunda Lista. Revis&atilde;o para a P2.
+
+	&nbsp;<br>
+	&nbsp;<br>		
+	
+		
+<h4><font color="blue">03/12</font></h4>
+<br>
+
+    Segunda Prova.
+
+	&nbsp;<br>
+	&nbsp;<br>		
+	
+<h4><font color="blue">08/12</font></h4>
+<br>
+Entrega das provas corrigidas. Resolu&ccedil;&atilde;o da Segunda Prova em sala de aula. Argui&ccedil;&otilde;es sobre o trabalho de implementa&ccedil;&atilde;o.
+
+&nbsp;<br>
+	&nbsp;<br>		
+
+
+<h4><font color="blue">10/12</font></h4>
+<br>
+
+    Prova Final.<br>
+    Corre&ccedil;&atilde;o da PF, discuss&atilde;o da prova e entrega das notas finais.
+
+	&nbsp;<br>
+	&nbsp;<br>		
+	
+<h4><font color="blue">17/12</font></h4>
+<br>
+
+    Prova de Segunda Chamada.<br>
+    Encerramento do curso.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+			
+	<p>
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="../seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+
+	
+  </body>
+
+</html>

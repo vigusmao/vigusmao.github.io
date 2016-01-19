@@ -1,0 +1,108 @@
+
+body {
+   background: white;
+   color: black;
+   margin-left: 4%;
+   margin-right: 4%;
+   font-family: sans-serif;
+}
+
+
+h1, h2, h3 {
+   color: black;
+   margin-bottom:20px;
+   margin-top:30px;
+}
+
+h4 {
+   color: black;
+   margin-bottom:0px;
+   margin-top:8px;
+}
+
+h3 {
+   font-style: italic;
+}
+
+
+
+a {
+   color: #631920;
+   background: inherit;
+}
+
+a:link {
+   background: inherit;
+   text-decoration:none;
+}
+
+a:visited {
+   background: inherit;
+   text-decoration: none;
+}
+
+a:active {
+   background: inherit;
+   text-decoration: none;
+}
+
+a:hover {
+   color: #7D181C;
+   background: inherit;
+   text-decoration: underline;
+}
+
+p.back {
+   border-top: white;
+   padding-top: 1ex;
+}
+
+img {
+   border: none; <!--5px double #545565;-->
+}
+
+ul {
+   padding-left: 2ex;
+}
+
+li {
+    padding-top: 1ex;
+}
+
+.pt {
+   display: none;
+}
+
+.flag {
+   border: none;
+   cursor: pointer;
+}
+
+.abstract {
+   display: none;
+   margin-left: 5ex;
+   margin-right: 7ex;
+   font-family: serif;
+   text-align: justify;
+}
+
+.bib {
+   display: none;
+   margin-left: 5ex;
+}
+
+.sample {
+   display: none;
+}
+
+.but {
+   cursor: pointer;
+}
+
+.imagewithborder {
+   border: 5px double #545565;
+}
+
+.indice {
+   font-weight: normal;
+}

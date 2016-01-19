@@ -1,0 +1,427 @@
+<html>
+
+  <head>
+    <script type="text/javascript" src="../language.js"></script>
+
+    <meta http-equiv="Content-Type"
+     content="text/html; charset=ISO-8859-1"><link type="text/css" rel="stylesheet"
+     href="../estilo.css"><title>Vin&iacute;cius Gusm&atilde;o Pereira de S&aacute;</title>
+
+  </head> 
+ 
+  <body onload="autoLanguage()">    
+
+    <h2>Organiza&ccedil;&atilde;o de Dados II&nbsp;  &#8212;  &nbsp;2013/1</h2>
+    
+    <p><a href="..">P&aacute;gina principal</a><br>
+                  
+<!--    <p>&nbsp;</p>  -->
+
+    <div><h3>Informa&ccedil;&otilde;es</h3></div>
+    
+        <div>Local: Sala do DCC / LAB 2.<br>
+                        Hor&aacute;rio: 3as e 5as, das 13h &agrave;s 15h.<br>
+                        In&iacute;cio: 02 de abril de 2013.<br>
+                        
+                        <br>
+                        Reposit&oacute;rio do c&oacute;digo criado em sala de aula: <br><a target="_blank" href="https://github.com/vigusmao/OrgDados2_2013_1">https://github.com/vigusmao/OrgDados2_2013_1</a>
+                       <br><br>
+                       
+                       Ementa:<br>
+                       - &nbsp; Interpolation search;<br>
+                       - &nbsp; Self-organizing sequential search;<br>
+                       - &nbsp; Hashing (t&eacute;cnicas gerais, aplica&ccedil;&otilde;es, hashing universal, hashing perfeito);<br>
+                       - &nbsp; Bloom filters; <br>
+                       - &nbsp; Text searching;<br>
+                       - &nbsp; Tries;<br>
+                       - &nbsp; T&oacute;picos especiais em ordena&ccedil;&atilde;o.
+
+                    <br><br>
+                        
+                        <font color="black">N&atilde;o haver&aacute; aula nos dias:<br>
+                            - &nbsp; 23/04 (feriado de S&atilde;o Jorge);<br>
+                            - &nbsp; 25/04 (estarei em congresso fora do pa&iacute;s);<br>
+                            - &nbsp; 30/05 (feriado de Corpus Chirsti);<br>
+                            - &nbsp; de 11/06 a 27/06 (<a target="_blank" href="http://www.informatik.uni-rostock.de/wg2013/">WG'13</a> 
+                                 + <a target="_blank" href="http://dga2013.icomp.ufam.edu.br/">DGA'13</a>);<br>
+                            - &nbsp; 11/07;</font>
+                        <br><br>
+                        
+                        <font color="black">Aulas extras (reposi&ccedil;&atilde;o), sempre das 8h &agrave;s 10h:<br>
+                            - &nbsp; 05/07;<br>
+                            - &nbsp; 12/07;<br>
+                            - &nbsp; 19/07.</font>
+                        <br><br>
+                        
+                        <font color="black">Prova &uacute;nica:<br>
+                            - &nbsp; <del>23/07</del> 30/07.<br>
+                        <br><br>
+                        
+                        <font color="red">Primeiro trabalho</font>: 
+                        <br>Implementa&ccedil;&atilde;o dos tr&ecirc;s m&eacute;todos de
+                        busca auto-organiz&aacute;vel vistos em sala. <br>As inst&acirc;ncias de teste devem ser escolhidas
+                        de forma a permitir uma boa observa&ccedil;&atilde;o das diferen&ccedil;as entre os m&eacute;todos.
+                        <br>Prazo: segunda-feira, 29 de abril, &agrave;s 23:59. Entrega por e-mail.
+                        <br><br> 
+
+                        <font color="red">Segundo trabalho</font>: 
+                        <br>Cria&ccedil;&atilde;o de programa para resolver o problema apresentado na aula de 16/05.
+                        <br>
+                        Exig&ecirc;ncias: (i) crie seu pr&oacute;prio hash map (com arrays e/ou listas); (ii)
+                        permita que o usu&aacute;rio selecione uma dentre pelo menos tr&ecirc;s fun&ccedil;&otilde;es hash,
+                        <em>al&eacute;m</em> de uma implementa&ccedil;&atilde;o de hashing universal, que poder&aacute; ser utilizado a crit&eacute;rio do usu&aacute;rio.
+                        <br>
+                        Entrada: uma linha para cada um dos seguintes par&acirc;metros: <em>min_el</em>: o menor elemento do conjunto de inteiros <em>A</em>;
+                        <em>max_el</em>: o maior elemento de <em>A</em> (<em>A</em> possuir&aacute; todos os inteiros entre <em>min_el</em> e <em>max_el</em>, 
+                        sendo -1000 &leq; <em>min_el</em>, <em>max_el</em> &leq; 1000);
+                        o tamanho <em>k</em> dos subconjuntos de <em>A</em> em que estamos interessados (2 &leq; k &leq; 5); 
+                        elementos arbitr&aacute;rios de <em>A</em> (um por linha), com repeti&ccedil;&atilde;o. A cada elemento lido a partir do <em>k</em>-&eacute;simo, 
+                        fica constitu&iacute;da uma <em>k</em>-upla formada pelos <em>k</em> &uacute;ltimos elementos lidos, na ordem em que foram lidos.
+                        <br>
+                        Sa&iacute;da: o n&uacute;mero de linhas com elementos de <em>A</em> que foram lidas 
+                        at&eacute; completar todas as permuta&ccedil;&otilde;es (<em>k</em>-uplas) de elementos de algum <em>k</em>-subconjunto de elementos distintos de <em>A</em>.
+                        <br>Obs.1: O n&uacute;mero m&aacute;ximo de linhas de um arquivo de entrada &eacute; 1 milh&atilde;o. 
+                        Se o programa chegar a ler a &uacute;ltima linha do arquivo, ainda sem sucesso, deve reportar falha.
+                        <br>Obs.2: Descarte <em>k</em>-uplas cujos elementos n&atilde;o sejam todos distintos.
+                        <br>Prazo: segunda-feira, 01 de julho, &agrave;s 23:59. Entrega por e-mail.
+                        <br><br> 
+                        
+                        <font color="red">Terceiro trabalho</font>: 
+                        <br>Implementa&ccedil;&atilde;o do algoritmo de <em>pattern matching</em> visto em sala, com filtros por linhas.
+                        Dado um arquivo-texto de entrada com <em>t</em> linhas de no m&aacute;ximo <em>n</em> caracteres cada,
+                        o programa deve pre-processar cada linha de forma a obter sua assinatura baseada nas <em>k</em>-uplas de 
+                        caracteres consecutivos presentes na linha. Cada <em>k</em>-upla &eacute; mapeada por uma fun&ccedil;&atilde;o
+                        escolhida por voc&ecirc; a um inteiro de 
+                        0 a <em>m</em>-1. A assinatura
+                        consiste em uma palavra de <em>m</em> bits, onde os bits 1 s&atilde;o aqueles que correspondem &agrave;
+                        imagem de pelo menos uma <em>k</em>-upla da linha. Voc&ecirc; deve tentar valores diferentes de <em>k</em>
+                        e <em>m</em>, e relatar que valores apresentaram melhores resultados para textos grandes aleat&oacute;rios.
+                        Explique tamb&eacute;m como foi a escolha da fun&ccedil;&atilde;o hash.
+                        
+                        <br>Prazo: segunda-feira, 8 de julho, &agrave;s 23:59. Entrega por e-mail.
+                        <br><br> 
+                        Confiram, por favor, a <a target="_blank" href="https://docs.google.com/spreadsheet/ccc?key=0ArdEixTeJAyzdEdVSlVlb0t0Q0hteVBWdzZmbk4tcUE&usp=sharing">lista de trabalhos entregues.</a>
+                        <br><br>
+                        
+                        <b>Lista de Exerc&iacute;cios <a target="_blank" href="/../listas/ORGDADOS2_2013_1_Lista_1.pdf">aqui</a>.</b>
+                        <br><br>
+                        
+                        <b>Gabarito da Lista <a target="_blank" href="/../listas/ORGDADOS2_2013_1_Lista_1_GABARITO.pdf">aqui</a>.</b>
+                        <br><br>
+                        
+                        
+                
+                        
+<br>
+
+    <div><h3>Bibliografia sugerida</h3></div>
+    
+    <table>  
+     
+        <tr>
+            <td><a target="_blank" href="http://books.google.com.br/books?id=xK4mAAAAMAAJ&source=gbs_book_other_versions">File Organization and Processing</a></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><a target="_blank" href="http://books.google.com.br/books?id=NLngYyWFl_YC">Introduction to Algorithms</a></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr> 
+        <tr> 
+            <td>(Alan L. Tharp)</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>(Cormen, Leiserson, Rivest &amp; Stein)</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td><a target="_blank" href="http://books.google.com.br/books?id=xK4mAAAAMAAJ&source=gbs_book_other_versions"><img style="height: 180px" src="../images/books/tharp.jpg"/></a></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><a target="_blank" href="http://books.google.com.br/books?id=NLngYyWFl_YC"><img style="height: 180px" src="../images/books/cormen.jpg"/></a></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+    </table>
+    
+<br><br>
+
+<div><h3>Conteúdo das aulas</h3></div>
+		
+
+<h4><font color="blue">02/04</font></h4>
+<br>
+Introdu&ccedil;&atilde;o: T&oacute;picos Especiais em Como Derrotar o C&oacute;digo do Pr&oacute;ximo. :-)
+<br>
+<br>Busca Interpolada (<em>Interpolation Search</em>). 
+Implementa&ccedil;&atilde;o em Python feita em sala de aula dispon&iacute;vel <a target="_blank" href="https://github.com/vigusmao/OrgDados2_2013_1/blob/master/buscaInterpolada.py">aqui</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+	
+	
+	
+<h4><font color="blue">04/04</font></h4>
+<br>
+Mais sobre Busca Interpolada. An&aacute;lise de complexidade: caso m&eacute;dio x pior caso. 
+Verificando experimentalmente a complexidade de algoritmos.
+<br>
+<br>O caso do m&eacute;todo de ordena&ccedil;&atilde;o do Python: TimSort. 
+Encontre 
+<a target="_blank" href="http://bugs.python.org/file4451/timsort.txt">aqui</a> a descri&ccedil;&atilde;o do algoritmo pelo pr&oacute;prio autor. 
+O artigo que o inspirou parece ter sido o seguinte:
+<a target="_blank" href="http://dl.acm.org/citation.cfm?id=313859&dl=ACM&coll=DL&CFID=200806246&CFTOKEN=99003918">
+<br>
+<br>Optimistic Sorting and Information Theoretic Complexity
+<br>Peter McIlroy
+<br>SODA (Fourth Annual ACM-SIAM Symposium on Discrete Algorithms),
+<br>pp 467-474, Austin, Texas, 25-27 January 1993.
+</a>
+<br>
+<br>Provavelmente falaremos mais a respeito.
+
+	&nbsp;<br>
+	&nbsp;<br>
+		
+	
+	
+<h4><font color="blue">09/04</font></h4>
+<br>
+Arrays. Complexidade das pol&iacute;ticas de crescimento por progress&atilde;o aritm&eacute;tica e geom&eacute;trica.
+<br><br>
+Busca auto-organiz&aacute;vel (<em>Self-Organizing Search</em>): contador de consultas, transposi&ccedil;&atilde;o passo a passo, reposicionamento &agrave; frente.
+
+	&nbsp;<br>
+	&nbsp;<br>
+
+	
+	
+<h4><font color="blue">11/04</font></h4>
+<br>
+Ainda arrays. Problemas envolvendo escalabilidade / limites de mem&oacute;ria. Exemplo: encontrar inteiro que n&atilde;o perten&ccedil;a a um array grande dado.
+<br><br>
+Bit array.
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+	  
+
+<h4><font color="blue">16/04</font></h4>
+<br>
+Problema de busca em matriz ordenada tanto nas linhas quanto nas colunas. 
+<br><br>
+Strings como arrays est&aacute;ticos de caracteres. Performance de m&uacute;ltiplas concatena&ccedil;&otilde;es. StringBuffer. 
+C&oacute;digo escrito em sala, como de costume, no <a target="_blank" href="https://github.com/vigusmao/OrgDados2_2013_1">github</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+	
+	
+<h4><font color="blue">18/04</font></h4>
+<br>
+Introdu&ccedil;&atilde;o a hashing. Por que se importar? Por que usar? Por que customizar fun&ccedil;&otilde;es? 
+Exemplo: o complexo algoritmo do Shazam (reconhecedor de m&uacute;sicas).
+
+
+	&nbsp;<br>
+	&nbsp;<br>
+
+
+	
+<h4><font color="blue">30/04</font></h4>
+<br>
+Hashing em Java. 
+<br>
+O contrato equals()/hashCode(). 
+<br><br>
+HashMap. 
+<br>
+Exemplo: igualdade da soma de fun&ccedil;&otilde;es: determinar todas as solu&ccedil;&otilde;es n&atilde;o-triviais da equa&ccedil;&atilde;o f(a) + f(b) + f(c) = f(x) + f(y) + f(z), para a, b, c, x, y, z em {1,...,N}, N dado.
+<br>
+C&oacute;digo no <a target="_blank" href="https://github.com/vigusmao/OrgDados2_2013_1">github</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>
+
+
+	
+<h4><font color="blue">02/05</font></h4>
+<br>
+Objeto --> hashCode() --> endere&ccedil;o f&iacute;sico (i.e. &iacute;ndice do bucket no array subjacente).
+<br><br>
+Tabelas hash ponteiradas, com links entre elementos. Complexidade da iteração completa sobre o conjunto de elementos. LinkedHashMap. 
+<br>
+Exemplo: Cache LRU.
+
+	&nbsp;<br>
+	&nbsp;<br>
+
+
+<h4><font color="blue">07/05</font></h4>
+<br>
+Fun&ccedil;&otilde;s hash: outras aplica&ccedil;&otilde;es al&eacute;m de indexar tabelas hash. 
+Exemplos: armazenamento de senhas hasheadas, message authentication codes (MAC), verifica&ccedil;&atilde;o de integridade.
+<br><br>
+Alguns dos m&eacute;todos mais comuns para se obter fun&ccedil;&otilde;es hash razo&aacute;veis: m&oacute;dulo, dobra, <em>one-at-a-time</em>.
+<br><br>
+Tabelas hash com encadeamento externo (<em>chained hashing</em>): tamanho de cada lista encadeada (<em>bucket</em>) &eacute; uma V.A. binomial, 
+com valor esperado igual ao fator de carga.
+	&nbsp;<br>
+	&nbsp;<br>
+
+
+<h4><font color="blue">09/05</font></h4>
+<br>
+N&uacute;mero esperado de pares de chaves sin&ocirc;nimas para fun&ccedil;&otilde;es hash com bom espalhamento. N&uacute;mero esperado de compara&ccedil;&otilde;es
+durante consulta a chave pertencente &agrave; tabela hash com encadeamento externo (obs.: buckets maiores contribuem com um peso maior para a m&eacute;dia).
+	&nbsp;<br>
+	&nbsp;<br>
+
+
+<h4><font color="blue">14/05</font></h4>
+<br>
+Hashing universal. M&eacute;todo para obter fam&iacute;lia de fun&ccedil;&otilde;es para hashing universal: dada uma chave <em>k</em>, 
+define-se <em>h<sub>a,b</sub></em> = ((<em>ak</em> + <em>b</em>) mod <em>p</em>) mod <em>m</em>, para <em>p</em> primo maior do que max(<em>k</em>) e maior do que <em>m</em>, 
+onde <em>m</em> &eacute; o tamanho do contradom&iacute;nio desejado
+(espa&ccedil;o mape&aacute;vel, i.e. n&uacute;mero de posi&ccedil;&oacute;es do array subjacente).
+	&nbsp;<br>
+	&nbsp;<br>
+
+
+<h4><font color="blue">16/05</font></h4>
+<br>
+Quando abrir m&atilde;o do conforto do hashing &quot;pr&eacute;-moldado&quot; e ganhar performance com fun&ccedil;&otilde;es hash customizadas,
+endere&ccedil;amento direto, bit arrays etc. Uso de hashing para ganho de escalabilidade.
+<br><br>
+O problema da cole&ccedil;&atilde;o de permuta&ccedil;&otilde;es de um subconjunto. L&ecirc;em-se <em>k</em>-uplas formadas de elementos de certo conjunto <em>A</em>.
+O programa deve acusar o primeiro momento em que todas as poss&iacute;veis diferentes <em>k</em>-uplas, para algum subconjunto de <em>A</em>, j&aacute; tiverem sido lidas.
+
+	&nbsp;<br>
+	&nbsp;<br>
+
+
+
+<h4><font color="blue">21/05</font></h4>
+<br>
+Hashing perfeito.
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+	
+<h4><font color="blue">23/05</font></h4>
+<br>
+Quando os par&acirc;metros <em>a</em> e <em>b</em> do hashing universal prim&aacute;rio s&atilde;o escolhidos aleat&oacute;ria e uniformemente,
+a probabilidade de se conseguir montar um hashing perfeito para um conjunto est&aacute;tico de <em>n</em> chaves 
+exigindo menos que 4<em>n</em> posi&ccedil;&otilde;es de mem&oacute;ria para todas as tabelas hash secund&aacute;rias &eacute; maior ou igual a 1/2.
+Portanto, o n&uacute;mero esperado de tentativas (escolhas aleat&oacute;rias) para aqueles par&acirc;metros &eacute; menor ou igual a 2. 
+Para o hashing secund&aacute;rio, como cada bucket apontar&aacute; uma tabela cujo n&uacute;mero de posi&ccedil;&otilde;es &eacute; o quadrado do n&uacute;mero de chaves naquele bucket,
+o n&uacute;mero de tentativas para os par&acirc;metros do hashing universal secund&aacute;rio associado &agrave;quele bucket &eacute; tamb&eacute;m menor ou igual a 2.
+Dessa forma, toda a constru&ccedil;&atilde;o do hashing perfeito ocupando menos do que 4<em>n</em> posi&ccedil;&otilde;es &eacute; conseguida em tempo esperado linear O(<em>n</em>).
+<br><br>
+Memoiza&ccedil;&atilde;o com hashing. Ocasi&otilde;es em que o padr&atilde;o de vetores e matrizes simplesmente n&atilde;o funciona. Exemplos de problemas cuja solu&ccedil;&atilde;o por
+backtracking demandaria a aloca&ccedil;&atilde;o pr&eacute;via de uma quantidade absurda de mem&oacute;ria para se conseguir registrar respostas de subproblemas de forma matricial.
+<br><br>
+Fibonacci recursivo. Fibonacci n&atilde;o recursivo. Fibonacci recursivo com memoiza&ccedil;&atilde;o. 
+<br><br>
+O problema da distribui&ccedil;&atilde;o das balas pelas crian&ccedil;as por ordem de altura e sem repeti&ccedil;&atilde;o, e sem que qualquer crian&ccedil;a fique com zero balas. Abordagem recursiva. 
+Sem memoiza&ccedil;&atilde;o: desita! Com memoiza&ccedil;&atilde;o: domingo no parque! (C&oacute;digos no github.)
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+	
+<h4><font color="blue">28/05</font></h4>
+<br>
+Text searching / pattern matching.
+
+	&nbsp;<br>
+	&nbsp;<br>
+	 
+	 
+	 
+<h4><font color="blue">04/06</font></h4>
+<br>
+Bloom filters.
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+	
+	 
+<h4><font color="blue">06/06</font></h4>
+<br>
+Implementa&ccedil;&atilde;o de Bloom filters. (C&oacute;digo no github.)
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+
+<h4><font color="blue">02/07</font></h4>
+<br>
+Tries. Implementa&ccedil;&atilde;o sequencial e encadeada.
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+	
+<h4><font color="blue">04/07</font></h4>
+<br>
+C&oacute;digo para tries em Java. O problema do ret&acirc;ngulo de palavras (palavras v&aacute;lidas em cada linha e em cada coluna).
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+	
+<h4><font color="blue">05/07</font></h4>
+<br>
+Fechamento do c&oacute;digo para o problema do ret&acirc;ngulo de palavras. (C&oacute;digo no github.)
+<br>
+Foi f&aacute;cil perceber que:
+<br>
+1) Sem a otimiza&ccedil;&atilde;o de podar a busca t&atilde;o logo seja inserida uma palavra que gere prefixos invalidos, o programa rodaria &quot;para sempre&quot;.
+<br>
+2) Fazendo a otimiza&ccedil;&atilde;o, mas implementando a verifica&ccedil;&atilde;o dos prefixos atrav&eacute;s de uma varredura 
+de toda a lista de palavras do tamanho desejado para testar se alguma delas possui aquele prefixo (m&eacute;todo testaPrefixoPorSubstringNoArrayList),
+o programa passa a rodar em tempo razo&aacute;vel (15-20 segundos).
+<br>
+3) Implementando a verifica&ccedil;&atilde;o dos prefixos usando tries (m&eacute;todo testaPrefixoPorTries), o programa roda instantaneamente.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+
+<h4><font color="blue">09/07</font></h4>
+<br>
+Problemas: 
+<br><br>
+- &nbsp; ordena&ccedil;&atilde;o de pilha (usando qualquer coisa, usando um n&uacute;mero constante de pilhas, usando apenas duas pilhas);<br>
+- &nbsp; pilha de inteiros com push(), pop() e getMin() em tempo constante (usando qualquer coisa, usando apenas pilhas, usando apenas uma pilha de qualquer coisa, usando apenas uma pilha de inteiros);<br>
+- &nbsp; dado um array, determinar o menor subarray cuja ordena&ccedil;&atilde;o faz que o array inteiro fique ordenado.
+
+	&nbsp;<br>
+	&nbsp;<br>
+
+
+<h4><font color="blue">12/07</font></h4>
+<br>
+Problemas: 
+<br><br>
+- &nbsp; <em>external sort</em>;<br>
+- &nbsp; merge de arrays ordenados <em>A</em> e <em>B</em> in-place no array <em>A</em> (que, por hip&oacute;tese, tem espa&ccedil;o livre no final maior do que o tamanho de <em>B</em>);<br>
+- &nbsp; localiza&ccedil;&atilde;o do &quot;&iacute;ndice m&aacute;gico&quot; em array ordenado (variantes com e sem valores repetidos, ordena&ccedil;&atilde;o crescente e decrescente);<br>
+- &nbsp; busca em array ordenado de strings com espa&ccedil;os em branco inseridos em posi&ccedil;&otilde;es arbitr&aacute;rias do array;<br>
+- &nbsp; agrupamento de anagramas (via ordena&ccedil;&atilde;o e via hashing estilo <em>bucket sort</em>);<br>
+- &nbsp; maior sequ&ecirc;ncia ascendente obtida de array.<br>
+
+	&nbsp;<br>
+	&nbsp;<br>
+
+		
+<h4><font color="blue">16/07</font></h4>
+<br>
+Algoritmos modernos de ordena&ccedil;&atilde;o: introdu&ccedil;&atilde;o ao Dual Pivot Quick Sort do Java 7 (<em>Arrays.sort</em>) e coment&aacute;rios breves sobre o Tim Sort do Python.
+
+
+	&nbsp;<br>
+	&nbsp;<br>		
+		
+		<p>
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="../seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+
+		
+  </body>
+
+</html>

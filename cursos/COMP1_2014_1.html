@@ -1,0 +1,565 @@
+<html>
+
+  <head>
+    <script type="text/javascript" src="../language.js"></script>
+
+    <meta http-equiv="Content-Type"
+     content="text/html; charset=ISO-8859-1"><link type="text/css" rel="stylesheet"
+     href="../estilo.css"><title>Vin&iacute;cius Gusm&atilde;o Pereira de S&aacute;</title>
+
+  </head> 
+ 
+  <body onload="autoLanguage()">    
+
+    <h2>Computa&ccedil;&atilde;o 1&nbsp;  &#8212; &nbsp; Linguagem C &nbsp; &#8212; &nbsp;2014/1</h2>
+    
+    <p><a href="..">P&aacute;gina principal</a><br>
+                  
+<!--    <p>&nbsp;</p>  -->
+
+    <div><h3>Informa&ccedil;&otilde;es</h3></div>
+    
+    <ul>
+     
+       <li>   <div>Local: LEP-1 (&agrave;s 2as) e sala F2-029 (&agrave;s 4as e 6as).<br>
+                        Hor&aacute;rio: das 8h &agrave;s 10h.<br>
+                        In&iacute;cio: 10 de fevereiro de 2014.<br>
+                        
+                        <br>
+       <li>                 Reposit&oacute;rio do c&oacute;digo criado em sala de aula: <br><a target="_blank" href="https://github.com/vigusmao/Comp1_2014_1">https://github.com/vigusmao/Comp1_2014_1</a>
+                       <br><br>
+<!--                        
+                       Ementa:<br>
+                       - &nbsp; Introdu&ccedil;&atilde;o &agrave; programa&ccedil;&atilde;o em linguagem C<br>
+                    <br><br>
+-->                       
+     <li>                   <font color="black"><b>N&atilde;o haver&aacute; aula nos seguintes dias</b>:<br>
+                            - &nbsp; 07/03, sexta-feira (recesso oficial da UFRJ)<br>
+                            - &nbsp; 09/04, quarta-feira (QCon 2014)<br>
+                            - &nbsp; 11/04, sexta-feira (QCon 2014)                
+                        <br><br>
+<!--                        
+                        <font color="black">Aulas extras (d&uacute;vidas):<br>
+                            - &nbsp; 11/10, &agrave;s 13h, na sala F2-030<br>
+                            - &nbsp; 27/11, &agrave;s 12h, na sala F2-030<br>
+                            - &nbsp; 10/12, &agrave;s 8h, na sala F2-030
+                            
+                        <br><br>
+-->                        
+                                                
+         <li>               <font color="black">Provas:<br>
+                            - &nbsp; <a href="../listas/C_P1_2014_1.pdf" target="_blank">P1</a>: 26/03<br>
+                            - &nbsp; <a href="../listas/C_P2_2014_1.pdf" target="_blank">P2</a>: 21/05<br>
+                            - &nbsp; <a href="../listas/C_PF_2014_1.pdf" target="_blank">PF</a>: 30/05<br>
+                            - <font color="red">&nbsp; SEGUNDA CHAMADA (apenas para quem perdeu alguma prova): SEXTA-FEIRA, 06/06</font>
+                        <br><br>
+                        
+                        
+        <li>                <font color="blue"><b>Veja <a target="_blank" href="https://docs.google.com/spreadsheets/d/1XiwDELKK9N5jJ4f2V0QBmask-xhREPtFpzqPz7REgE4/edit#gid=0">aqui</a> 
+                        as m&eacute;dias (ap&oacute;s a PF).</a></b></font>
+                        
+                                 
+                        <br><br>
+                                       
+         <li>               M = (P1 + P2) / 2 &ge; 6.0 --> aprova&ccedil;&atilde;o direta; <br>
+                        do contr&aacute;rio, MF = (M + PF) / 2 &ge; 5.0 --> aprova&ccedil;&atilde;o; <br>
+                        MF < 5.0 --> reprova&ccedil;&atilde;o.
+                        <br>
+                       
+                        <br>
+          <li>              Slides do Prof. Adriano Cruz <a target="_blank" href="http://equipe.nce.ufrj.br/adriano/c/transparencias.htm">aqui</a>.
+                        <br><br> 
+                        
+          <li>              Blbliografia sugerida (tamb&eacute;m da p&aacute;gina do Prof. Adriano) <a target="_blank" href="http://equipe.nce.ufrj.br/adriano/c/bibliogr.htm">aqui</a>.
+                        <br><br>
+                        
+           <li> Material de apoio:             <br>
+                        <a target="_blank" href="http://pw1.netcom.com/~tjensen/ptr/pointers.htm">Tutorial online sobre arrays e ponteiros em C</a>.<br>
+                        <a target="_blank" href="../listas/C_Lista1.pdf">Lista de exerc&iacute;cios</a>.
+                        
+   </ul>                     
+                        
+                        
+                    
+          
+                        <br>    
+                        
+ 
+<div><h3>Conte&uacute;do das aulas</h3></div>
+		
+
+<h4><font color="blue">10/02</font></h4>
+<br>
+Laborat&oacute;rio: conversa inicial sobre o curso.<br>
+Ambiente de programa&ccedil;&atilde;o: usar uma IDE (CodeBlocks, Dev C etc.) ou compilar diretamente um arquivo com o c&oacute;digo via linha de comando (modo Terminal).
+
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+
+<h4><font color="blue">12/02</font></h4>
+<br>
+O que &eacute; programar um computador? Que tipos de a&ccedil;&otilde;es um computador &quot;sabe&quot; executar?
+<br><br>
+Um primeiro exemplo de programa: calculando a m&eacute;dia do aluno e exibindo a nota necess&aacute;ria para aprova&ccedil;&atilde;o na Prova Final.
+
+
+	&nbsp;<br>
+	&nbsp;<br>
+
+
+<h4><font color="blue">14/02</font></h4>
+<br>
+Vari&aacute;veis dos tipos <b>int</b> e <b>float</b>. Entrada e sa&iacute;da de dados via <b>printf()</b> e <b>scanf()</b>.
+<br><br>
+Exemplo de programa simples: calculando o tempo de frenagem de um ve&iacute;culo.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+
+<h4><font color="blue">17/02</font></h4>
+<br>
+Laborat&oacute;rio: c&aacute;lculo do IMC (a partir de peso e altura) e da idade da pessoa (a partir do ano de nascimento).
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+
+<h4><font color="blue">19/02</font></h4>
+<br>
+Condicionais (<b>if</b>, <b>if...else</b>) e la&ccedil;os com <b>while</b>. Operadores de compara&ccedil;&atilde;o: <b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>==</b>, <b>!=</b>.
+<br><br>
+Exemplo de programa simples: verificando se um n&uacute;mero &eacute; par ou &iacute;mpar.<br>
+Outro exemplo: imprimindo todos os n&uacute;meros em um intervalo.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+	
+<h4><font color="blue">21/02</font></h4>
+<br>
+Operadores l&oacute;gicos: <b>&amp;&amp;</b> (and), <b>||</b> (or), <b>!</b> (not). Os comandos <b>break</b> e <b>continue</b>. La&ccedil;os infinitos.
+<br><br>
+Exemplo de programa simples: imprimindo todos os n&uacute;meros de 1 a 100, mas pulando os m&uacute;ltiplos de 5.<br> 
+Outro exemplo: imprimindo o maior n&uacute;mero digitado pelo usu&aacute;rio, parando de ler no primeiro n&uacute;mero negativo.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+
+
+<h4><font color="blue">24/02</font></h4>
+<br>
+Laborat&oacute;rio: programa para testar se um n&uacute;mero &eacute; primo; programa para imprimir os divisores de um n&uacute;mero; 
+<a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/numeros_perfeitos.c" target="_blank">programa para encontrar n&uacute;meros perfeitos</a>
+(que s&atildeo aqueles n&uacute;meros <em>x</em> cujos divisores pr&oacute;prios somam <em>x</em>).
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+
+<h4><font color="blue">26/02</font></h4>
+<br>
+Fun&ccedil;&otilde;es. O comando <b>return</b>.
+<br>
+Exemplo: fun&ccedil;&atilde;o para calcular o fatorial de um n&uacute;mero.
+<br>Exemplo de fun&ccedil;&atilde;o chamando fun&ccedil;&atilde;o: c&aacute;lculo da combina&ccedil;&atilde;o de <em>n</em>, <em>p</em> a <em>p</em>.
+<br>
+C&oacute;digo feito em sala de aula no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/fatorial.c" target="_blank">GitHub</a>.
+
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">10/03</font></h4>
+<br>
+Laborat&oacute;rio: gera&ccedil;&atilde;o de n&uacute;meros pseudo-aleat&oacute;rios: <b>rand()</b> e <b>srand(time(NULL))</b>.<br> 
+Jogo &quot;Adivinhe o N&uacute;mero&quot;.
+<br>
+Sugest&atilde;o de solu&ccedil;&atilde;o no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/adivinhe_o_numero.c" target="_blank">GitHub</a>.
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+
+<h4><font color="blue">12/03</font></h4>
+<br>
+Simula&ccedil;&otilde;es usando n&uacute;meros pseudo-aleat&oacute;rios.
+<br>
+Exemplo: c&aacute;lculo aproximado do valor esperado de uma vari&aacute;vel aleat&oacute;ria.<br>
+Outro exemplo: Jogo &quot;Trio vs. Dois Pares Seguidos&quot; (utilizando fun&ccedil;&atilde;o que retorna o resultado obtido no lan&ccedil;amento de um dado honesto ou desonesto).
+<br>
+C&oacute;digo feito em sala de aula no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/trio_vs_dois_pares_seguidos.c" target="_blank">GitHub</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">14/03</font></h4>
+<br>
+La&ccedil;o com <b>for</b>.
+<br>
+Exemplo: c&aacute;lculo aproximado de Pi pelas s&eacute;ries de Gregory-Leibniz
+e de Nilakantha.
+<br>
+C&oacute;digo feito em sala de aula no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/pi.c" target="_blank">GitHub</a>.
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">17/03</font></h4>
+<br>
+Laborat&oacute;rio: fun&ccedil;&otilde;es e o uso do <em>for</em> em um estudo sobre a <a href="http://en.wikipedia.org/wiki/Collatz_conjecture" target="_blank">Conjectura de Collatz</a>.
+<br>
+Sugest&atilde;o de solu&ccedil;&atilde;o no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/3n_plus_1.c" target="_blank">GitHub</a>.
+
+   &nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">19/03</font></h4>
+<br>
+Revis&atilde;o r&aacute;pida de tudo.
+<br>
+Novas estruturas de controle: <b>do...while</b>, <b>switch</b> e o comando tern&aacute;rio <b>__?__:__</b>.
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">21/03</font></h4>
+<br>
+Fun&ccedil;&otilde;es que nada retornam: <b>void</b>.
+<br>
+Ex.: <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/piramide.c" target="_blank">pir&acirc;mides de caracteres</a>.
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+	
+<h4><font color="blue">24/03</font></h4>
+<br>
+Laborat&oacute;rio: o problema do rob&ocirc;. 
+<br><br>
+Um rob&ocirc; pode se deslocar uma unidade de dist&acirc;ncia por vez sobre uma superf&iacute;cie unidimensional (i.e., uma reta). 
+Sobre essa mesma superf&iacute;cie, h&aacute; um objeto que o rob&ocirc; precisa encontrar. O rob&ocirc; n&atilde;o sabe se o objeto est&aacute; &agrave;
+sua esquerda ou &agrave; sua direita. Queremos uma estrat&eacute;dia para o rob&ocirc; encontrar o objeto. Fa&ccedil;a passo-a-passo os seguintes exerc&iacute;cios:
+<br><br>
+1) Escreva uma fun&ccedil;&atilde;o que recebe como par&acirc;metros a posi&ccedil;&atilde;o do rob&ocirc; (entre 1 e 80) 
+e a posi&ccedil;&atilde;o do objeto (entre 1 e 80), e que desenha na tela, utilizando caracteres, a situa&ccedil;&atilde;o. 
+Mostre cada uma das posi&ccedil;&otilde;es do segmento de reta entre 1 e 80. Use caracteres &quot;_&quot;
+para posi&ccedil;&otilde;es vazias, &quot;R&quot; para o rob&ocirc; e &quot;O&quot; para o objeto. Se ambos, rob&ocirc; e objeto, estiverem na mesma posi&ccedil;&atilde;o,
+represente-a por um &quot;*&quot;.
+<br><br>
+Exemplo: desenhar(40, 60)
+<br>
+_______________________________________R___________________O____________________
+<br><br>
+2) Escreva uma fun&ccedil;&atilde;o que sorteia uma posi&ccedil;&atilde;o para o objeto entre 20 e 60.
+<br><br>
+3) Escreva uma fun&ccedil;&atilde;o para aguardar uma determinada quantidade de segundos, que &eacute; passada como par&acirc;metro.
+<br><br>
+4) Escreva uma fun&ccedil;&atilde;o que ilustra o movimento do rob&ocirc;, passo a passo em linha reta, desde uma posi&ccedil;&atilde;o inicial at&eacute; uma posi&ccedil;&atilde;o final. 
+Sua fun&ccedil;&atilde;o deve receber como par&acirc;metros as posi&ccedil;&otilde;es inicial e final do rob&ocirc;, e tamb&eacute;m a posi&ccedil;&atilde;o do objeto.
+Utilize a fun&ccedil;&atilde;o criada no exerc&iacute;cio 1 para mostrar a situa&ccedil;&atilde;o ap&oacute;s cada movimento do rob&ocirc;. A cada passo,
+aguarde um segundo antes de mostrar o pr&oacute;ximo passo.<br>
+Obs.: Se o rob&ocirc;, em algum momento, encontrar o objeto, ele deve parar. Nesse caso, a fun&ccedil;&atilde;o deve retornar 1. Do contr&aacute;rio, deve retornar 0.
+<br><br>
+Exemplo: mover(40, 43, 60)
+<br>
+_______________________________________R___________________O____________________<br>
+________________________________________R__________________O____________________<br>
+_________________________________________R_________________O____________________<br>
+__________________________________________R________________O____________________<br>
+<br><br>
+5) Escreva um programa para simular uma estrat&eacute;gia em zigue-zague do rob&ocirc;, que deve sair da posi&ccedil;&atilde;o inicial 40 e encontrar o objeto numa posi&ccedil;&atilde; esolhida aleatoriamente 
+pela fun&ccedil;&atilde;o criada no exerc&iacute;cio 2. Fa&ccedil;a um zigue-zague em que os passos crescem segundo uma progress&atilde;o aritm&eacute;tica. Utilize a fun&ccedil;&atilde;o do exerc&iacute;cio 4 para ilustrar todo o movimento do rob&ocirc;. 
+<br><br>
+Sugest&atilde;o de solu&ccedil;&atilde;o no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/robo.c" target="_blank">GitHub</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+	
+<h4><font color="blue">26/03</font></h4>
+<br>
+Primeira prova.
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">28/03</font></h4>
+<br>
+Resolu&ccedil;&atilde;o da primeira prova em sala de aula.
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">31/03</font></h4>
+<br>
+Laborat&oacute;rio: finaliza&ccedil;&atilde;o do problema do rob&ocirc;. Zigue-zague aritm&eacute;tico e geom&eacute;trico com contagem do n&uacute;mero de passos.
+<br>
+Sugest&atilde;o de solu&ccedil;&atilde;o no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/robo2.c" target="_blank">GitHub</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+	
+
+<h4><font color="blue">02/04</font></h4>
+<br>
+<em>Arrays</em>. Arrays est&aacute;ticos.
+<br><br>
+Ex.1: c&aacute;lculo do desvio padr&atilde;o das idades dos alunos da turma.
+<br><br>
+Ex.2: o problema dos arm&aacute;rios. H&aacute; <em>n</em> arm&aacute;rios numerados de 1 a <em>n</em> no vesti&aacute;rio de uma escola, e <em>n</em> alunos na escola. 
+Os arm&aacute;rios est&atilde;o todos fechados, inicialmente. O aluno <em>i</em>, para <em>i</em> de 1 a <em>n</em>, muda o estado (aberto/fechado) de todos os arm&aacute;rios
+cujo n&uacute;mero seja m&uacute;ltiplo de <em>i</em>. Que arm&aacute;rios estar&atilde;o abertos no final?
+<br>
+C&oacute;digo feito em sala de aula no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/armarios.c" target="_blank">GitHub</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+
+<h4><font color="blue">04/04</font></h4>
+<br>
+O tipo <b>char</b>. Arrays de caracteres (<em>strings</em>). Algumas fun&ccedil;&otilde;es da biblioteca &lt;string.h&gt; para manipular strings: strlen(), strcpy(), strcat(), strcmp().
+<br>
+Ex.: Contando o n&uacute;mero de ocorr&ecirc;ncias de um caracter numa string.
+<!--C&oacute;digo feito em sala de aula no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/armarios.c" target="_blank">GitHub</a>.-->
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+	
+<h4><font color="blue">07/04</font></h4>
+<br>
+Laborat&oacute;rio.
+
+<br><br>
+
+Problema 1: escreva um programa que l&ecirc; dois arrays de inteiros positivos digitados pelo usu&aacute;rio (um inteiro por vez seguido de &lt;enter&gt;, zero para terminar cada array) e depois imprime a interse&ccedil;&atilde;o dos dois arrays. (Exemplo de aplica&ccedil;&atilde;o: determinar os &quot;amigos em comum&quot; de usu&aacute;rios do Facebook).
+<br><br>
+Problema 2: escreva um programa que l&ecirc; o nome do usu&aacute;rio e depois o escreve de tr&aacute;s para frente.
+<br><br>
+Problema 3: escreva um programa que l&ecirc; uma palavra digitada pelo usu&aacute;rio e depois a escreve na &quot;l&iacute;ngua do P&quot;. Ex.: boneco --&gt; boponepecopo, melancia --&gt; mepelapancipiapa, cachorro --&gt;capachoporropo.
+<br><br>
+Para casa os problemas a seguir:
+<br><br>
+Problema 4: leia um array de n&uacute;meros e os apresente em ordem crescente.
+<br><br>
+Problema 5: verifique se uma frase digitada &eacute; pal&iacute;ndroma, isto &eacute;, se ela permanece a mesma quando lida de tr&aacute;s para frente (descartando espa&ccedil;os, h&iacute;fens, pontos e v&iacute;rgulas). Ex.: &quot;socorram-me, subi no onibus em marrocos.&quot
+<!--C&oacute;digo feito em sala de aula no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/armarios.c" target="_blank">GitHub</a>.-->
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">14/04</font></h4>
+<br>
+Laborat&oacute;rio: escreva um programa que l&ecirc; um array de inteiros positivos e depois imprime uma permuta&ccedil;&atilde;o aleat&oacute;ria dos 
+elementos desse array. O usu&aacute;rio deve digitar 0 para indicar o fim da entrada dos dados. Voc&ecirc; pode implementar qualquer algoritmo,
+mas um algoritmo bastante eficiente para fazer isso &eacute; o <a target="_blank" href="http://en.wikipedia.org/wiki/Fisher-Yates_shuffle">Knuth shuffle</a> 
+(tamb&eacute;m conhecido como <a target="_blank" href="http://en.wikipedia.org/wiki/Fisher-Yates_shuffle">Fischer-Yates shuffle</a>).
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">16/04</font></h4>
+<br>
+Ponteiros. Primeiras id&eacute;ias. Aritm&eacute;tica de ponteiros. A fun&ccedil;&atilde;o <b>sizeof()</b>. Rela&ccedil;&atilde;o entre ponteiros e arrays.
+<br><br>
+Os operadores <b>++</b> e <b>--</b>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">25/04</font></h4>
+<br>
+Estruturas de dados customizadas: criando suas pr&oacute;rias <b>struct</b>s. 
+<br><br>
+Exemplo: uma lista telef&ocirc;nica rudimentar. C&oacute;digo sugerido (rascunhado em sala de aula) no <a target="_blank" href="https://github.com/vigusmao/Comp1_2014_1/blob/master/lista_telefonica.c">GitHub</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+	
+<h4><font color="blue">28/04</font></h4>
+<br>
+Laborat&oacute;rio: crie uma estrutura ALUNO, com nome, email e nota. Crie uma fun&ccedil;&atilde;o para imprimir um ALUNO. Instancie duas dessas estruturas. Imprima-as. 
+Copie uma estrutura na outra, usando atribui&ccedil;&atilde;o. Imprima-as novamente. Modifique uma delas. Imprima-as novamente e perceba o que aconteceu. Agore crie uma fun&ccedil;&atilde;o que recebe um array
+de ALUNOs, encontra a m&eacute;dia das notas desses alunos, e imprime os dados do melhor e do pior aluno.
+<br><br>
+Sugest&atilde;o de c&oacute;digo (sem os testes iniciais) no <a target="_blank" href="https://github.com/vigusmao/Comp1_2014_1/blob/master/alunos.c">GitHub</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+<h4><font color="blue">30/04</font></h4>
+<br>
+Sintaxe alternativa para structs: o comando <b>typedef</b>.<br><br>
+Ex.:
+<br><br>
+&nbsp;&nbsp;typedef struct {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char nome[30];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int DRE;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float CR;<br>
+&nbsp;&nbsp;} ALUNO;
+<br><br>
+
+Ponteiros para estruturas. Usando <em>estrutura_ptr<b>-&gt;</b>campo</em> ao inv&eacute;s de <em>(*estrutura_ptr).campo</em>.
+<br><br>
+Alocando e desalocando mem&oacute;ria: as fun&ccedil;&otilde;es <b>malloc()</b> e <b>free()</b>. <br>
+Duas maneiras de se fazer um ponteiro apontar para uma regi&atilde;o v&aacute;lida de mem&oacute;ria: (1) copiando para eles o endere&ccedil;o de uma vari&aacute;vel previamente declarada; ou (2) alocando mem&oacute;ria.
+<br><br>
+Alocando mem&oacute;ria dinamicamente para arrays.<br><br>
+C&oacute;digo feito em sala de aula no GitHub <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/malloc.c" target="_blank">aqui</a> e 
+<a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/malloc2.c" target="_blank">aqui</a>. 
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+<h4><font color="blue">05/05</font></h4>
+<br>
+Laborat&oacute;rio: escreva um programa para fatorar um inteiro.<br>
+Sugest&atilde;o de solu&ccedil;&atilde;o no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/fatoracao.c" target="_blank">GitHub</a>.
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">07/05</font></h4>
+<br>
+Outras diferen&ccedil;as entre aloca&ccedil;&atilde;o est&aacute;tica e din&acirc;mica de arrays.<br>
+Arrays e ponteiros como par&acirc;metros de fun&ccedil;&otilde;es e como valores de retorno de fun&ccedil;&otilde;es.<br>
+Duas escolas: (1) aloca&ccedil;&atilde;o de mem&oacute;ria feita dentro de uma fun&ccedil;&atilde;o, que retorna o endere&ccedil;o, e desaloca&ccedil;&atilde;o
+feita pelo chamador; (2) [MELHOR] aloca&ccedil;&atilde;o e desaloca&ccedil;&atilde;o de mem&oacute;ria feita pelo chamador, que passa o endere&ccedil;o para a fun&ccedil;&atilde;o, fun&ccedil;&atilde;o
+esta que <em>preencher&aacute;</em> o array, n&atilde;o retornando nada (void).
+<br><br>
+Exemplo: fun&ccedil;&atilde;o que computa os divisores de um n&uacute;mero.
+<br><br>
+C&oacute;digo feito em sala de aula no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/divisores.c" target="_blank">GitHub</a>.
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+
+<h4><font color="blue">09/05</font></h4>
+<br>
+Revis&atilde;o sobre estruturas, arrays, ponteiros, aloca&ccedil;&atilde;o est&aacute;tica e din&acirc;mica.
+<br><br>
+Arrays multidimensionais (matrizes). Ponteiros para ponteiros.
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">12/05</font></h4>
+<br>
+Laborat&oacute;rio. Implementa&ccedil;&atilde;o de matrizes usando aloca&ccedil;&atilde;o est&eacute;tica e din&acirc;mica. Crie uma matriz T
+para representar os tempos dos carros de uma corrida de F&oacute;rmula 1 a cada volta. A c&eacute;lula <em>T[i][j]</em> armazenar&aacute; o tempo do carro <em>i</em> na volta <em>j</em>.
+Crie uma fun&ccedil;&atilde;o que recebe uma matriz de tempos como par&acirc;metro e imprime o tempo da volta mais r&aacute;pida e o carro que fez esse tempo.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">14/05</font></h4>
+<br>
+N&atilde;o houve aula em fun&ccedil;&atilde;o da greve dos &ocirc;nibus.
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">16/05</font></h4>
+<br>
+Compilando e executando um programa via linha de comando (terminal).
+<br>
+Redirecionando entrada e sa&iacute;da para arquivos.
+<br>
+Vari&aacute;veis globais (e o porqu&ecirc; de n&atilde;o devermos us&aacute;-las, salvo em rar&iacute;ssimos casos).
+<br>
+Primeiras no&ccedil;&otilde;es de recurs&atilde;o. Exemplos: fatorial, Fibonacci.
+<br><br>
+C&oacute;digo feito em sala de aula (fibonnaci recursivo e n&atilde;o-recursivo) no <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/recursao.c" target="_blank">GitHub</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">19/05</font></h4>
+<br>
+Laborat&oacute;rio. Resolu&ccedil;&atilde;o da <a target="_blank" href="../listas/C_Lista1.pdf">lista</a>.
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">21/05</font></h4>
+<br>
+Revis&atilde;o para a prova. Dicas para input/output de strings.
+<br><br>
+// flush do buffer do teclado<br>
+void flush() {<br>
+&nbsp;&nbsp;&nbsp;    while (fgetc(stdin) == EOF);<br>
+}<br>
+<br>
+// substitui o \n final por um 0 (indicador de terminacao)<br>
+void remove_linebreak(char* string) {<br>
+&nbsp;&nbsp;&nbsp;    if (string[strlen(string)-1] == '\n') {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        string[strlen(string)-1] = 0;<br>
+&nbsp;&nbsp;&nbsp;    }<br>
+}<br>
+<br>
+PS.: O flush &eacute; desej&aacute;vel ap&oacute;s uma leitura do stdin via scanf(), pois o scanf() n&atilde;o consome os '\n' que possam l&aacute; estar.
+<br>
+PS.2: O fgets(), por sua vez, consome os '\n' e os coloca no fim do array de caracteres. Pode ser interessante, portanto, substitu&iacute;-los por caracteres \0 (indicadores de termina&ccedil;&atilde;o).
+<br><br>
+C&oacute;digo feito em sala de aula no GitHub <a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/cidades.c" target="_blank">aqui</a> (arrays, ponteiros, estruturas, strings) e 
+<a href="https://github.com/vigusmao/Comp1_2014_1/blob/master/matriz.c" target="_blank">aqui</a> (arrays multidimensionais din&acirc;micos). 
+&nbsp;<br>
+&nbsp;<br>	
+
+
+<h4><font color="blue">23/05</font></h4>
+<br>
+Segunda prova.
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">26/05</font></h4>
+<br>
+Resolu&ccedil;&atilde;o da segunda prova no laborat&oacute;rio.
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+<h4><font color="blue">30/05</font></h4>
+<br>
+Prova final.
+
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+
+	<p>
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="../seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+
+
+
+	
+  </body>
+
+</html>
