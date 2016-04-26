@@ -19,7 +19,7 @@
 
     <div><h3>Informa&ccedil;&otilde;es</h3></div>
     
-        <div><!--Local: Sala <del>F2-021</del> F2-030 do CCMN.<br>-->
+        <div>Local: Sala <del>F2-022</del> F3-003 do CCMN.<br>
                         Hor&aacute;rio: 3as e 5as, das 8h &agrave;s 10h.<br>
                         In&iacute;cio: 5 de abril de 2016.<br>
                         
@@ -105,11 +105,103 @@
 
 <h4><font color="blue">05/04</font></h4>
 <br>
+Introdu&ccedil;&atilde;o &agrave; Combinat&oacute;ria. Princ&iacute;pio multiplicativo (Princ&iacute;pio Fundamental da Contagem). 
+Decis&otilde;es sequenciadas no tempo. Permuta&ccedil;&otilde;es simples. Recomenda&ccedil;&atilde;o geral: come&ccedil;ar pelas restri&ccedil;&otilde;es.
+T&eacute;cnica da parti&ccedil;&atilde;o (resolvendo as situa&ccedil;&otilde;es do tipo &quot;depende!&quot;).
+T&eacute;cnica da complementa&ccedil;&atilde;o 
+(relaxamento de restri&ccedil&otilde;es seguido da subtra&ccedil;&atilde;o da quantidade de elementos indesejados).
+<br><br>
+Problema 1: Quantas ta&ccedil;as de sorvete (uma bola de sorvete, uma cobertura) distintas s&atilde;o oferecidas
+em uma sorveteria que disp&otilde;e de 30 sabores de sorvete e de 4 tipos de cobertura?
+<br><br>
+Problema 2: De quantas maneiras distintas podemos estacionar 3 carros em 3 vagas de garagem (um carro por vaga)? 
+<br><br>
+Problema 3: De quantas maneiras podem se sentar ao redor de uma mesa redonda 5 pessoas (A, B, C, D e E) de forma que duas delas (A e B) n&atilde;o fiquem lado a lado?
+<br><br>
+Problema 4: De quantas maneiras podem se posicionar em linha 7 pessoas (A, B, C, D, E, F e G) de forma que duas delas (A e B) n&atilde;o fiquem lado a lado?
+<br><br>
+Problema 5: De quantas maneiras podem se posicionar em linha 7 pessoas de forma que duas delas (digamos, A e B) <em>fiquem</em> lado a lado?
 
 	&nbsp;<br>
 	&nbsp;<br>
 
+<h4><font color="blue">07/04</font></h4>
+<br>
 
+Os dois testes b&aacute;sicos:<br><br>
+1) Cada elemento do conjunto que me interessa pode ser obtido pela sequ&ecirc;ncia de decis&otilde;es que foi escolhida? 
+(Resposta esperada: SIM!) <br>
+2) &Eacute; poss&iacute;vel obter um mesmo elemento atrav&eacute;s de escolhas <em>diferentes</em> ao longo da sequ&ecirc;ncia escolhida?
+(Resposta esperada: N&Atilde;O!)
+Se um dos testes falhar, &eacute; preciso definir uma outra sequ&ecirc;ncia de decis&otilde;es, ou usar alguma t&eacute;cnica auxiliar.
+<br><br>
+
+Problema 6: Se dispomos de 5 tintas de cores distintas, de quantas maneiras podemos pintar uma bandeira que possui 3 faixas
+verticais?
+<br>
+Problema 7: E se as faixas precisarem ser pintadas cada qual com um cor distinta das outras?
+<br>
+Problema 8: Novamente, se dispomos de 5 tintas diferentes (uma das quais &eacute; a cor verde) e uma bandeira de 3 faixas, 
+de quantas maneiras podemos pintar a bandeira <b>com cores distintas</b>
+garantindo que pelo menos uma das faixas receba a cor verde?
+<br>
+Problema 9: E como ficaria o problema anterior se <b>n&atilde;o</b> houvesse a exig&ecirc;ncia de que as cores das faixas fossem todas distintas?
+<br><br>
+Perceba que no Problema 9 a maneira mais intuitiva (para muitos) de raciocinar -- que seria aquela pela qual
+come&ccedil;ar&iacute;amos escolhendo logo uma das faixas para pintarmos de verde, garantindo assim que a
+exig&ecirc;ncia fosse de imediato atendida -- leva quase com certeza
+a uma resposta errada. De fato, a sequ&ecirc;ncia de decis&otilde;es pela qual escolhemos uma faixa para pintar de verde,
+depois escolhemos uma cor qualquer para a faixa mais &agrave; esquerda que ainda est&aacute; sem cor, 
+e escolhemos finalmente uma cor qualquer para a &uacute;ltima faixa nos possibilita obter uma mesma atribui&ccedil;&atilde;o
+de cores de diversas maneiras. Por exemplo, uma bandeira com as 3 faixas pintadas de verde pode ser obtida de 3 formas diferentes
+(dependendo da faixa que escolhamos para ser pintada de verde na primeira decis&atilde;o). Duas boas maneiras de se resolver o problema 
+aqui s&atilde;o: (i) quebrar em casos, de acordo com o n&uacute;mero de faixas (1, 2 ou 3) que receber&atilde;o a cor verde
+(T&eacute;cnica da parti&ccedil;&atilde;o); ou (ii)
+contar quantas s&atilde;o todas as maneiras poss&iacute;veis de se pintar a bandeira e subtrair o n&uacute;mero de maneiras
+em que <b>nenhuma</b> faixa recebe a cor verde (T&eacute;cnica da complementa&ccedil;&atilde;o). 
+
+	&nbsp;<br>
+	&nbsp;<br>
+
+<h4><font color="blue">19/04</font></h4>
+<br>
+
+Problema 10: Quantas novas cores podem ser produzidas da mistura uniforme de 3 tintas de cores distintas escolhidas de um total de 4 cores distintas de tintas?
+<br><br>
+
+Nos casos em que elementos s&atilde;o contados repetidas vezes de maneira uniforme, isto &eacute;, <em>cada elemento</em>
+&eacute; contado exatamente o mesmo n&uacute;mero de vezes, podemos ignorar inicialmente essa redund&acirc;ncia e 
+dividir no final pelo n&uacute;mero de vezes em que cada elemento &eacute; contado, isto &eacute;, pela quantidade de caminhos
+na &aacute;rvore de decis&otilde;es que levam a um &uacute;nico dos elementos em que estamos interessados.
+
+<br><br>
+
+Combina&ccedil;&atilde;o de <em>n</em> elementos, <em>p</em> a <em>p</em>.
+F&oacute;rmula deduzida. Combina&ccedil;&otilde;es complementares.
+
+<br><br>
+
+Problema 11: Quantas comiss&otilde;es distintas de 6 alunos poder&iacute;amos formar em uma turma de 30 alunos?
+<br>
+Problema 12: Quantas comiss&otilde;es distintas de 3 alunos e 3 alunas poder&iacute;amos formar em uma turma de 20 alunos e 10 alunas?
+<br><br>
+
+Combina&ccedil;&otilde;es completas. A t&eacute;cnica dos &quot;separadores&quot;.
+<br><br>
+
+Problema 13: De quantas maneiras podemos guardar 10 bolas-de-gude id&eacute;nticas se dispomos de 5 latas distintas?
+<br>
+Problema 14: E se n&atilde;o quisermos deixar latas vazias?
+
+
+	&nbsp;<br>
+	&nbsp;<br>
+
+<h4><font color="blue">26/04</font></h4>
+<br>
+
+	&nbsp;<br>
+	&nbsp;<br>
 
 		<p>
         <a href=#><img title="Voltar ao topo" style="height: 35px" src="../seta_voltar.jpeg" alt="Voltar ao topo" ></a>
