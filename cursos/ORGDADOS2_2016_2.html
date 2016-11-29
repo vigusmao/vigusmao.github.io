@@ -34,12 +34,15 @@
                        - &nbsp; Segment trees;<br>
 		       - &nbsp; Lowest Common Ancestor;<br>                       
                        - &nbsp; Disjoint sets (Union/Find);<br>
-                       - &nbsp; String matching;<br>
+                       - &nbsp; String matching (Rabin-Karp, KMP);<br>
 		       - &nbsp; Treaps;<br>
 		       - &nbsp; Interval trees;<br>
                        - &nbsp; Fenwick trees (binary indexed trees);<br>
                        - &nbsp; SQRT-decomposition;<br>
-                       - &nbsp; Fenwick trees;
+                       - &nbsp; Bloom filters;
+                       - &nbsp; Conjunto independente m&aacute;ximo em &aacute;rvores;
+                       - &nbsp; classes P e NP; problemas NP-dif&iacute;ceis; dom&iacute;nio restrito.
+                       
 
 
                     <br><br>
@@ -75,6 +78,23 @@
                         <br>Implemente o algoritmo cl&aacute;ssico para conjuntos disjuntos, com e sem <em>union by rank</em>, com e sem <em>path compression</em>. Compare os desempenhos.
                         <br>Prazo: 26 de outubro, &agrave;s 23:59. Entrega por e-mail.
                         <br><br> 
+                        
+                        <font color="red">Terceiro trabalho</font>: 
+                        <br>Ret&acirc;ngulo de palavras: dada uma lista de palavrasv&aacute;lidas, encontre o maior ret&acirc;ngulo de caracteres 
+                        que exiba exatamente uma palavra v&aacute;lida em cada linha (ocupando toda a linha) 
+                        e em cada coluna (ocupando toda a coluna).
+                        <br>Estenda a solu&ccedil;&atilde; do problema do ret&acirc;ngulo de palavras (c&oacute;digo no github), ou implemente <em>from scratch</em>.
+<br>Observe que:
+1) Sem a otimiza&ccedil;&atilde;o de podar a busca t&atilde;o logo seja inserida uma palavra que gere prefixos invalidos, o programa rodaria &quot;para sempre&quot;.
+<br>
+2) Fazendo a otimiza&ccedil;&atilde;o (poda), mas implementando a verifica&ccedil;&atilde;o dos prefixos atrav&eacute;s de uma varredura 
+de toda a lista de palavras do tamanho desejado para testar se alguma delas possui aquele prefixo (m&eacute;todo testaPrefixoPorSubstringNoArrayList),
+o programa passa a rodar em tempo razo&aacute;vel.
+<br>
+3) Implementando a verifica&ccedil;&atilde;o dos prefixos usando tries (m&eacute;todo testaPrefixoPorTries), o programa roda instantaneamente. Sobre essa parte, nada foi feito em sala de aula.
+                        <br>Prazo: 6 de dezembro, &agrave;s 23:59. Entrega por e-mail.
+                        <br><br> 
+
 
 <!--                        
                         <font color="red">Terceiro trabalho</font>: 
@@ -165,7 +185,7 @@ Segment trees. M&eacute;todo generaliz&aacute;vel para problemas de Range Querie
 
 	
 	
-<h4><font color="blue">04/09</font></h4>
+<h4><font color="blue">04/10</font></h4>
 <br>
 Lowest Common Ancestor. Algoritmo linear (offline) de Tarjan.<br>
 <br>
@@ -176,7 +196,7 @@ Disjoint sets (Union/Find).
 	
 	  
 
-<h4><font color="blue">11/09</font></h4>
+<h4><font color="blue">11/10</font></h4>
 
 String searching. Rabin-Karp, Knuth-Morris-Pratt.<br>
 Bloom filters.
@@ -185,7 +205,7 @@ Bloom filters.
 	&nbsp;<br>
 	
 
-<h4><font color="blue">25/09</font></h4>
+<h4><font color="blue">25/10</font></h4>
 
 Complexidade do KMP. Indexa&ccedil;&atilde;o de documentos via Bloom filters usando tuplas
 de caracteres cont&iacute;guos como elementos.<br><br>
@@ -195,6 +215,33 @@ de caracteres cont&iacute;guos como elementos.<br><br>
 	&nbsp;<br>
 	&nbsp;<br>
 
+
+
+<h4><font color="blue">01/11</font></h4>
+
+Classes P e NP. Problemas NP-dif&iacute;ceis. Dom&iacute;nio restrito.
+<br>
+Ex.: conjunto independente m&aacute;ximo em &aacute;rvores (o problema da festa da empresa).
+	&nbsp;<br>
+	&nbsp;<br>
+
+
+
+
+<h4><font color="blue">08/11</font></h4>
+
+    Tries. O problema do ret&acirc;ngulo de palavras.
+    
+	&nbsp;<br>
+	&nbsp;<br>
+
+
+<h4><font color="blue">22/11</font></h4>
+
+    Fenwick trees. Treaps.
+
+	&nbsp;<br>
+	&nbsp;<br>
 	
 		<p>
         <a href=#><img title="Voltar ao topo" style="height: 35px" src="../seta_voltar.jpeg" alt="Voltar ao topo" ></a>
