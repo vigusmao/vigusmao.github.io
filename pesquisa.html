@@ -7,7 +7,7 @@
     <script type="text/javascript" src="reorder.js"></script>
       
     <meta http-equiv="Content-Type"
-     content="text/html; charset=ISO-8859-1"><link type="text/css" rel="stylesheet"
+     content="text/html; charset=UTF-8"><link type="text/css" rel="stylesheet"
      href="estilo.css"><title>Vin&iacute;cius Gusm&atilde;o Pereira de S&aacute;</title>
 
   </head> 
@@ -18,7 +18,7 @@
     <h2 class="pt">Vin&iacute;cius Gusm&atilde;o Pereira de S&aacute;&nbsp;  &#8212;  &nbsp;Publica&ccedil;&otilde;es</h2>
     
           <p>
-        <img title="Vers&atilde;o em portuguÍs" src="bandeira_br.gif" alt="Vers&atilde;o em portuguÍs" style="width: 34px; height: 21px;" onclick="portuguese()" cursor="pointer" class="flag">
+        <img title="Vers&atilde;o em portugu√™s" src="bandeira_br.gif" alt="Vers&atilde;o em portugu√™s" style="width: 34px; height: 21px;" onclick="portuguese()" cursor="pointer" class="flag">
         &nbsp;&nbsp;
         <img title="English version" src="english_language_flag.jpg" alt="English version" style="width: 34px; height: 21px;" onclick="english()" class="flag">
       </p>
@@ -33,10 +33,10 @@
 
 
     <p class="pt"><a href=".">P&aacute;gina principal</a><br><br>
-                  <a href="#submetidos">Submetidos recentemente</a><br>
+                  <a href="#submetidos">Submetidos recentemente</a><br> 
                   <a href="#periodicos">Artigos em peri&oacute;dicos</a><br>
-                  <a href="#conferencias">Artigos em conferÍncias</a><br>
-                  <a href="#conferencias_resumos">Resumos em conferÍncias</a><br>                  
+                  <a href="#conferencias">Artigos em confer√™ncias</a><br>
+                  <a href="#conferencias_resumos">Resumos em confer√™ncias</a><br>                  
                   <a href="#livros">Livros, cap&iacute;tulos, monografias, outras publica&ccedil;&otilde;es</a><br>
                   <!--<a href="#limbo">No limbo: rascunhos e artigos n&atilde;o publicados</a><br>-->
 
@@ -57,15 +57,33 @@
     <ol class="reversed"> 
     
    
-      <li> <a target="_blank" href="manuscripts/dijkstra_swat.pdf"><b>Dijkstra Graphs</b></a>.&nbsp;
-        <a target="_blank" href="manuscripts/dijkstra_swat.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
-        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('swat2016')">
-        <div class="pt">Com Lucila Bento, Davidson Boccardo, Raphael Machado e Jayme Szwarcfiter.</div>
-        <div class="en">With Lucila Bento, Davidson Boccardo, Raphael Machado and Jayme Szwarcfiter.</div>
+      <li> <a target="_blank" href="manuscripts/parachuting_robots.pdf"><b>Rob&ocirc;s de paraquedas: algoritmo randomizado para rendezvous sim&eacute;trico com marcadores</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/parachuting_robots.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('parachuting_robots')">
+        <div class="pt">Com Juan Baptista.</div>
+        <div class="en">With Juan Baptista.</div>
         <div class="pt">Artigo completo submetido 
-        em fevereiro de 2016 para publica&ccedil;&atilde;o em evento.</div>	
+        em abril de 2017 para publica&ccedil;&atilde;o em evento.</div>	
         <div class="en">Full paper submitted
-        for conference publication in February, 2016.</div>	
+        for conference publication in April, 2017.</div>	
+        <p id="parachuting_robots" class="abstract">
+Two agents, starting from distinct points and unaware of the position of one another, must meet. This general setting is known in the literature as the <em>Robot Rendezvous Problem</em>. In this paper, we study the symmetric variant of the problem, whereby both agents must execute exactly the same algorithm. The space we consider is one-dimensional, and the starting points of the agents receive markers that may help them during their search. After revisiting the best known solution for the problem, we propose a randomized algorithm that presents a better performance. Furthermore, we analyse the variant in which the agents are required to return to their starting points, where the gain obtained by the randomized strategy is even more pronounced.
+<br>
+<br>
+             Dois agentes, partindo de pontos distintos e desconhecendo a localiza&ccedil;&atilde;o um do outro, precisam se encontrar. Este cen&aacute;rio geral &eacute; conhecido na literatura como o <em>Problema do Rendezvous de Rob&ocirc;s</em>. Neste artigo estudamos a variante sim&eacute;trica do problema, em que os dois agentes devem executar exatamente o mesmo algoritmo. O espa&ccedil;o considerado &eacute; unidimensional, e as posi&ccedil;&otilde;es iniciais dos agentes recebem marcadores que podem ajud&aacute;-los a se orientar durante a busca. Ap&oacute;s revisitarmos a melhor solu&ccedil;&atilde;o conhecida para o problema, propomos uma estrat&eacute;gia de busca randomizada, que apresenta desempenho superior. Analisamos tamb&eacute;m a variante em que os agentes precisam retornar a seus pontos de origem, e para a qual o ganho da estrat&eacute;gia randomizada &eacute; ainda mais acentuado.
+         </p>
+      </li>
+
+
+      <li> <a target="_blank" href="manuscripts/dijkstra_graphs.pdf"><b>Dijkstra Graphs</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/dijkstra_graphs.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('swat2016')">
+        <div class="pt">Com Lucila Bento, Davidson Boccardo, Raphael Machado, Flavio Miyazawa e Jayme Szwarcfiter.</div>
+        <div class="en">With Lucila Bento, Davidson Boccardo, Raphael Machado, Flavio Miyazawa and Jayme Szwarcfiter.</div>
+        <div class="pt">Artigo completo submetido 
+        em fevereiro de 2017 para publica&ccedil;&atilde;o em peri&oacute;dico.</div>	
+        <div class="en">Full paper submitted
+        for journal publication in February, 2017.</div>	
         <p id="swat2016" class="abstract">
              We revisit a concept that has been central in some early stages of computer science, that of 
              <em>structured programming</em>: a set of rules that an algorithm must follow in order to acquire a 
@@ -80,27 +98,7 @@
          </p>
       </li>
     
-      <li> <a target="_blank" href="manuscripts/udg-linear-journal.pdf"><b>Linear-time approximation algorithms for geometric intersection graphs</b></a>.&nbsp;
-        <a target="_blank" href="manuscripts/udg-linear-journal.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
-        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('algorithmica2014')">
-        <div class="pt">Com Guilherme Fonseca e Celina Figueiredo.</div>
-        <div class="en">With Guilherme Fonseca and Celina Figueiredo.</div>	
-        <div class="pt">Artigo completo submetido 
-        em janeiro de 2016 para publica&ccedil;&atilde;o em peri&oacute;dico.</div>	
-        <div class="en">Full paper submitted
-        for journal publication in January, 2016.</div>	
-        <p id="algorithmica2014" class="abstract">
-             Numerous approximation algorithms for problems on geometric intersection graphs have been proposed in the literature, 
-             exhibiting a sharp trade-off between running times and approximation ratios.
-			 We introduce a method to obtain linear-time constant-factor approximation algorithms for such problems. 
-			 To illustrate its applicability, we obtain results for three well-known optimization problems 
-			 on two classes of geometric intersection graphs. 
-			 Among such results, our method yields linear-time (4+&#949;)-approximations for the maximum-weight independent set 
-			 and the minimum dominating set of unit disk graphs, thus bringing dramatic performance improvements when compared to 
-			 previous algorithms that achieve the same approximation ratios. 
-         </p>
-      </li>
-   
+  
      <li> <a target="_blank" href="manuscripts/fair_exchange_DAM.pdf"><b>Partial knowledge transfer and almost fair exchange of secrets</b></a>.&nbsp;
         <a target="_blank" href="manuscripts/fair_exchange_DAM.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
         <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('FairExchangeDAM2015')">
@@ -123,30 +121,6 @@
          </p>
       </li>   
     
-      <li> <a target="_blank" href="manuscripts/watermarking_DAM.pdf"><b>On the resilience of canonical reducible permutation graphs</b></a>.&nbsp;
-        <a target="_blank" href="manuscripts/watermarking_DAM.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
-        <!--<a target="_blank" href="http://arxiv.org/abs/1204.3488"><img src="arxiv.png" alt="arXiv" title="arXiv"></a>-->
-        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('WatermarkingDAM2015')">
-        <div class="pt">Com Lucila Bento, Davidson Boccardo, Raphael Machado e Jayme Szwarcfiter.</div>
-        <div class="en">With Lucila Bento, Davidson Boccardo, Raphael Machado and Jayme Szwarcfiter.</div>	
-        <div class="pt">Artigo completo submetido 
-        <!--ao peri&oacute;dico <em>Discrete Applied Mathematics</em> -->
-        em julho de 2015 para publica&ccedil;&atilde;o em peri&oacute;dico.</div>	
-        <div class="en">Full paper submitted <!--to journal <em>Discrete Applied Mathematics</em> -->
-        for journal publication in July, 2015.</div>	
-        <p id="WatermarkingDAM2015" class="abstract">
-            An ingenious graph-based watermarking scheme recently proposed by Chroni and Nikolopoulos 
-            encodes integers as a special type of reducible permutation graphs. 
-            It was claimed without proof that those graphs can withstand attacks in the form of a single edge removal. 
-            We introduce a linear-time algorithm which restores the original graph after removals of 
-            <em>k</em> &le; 2 edges, therefore proving an even stronger result. 
-            Furthermore, we prove that <em>k</em> &le; 5 general edge modifications (removals/insertions) 
-            can always be detected in polynomial time. Both bounds are tight. 
-            Our results reinforce the interest in regarding Chroni and Nikolopoulos's scheme as a possible 
-            software watermarking solution for numerous applications.
-         </p>
-      </li>
-
 
 
       <li> <a target="_blank" href="manuscripts/watermarking_JCSS_1.pdf"><b>Full characterization of a class of graphs tailored for software watermarking</b></a>.&nbsp;
@@ -187,15 +161,56 @@
     <h4 class="pt" id="periodicos"><font color="blue">Artigos em peri&oacute;dicos</font></h4>
     
     <ol class="reversed">  
+    
+      <li> <a target="_blank" href="manuscripts/udg-linear-journal.pdf"><b>Shifting coresets: obtaining linear-time approximations for unit disk graphs and other geometric intersection graphs</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/udg-linear-journal.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('ijcga2017')">
+        <div class="pt">Com Guilherme Fonseca e Celina Figueiredo.</div>
+        <div class="en">With Guilherme Fonseca and Celina Figueiredo.</div>	
+        <div class="pt">Aceito para publica&ccedil&atilde;o no <em>International Journal of Computational Geometry &amp; Applications</em> em mar&ccedil;o de 2017.</div>	
+        <div class="en">Accepted for publication on the <em>International Journal of Computational Geometry &amp; Applications</em> in March, 2017.</div>	
+        <p id="ijcga2017" class="abstract">
+            Numerous approximation algorithms for problems on 
+            unit disk graphs 
+            have been proposed in the literature, exhibiting a sharp trade-off between running times and approximation ratios.
+            We introduce a variation of the known shifting strategy that allows us to obtain linear-time constant-factor approximation algorithms for such problems. To illustrate the applicability of the proposed variation, we obtain results for three well-known optimization problems.
+            Among such results, the proposed method yields linear-time (4+&#949;)-approximations for the maximum-weight independent set and the minimum dominating set of unit disk graphs, thus bringing significant performance improvements when compared to previous algorithms that achieve the same approximation ratios. 
+            Finally, we use axis-aligned rectangles to illustrate that the same method may be used to derive linear-time approximations for problems on other geometric intersection graph classes. 
+         </p>
+      </li>
+ 
+
+      <li> <a target="_blank" href="manuscripts/watermarking_DAM.pdf"><b>On the resilience of canonical reducible permutation graphs</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/watermarking_DAM.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
+        <a target="_blank" href="http://dx.doi.org/10.1016/j.dam.2016.09.038"><img src="doi.png" alt="DOI" title="DOI"></a>        
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('WatermarkingDAM2015')">
+        <div class="pt">Com Lucila Bento, Davidson Boccardo, Raphael Machado e Jayme Szwarcfiter.</div>
+        <div class="en">With Lucila Bento, Davidson Boccardo, Raphael Machado and Jayme Szwarcfiter.</div>	
+        <div class="pt"><em>Discrete Applied Mathematics</em>, no prelo (publicado online em novembro de 2016).</div>	
+        <div class="en"><em>Discrete Applied Mathematics</em>, to appear (published online in November, 2016).</div>	
+        <p id="WatermarkingDAM2015" class="abstract">
+            An ingenious graph-based watermarking scheme recently proposed by Chroni and Nikolopoulos 
+            encodes integers as a special type of reducible permutation graphs. 
+            It was claimed without proof that those graphs can withstand attacks in the form of a single edge removal. 
+            We introduce a linear-time algorithm which restores the original graph after removals of 
+            <em>k</em> &le; 2 edges, therefore proving an even stronger result. 
+            Furthermore, we prove that <em>k</em> &le; 5 general edge modifications (removals/insertions) 
+            can always be detected in polynomial time. Both bounds are tight. 
+            Our results reinforce the interest in regarding Chroni and Nikolopoulos's scheme as a possible 
+            software watermarking solution for numerous applications.
+         </p>
+      </li>
 
       <li> <a target="_blank" href="manuscripts/cyberphysical.pdf"><b>Software control and intellectual property protection in cyber-physical systems</b></a>.&nbsp;
         <a target="_blank" href="manuscripts/cyberphysical.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
-        <!--<a target="_blank" href="http://arxiv.org/abs/1204.3488"><img src="arxiv.png" alt="arXiv" title="arXiv"></a>-->
+        <a target="_blank" href="http://dx.doi.org/10.1186/s13635-016-0032-5"><img src="doi.png" alt="DOI" title="DOI"></a>        
+<!--        <img src="jpg.png" alt="1-page sample" title="1-page sample" class="but" onClick="toggleBlock('jpg:PO2015')">-->
         <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('cyberphysical')">
+        <img src="bibtex.png" alt="BibTeX" title="BibTeX" class="but" onClick="toggleBlock('bib:cyberphysical')">
         <div class="pt">Com Davidson Boccardo, Raphael Machado e Jayme Szwarcfiter.</div>
         <div class="en">With Davidson Boccardo, Raphael Machado and Jayme Szwarcfiter.</div>	
-        <div class="pt"><em>EURASIP Journal on Information Security</em>. no prelo (aceito em mar&ccedil;o de 2016).</div>	
-        <div class="en"><em>EURASIP Journal on Information Security</em>, to appear (accepted in March, 2016).</div>	
+        <div class="pt"><em>EURASIP Journal on Information Security</em> 2016:<b>8</b> (2016).</div>	
+        <div class="en"><em>EURASIP Journal on Information Security</em> 2016:<b>8</b> (2016).</div>	
         <p id="cyberphysical" class="abstract">
 		Software control is a critical issue in cyber-physical systems (CPS):
 		if the expected behavior of the software embedded in a single device of a CPS
@@ -213,6 +228,17 @@
 		misbehaving, misrepresenting or by prematurely aborting the protocol, therefore
 		providing a fair means to resolve disputes.
          </p>
+         <pre id="bib:cyberphysical" class="bib">
+@article{BPS2016,
+	author = {Machado, Raphael Carlos Santos and Boccardo, Davidson Rodrigo and Pereira de S{\'a}, Vin{\'i}cius Gusm{\~a}o and Szwarcfiter, Jayme Luiz},
+	title = {Software control and intellectual property protection in cyber-physical systems},
+	journal = {EURASIP Journal on Information Security},
+	volume = {2016},
+	issue = {8},
+	year = {2016},
+	doi = {10.1186/s13635-016-0032-5}
+} 
+     </pre>
       </li>
 
 
@@ -221,10 +247,11 @@
         <a target="_blank" href="http://dx.doi.org/10.1016/j.dam.2015.05.001"><img src="doi.png" alt="DOI" title="DOI"></a>
         <!--<a target="_blank" href="http://arxiv.org/abs/1204.3488"><img src="arxiv.png" alt="arXiv" title="arXiv"></a>-->
         <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('dam_lagos2013')">
+        <img src="bibtex.png" alt="BibTeX" title="BibTeX" class="but" onClick="toggleBlock('bib:radongrids')">
         <div class="pt">Com Mitre Dourado, Dieter Rautenbach e Jayme Szwarcfiter.</div>
         <div class="en">With Mitre Dourado, Dieter Rautenbach and Jayme Szwarcfiter.</div>	
-        <div class="pt"><em>Discrete Applied Mathematics</em>, no prelo (publicado online em maio de 2015).</div>	
-        <div class="en"><em>Discrete Applied Mathematics</em>, to appear (published online in May, 2015).</div>	
+        <div class="pt"><em>Discrete Applied Mathematics</em> <b>210</b> (2016), 277-283.</div>
+        <div class="en"><em>Discrete Applied Mathematics</em> <b>210</b> (2016), 277-283.</div>
         <p id="dam_lagos2013" class="abstract">
              The Radon number of a graph is the minimum integer <em>r</em> such that 
              all sets of at least <em>r</em> of its vertices can be partitioned 
@@ -239,6 +266,16 @@
              and in sublinear O(log <em>d</em>) time
              when all grid dimensions have the same size. 
          </p>
+         <pre id="bib:radongrids" class="bib">
+@article{BPS2016,
+	author = {Dourado, Mitre Costa and Rautenbach, Dieter and Pereira de S{\'a}, Vin{\'i}cius Gusm{\~a}o and Szwarcfiter, Jayme Luiz},
+	title = {Near-linear-time algorithm for the geodetic Radon number of grids},
+	journal = {Discrete Applied Mathematics},
+	volume = {210},
+	year = {2016},
+	doi = {10.1016/j.dam.2015.05.001}
+} 
+     </pre>
       </li>
  
 
@@ -250,8 +287,8 @@
         <img src="bibtex.png" alt="BibTeX" title="BibTeX" class="but" onClick="toggleBlock('bib:PO2015')">
         <div class="pt">Com Lucila Bento e Jayme Szwarcfiter.</div>
         <div class="en">With Lucila Bento and Jayme Szwarcfiter.</div>	
-        <div class="pt"><em>Pesquisa Operacional</em>, <b>35</b> 2 (2015), 1-15.</div>
-        <div class="en"><em>Pesquisa Operacional</em>, <b>35</b> 2 (2015), 1-15.</div>
+        <div class="pt"><em>Pesquisa Operacional</em> <b>35</b> 2 (2015), 1-15.</div>
+        <div class="en"><em>Pesquisa Operacional</em> <b>35</b> 2 (2015), 1-15.</div>
         <p id="PO2015" class="abstract">
              Hash tables are among the most important data structures known to mankind.
              Through hashing, the 
@@ -295,13 +332,12 @@
       <li> <a target="_blank" href="manuscripts/paper_DAM_DGA.pdf"><b>On the recognition of unit disk graphs and the Distance Geometry Problem with Ranges</b></a>.&nbsp;
         <a target="_blank" href="manuscripts/paper_DAM_DGA.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
         <a target="_blank" href="http://dx.doi.org/10.1016/j.dam.2014.08.014"><img src="doi.png" alt="DOI" title="DOI"></a>
-        <!--<a target="_blank" href="http://arxiv.org/abs/1204.3488"><img src="arxiv.png" alt="arXiv" title="arXiv"></a>-->
         <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('dam_dga')">
         <img src="bibtex.png" alt="BibTeX" title="BibTeX" class="but" onClick="toggleBlock('bib:dam_dga')">
         <div class="pt">Com Guilherme Fonseca, Celina Figueiredo e Raphael Machado.</div>
         <div class="en">With Guilherme Fonseca, Celina Figueiredo and Raphael Machado.</div>	
-        <div class="pt"><em>Discrete Applied Mathematics</em>, no prelo (publicado online em setembro de 2014).</div>	
-        <div class="en"><em>Discrete Applied Mathematics</em>, to appear (published online in September, 2014).</div>	
+        <div class="pt"><em>Discrete Applied Mathematics</em> <b>197</b> (2015), 3-19.</div>
+        <div class="en"><em>Discrete Applied Mathematics</em> <b>197</b> (2015), 3-19.</div>
         <p id="dam_dga" class="abstract">
              We introduce a method to decide whether a graph <em>G</em> admits a realization
              on the plane in which two vertices lie within unitary distance from one another exactly if they are neighbors in <em>G</em>.
@@ -322,10 +358,9 @@
 	author = {da Fonseca, Guilherme Dias and Pereira de S{\'a}, Vin{\'i}cius Gusm{\~a}o and Machado, Raphael Carlos Santos and de Figueiredo, Celina Miraglia Herrera},
 	title = {On the recognition of unit disk graphs and the Distance Geometry Problem with Ranges},
 	journal = {Discrete Applied Mathematics},
-	volume = {},
-	issue = {},
-	pages = {},
-	year = {2014},
+	volume = {197},
+	pages = {3--19},
+	year = {2015},
 	issn = {0166-218X},
 	doi = {10.1016/j.dam.2014.08.014}
 } 
@@ -760,7 +795,7 @@
 		
 
     <h4 class="en" id="conferences"><font color="blue">Papers in refereed conferences</font></h4>
-    <h4 class="pt" id="conferencias"><font color="blue">Artigos em conferÍncias</font></h4>
+    <h4 class="pt" id="conferencias"><font color="blue">Artigos em confer√™ncias</font></h4>
 	
     <ol class="reversed">
     
@@ -998,7 +1033,7 @@
         <div class="pt">Anais do <em>40&ordm; Semin&aacute;rio Integrado de Software e Hardware</em> (<a target="_blank" href="http://www.ic.ufal.br/csbc2013/noticias/semish">SEMISH'13</a>, Macei&oacute;/AL, Brasil, 23-26/07/13).</div>	
         <div class="en">Proceedings of the <em>40th Semin&aacute;rio Integrado de Software e Hardware</em> (<a target="_blank" href="http://www.ic.ufal.br/csbc2013/noticias/semish">SEMISH'13</a>), Macei&oacute;/AL, Brazil, July 23-26, 2013).</div>
         <p id="watermarking_semish" class="abstract">
-               A inserÁ„o de marcas d'&aacute;gua em programas de computador 
+               A inser√ß√£o de marcas d'&aacute;gua em programas de computador 
                objetiva a posterior identifica&ccedil;&atilde;o de sua autoria ou propriedade, 
                desencorajando a c&oacute;pia ilegal dos mesmos. Neste artigo, consideramos o esquema de 
                marcas d'&aacute;gua baseadas em grafos proposto por Chroni e Nikolopoulos 
@@ -1007,7 +1042,7 @@
                para a restaura&ccedil;&atilde;o de uma marca d'&aacute;gua da qual <em>k</em> > 0 arestas foram maliciosamente removidas. 
                Ademais, estudamos a resili&ecirc;ncia do esquema considerado diante desse tipo de ataque, 
                e apresentamos resultados computacionais evidenciando que a probabilidade de uma marca d'&aacute;gua se tornar 
-               irrecuper&aacute;vel pela remo&ccedil;&atilde;o de um n˙mero <em>k</em> fixo de arestas tende a zero &agrave; 
+               irrecuper&aacute;vel pela remo&ccedil;&atilde;o de um n√∫mero <em>k</em> fixo de arestas tende a zero &agrave; 
                medida em que o tamanho da marca d'&aacute;gua aumenta.
 <br>
 <br>
@@ -1167,7 +1202,7 @@
              busca e manipula&ccedil;&atilde;o da informa&ccedil;&atilde;o. No entanto, h&aacute; problemas que, mesmo possuindo natureza 
              bem diversa, podem ser solucionados de maneira elegante com o emprego de tabelas de dispers&atilde;o, 
              resultando em sens&iacute;vel economia de tempo e espa&ccedil;o. Este artigo ilustra o poder dessa t&eacute;cnica, 
-             tamb&eacute;m chamada <em>hashing</em>, em situa&ccedil;&atilde;es que n„o lhe s&atilde;o comumente associadas.
+             tamb&eacute;m chamada <em>hashing</em>, em situa&ccedil;&atilde;es que n√£o lhe s&atilde;o comumente associadas.
 <br>
 <br>
              The organization of data into hash tables is a well-known technique 
@@ -1201,7 +1236,7 @@
         <div class="en">With Guilherme Fonseca, Celina Figueiredo and Raphael Machado.</div>
         <div class="pt">Anais do <em>10th Workshop on Approximation and Online Algorithms</em>
         (<a href="http://www.cs.le.ac.uk/events/WAOA2012/" target="_blank">WAOA'12</a>,
-         Ljubljana, EslovÍnia, 13-14/09/12),<br>
+         Ljubljana, Eslov√™nia, 13-14/09/12),<br>
          <em>Lecture Notes in Computer Science</em> <b>7846</b> (2013), 82-92.</div>	
         <div class="en">Proceedings of the <em>10th Workshop on Approximation and Online Algorithms</em>
         (<a href="http://www.cs.le.ac.uk/events/WAOA2012/" target="_blank">WAOA'12</a>,
@@ -1446,16 +1481,33 @@
 		
 
     <h4 class="en" id="conferences_abstracts"><font color="blue">Abstracts in refereed conferences</font></h4>
-    <h4 class="pt" id="conferencias_resumos"><font color="blue">Resumos em conferÍncias</font></h4>
+    <h4 class="pt" id="conferencias_resumos"><font color="blue">Resumos em confer√™ncias</font></h4>
     <ol class="reversed">
  
+	  
+     <li> <a target="_blank" href="manuscripts/sbpo2016_resumo.pdf"><b>Cuckoo hashing com perfect rehash</b></a>.&nbsp;
+	<a target="_blank" href="manuscripts/sbpo2016_resumo.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
+        <a target="_blank" href="posters/poster_SBPO_2016.pdf"><img src="presentation.png" alt="poster" title="Poster"></a>
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('sbpo2016')">
+        <div class="pt">Com Judismar Arpini Junior.</div>
+        <div class="en">With Judismar Arpini Junior.</div>	
+        <div class="pt">Anais do <em>XLVIII Simp&oacute;sio Brasileiro de Pesquisa Operacional</em> (<a target="_blank" href="http://sbpo2016.ufes.br//">SBPO'16</a>, Vit√≥ria/ES, 27-30/09/16).</div>	
+        <div class="en">Proceedings of the <em>XLVIII Simp&oacute;sio Brasileiro de Pesquisa Operacional</em> (<a target="_blank" href="http://sbpo2016.ufes.br//">SBPO 2016</a>, Vit√≥ria/ES, Brazil, September 27-30, 2016).</div>	        
+        <p id="sbpo2016" class="abstract">
+             Apresentamos uma variante do Cuckoo Hashing tradicional em que o tempo de pior caso 
+		para a operacÃßaÃÉo de insercÃßaÃÉo eÃÅ O(sqrt(n)), ao contraÃÅrio do esquema claÃÅssico, que, 
+		embora bom na meÃÅdia, tem tempo de execucÃßaÃÉo ilimitado no pior caso. 
+        </p>        
+      </li>	    
+
+	    
       <li> <a target="_blank" href="manuscripts/GCO2016.pdf"><b>Randomized watermarks for structured programs</b></a>.&nbsp;
         <a target="_blank" href="manuscripts/GCO2016.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
         <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('gco2016')">
         <div class="pt">Com Lucila Bento, Davidson Boccardo, Raphael Machado e Jayme Szwarcfiter.</div>
         <div class="en">With Lucila Bento, Davidson Boccardo, Raphael Machado and Jayme Szwarcfiter.</div>
-        <div class="pt">Livro de abstracts do II Workshop Franco-brasileiro de Grafos e Otimiza&ccedil;&atilde;o Combinat&oacute;ria (<a href="http://www.lia.ufc.br/GCO2016/index_br.php" target="_blank">GCO'16</a>, Praia da Redonda/CE, 28/03-01/04/16).</div>	
-        <div class="en">Book of abstracts of the II Workshop Franco-brasileiro de Grafos e Otimiza&ccedil;&atilde;o Combinat&oacute;ria (<a href="http://www.lia.ufc.br/GCO2016/index_br.php" target="_blank">GCO'16</a>, Praia da Redonda/CE, 28/03-01/04/16).</div>	
+        <div class="pt">Livro de abstracts do <em>II Workshop Franco-brasileiro de Grafos e Otimiza&ccedil;&atilde;o Combinat&oacute;ria</em> (<a href="http://www.lia.ufc.br/GCO2016/index_br.php" target="_blank">GCO'16</a>, Praia da Redonda/CE, 28/03-01/04/16).</div>	
+        <div class="en">Book of abstracts of the <em>II Workshop Franco-brasileiro de Grafos e Otimiza&ccedil;&atilde;o Combinat&oacute;ria</em> (<a href="http://www.lia.ufc.br/GCO2016/index_br.php" target="_blank">GCO'16</a>, Praia da Redonda/CE, 28/03-01/04/16).</div>	
         <p id="gco2016" class="abstract">
              We propose a new codec for graph-based software watermarking.  The encoding algorithm employs randomization
              to produce distinct watermarks for the same key upon different executions. This feature makes it less
@@ -1615,7 +1667,7 @@
              Propomos uma heur&iacute;stica linear para a determina&ccedil;&atilde;o 
              de um passeio aberto do cavalo em tabuleiros multidimensionais a partir de 
              qualquer casa inicial plaus&iacute;vel. Nos casos em que duas das dimens&otilde;es t&ecirc;m tamanho <em>n</em>, 
-             para algum <em>n</em> par maior ou igual a 5, a heurÌstica funcionou em 100% dos casos testados 
+             para algum <em>n</em> par maior ou igual a 5, a heur√≠stica funcionou em 100% dos casos testados 
              (5 <= <em>n</em> <= 5000).
         </p> 
       </li>
@@ -1637,7 +1689,7 @@
              fingerprinting na constru&ccedil;&atilde;o de um protocolo de seguran&ccedil;a que permite identificar 
              respons&aacute;veis por eventuais &quot;vazamentos de c&oacute;digo&quot;. 
              A t&eacute;cnica utilizada emprega fingerprinting baseado em grafos, 
-             que s„o estruturas combinat&oacute;rias naturalmente associadas ao fluxo de execu&ccedil;&atilde;o de um programa.     
+             que s√£o estruturas combinat&oacute;rias naturalmente associadas ao fluxo de execu&ccedil;&atilde;o de um programa.     
          </p>
                  <pre id="bib:SEMETRO2013" class="bib">
 @inproceedings{BBCMSS13,
@@ -1744,11 +1796,11 @@
         <div class="en">Proceedings of the <em>XXXIV Congresso Nacional de Matem&aacute;tica Aplicada e Computacional</em> (<a href="http://www.cnmac2012.org.br/" target="_blank">CNMAC'12</a>, 
         &Aacute;guas de Lind&oacute;ia/SP, Brazil, September 17-21, 2012).<br></div>
         <p id="cnmac2012" class="abstract">
-        Problemas de otimiza&ccedil;&atilde;o combinat&oacute;ria possuem grande import‚ncia pr&aacute;tica, aparecendo em
+        Problemas de otimiza&ccedil;&atilde;o combinat&oacute;ria possuem grande import√¢ncia pr&aacute;tica, aparecendo em
 		diversas aplica&ccedil;&otilde;es. Muitos s&atilde;o dif&iacute;ceis de se resolver, pois requerem a busca de uma solu&ccedil;&atilde;o
 		num espa&ccedil;o exponencialmente grande, sem que algoritmos eficientes sejam conhecidos, ou mesmo
 		poss&iacute;veis. Neste trabalho, &eacute; apresentada uma t&eacute;cnica que, utilizando <em>hashing</em> como coadjuvante
-		‡ busca exaustiva (<em>backtracking</em>), oferece ganhos consider&aacute;veis de tempo e espa&ccedil;o em muitas
+		√† busca exaustiva (<em>backtracking</em>), oferece ganhos consider&aacute;veis de tempo e espa&ccedil;o em muitas
 		situa&ccedil;&otilde;es. Os problemas Carga da Balsa e Quebra-cabe&ccedil;a do 15 ser&atilde;o abordados para
 		ilustrar seu uso.
 		</p>
@@ -1964,7 +2016,7 @@
         </pre>
       </li>
 	
-      <li> <a target="_blank" href="manuscripts/tese.pdf"><b>Dez algoritmos para o problema-sandu&iacute;che do conjunto homogÍneo</b></a>.&nbsp;
+      <li> <a target="_blank" href="manuscripts/tese.pdf"><b>Dez algoritmos para o problema-sandu&iacute;che do conjunto homog√™neo</b></a>.&nbsp;
         <a target="_blank" href="manuscripts/tese.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
         <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('tese')">
         <img src="bibtex.png" alt="BibTeX" title="BibTeX" class="but" onClick="toggleBlock('bib:tese')">
@@ -2042,7 +2094,7 @@
         </pre>	
       </li>
 
-      <li> <a target="_blank" href="manuscripts/dissertacao.pdf"><b>O problema-sandu&iacute;che para conjuntos homogÍneos em grafos</b></a>.&nbsp;
+      <li> <a target="_blank" href="manuscripts/dissertacao.pdf"><b>O problema-sandu&iacute;che para conjuntos homog√™neos em grafos</b></a>.&nbsp;
         <a target="_blank" href="manuscripts/dissertacao.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
         <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('dissertacao')">
         <img src="bibtex.png" alt="BibTeX" title="BibTeX" class="but" onClick="toggleBlock('bib:dissertacao')">
@@ -2066,7 +2118,7 @@
 		em 2004.
 		</div>
         <p id="dissertacao" class="abstract">
-        O conceito de conjunto homogÍneo &eacute; de grande valia para a
+        O conceito de conjunto homog√™neo &eacute; de grande valia para a
         elabora&ccedil;&atilde;o de procedimentos de decomposi&ccedil;&atilde;o de grafos. Grafos-sandu&iacute;che
         s&atilde;o obtidos a partir de dois grafos pr&eacute;-definidos que lhes emprestam arestas,
         entre obrigat&oacute;rias e opcionais. No Problema-Sandu&iacute;che para Conjuntos
@@ -2078,7 +2130,7 @@
         modelagens grafo-sandu&iacute;che para in&uacute;meras aplica&ccedil;&atilde;es pr&aacute;ticas. Este trabalho
         re&uacute;ne a evolu&ccedil;&atilde;o das t&eacute;cnicas de resolu&ccedil;&atilde;o deste problema e os esfor&ccedil;os do
         autor no sentido de solucion&aacute;-lo eficientemente, culminando na corre&ccedil;&atilde;o do
-        limite superior at&eacute; ent„o aceito para sua complexidade temporal.
+        limite superior at&eacute; ent√£o aceito para sua complexidade temporal.
 <br>
 <br>        
         The concept of homogeneous sets has proved itself useful for the construction 
@@ -2088,7 +2140,7 @@
 		Notwithstanding the existence of linear-time algorithms for solving the problem of finding homogeneous sets in a 
 		single graph, the HSSP still remains a subject for research, not only because of the rather high time complexities 
 		of current algorithms but also motivated by the increasing importance of sandwich-graph modelling to many practical 
-		applications. This thesis presents the development of techniques for solving this problem, as well as the authorís 
+		applications. This thesis presents the development of techniques for solving this problem, as well as the author¬ís 
 		efforts to find a more efficient solution to it, which culminate in the correction of the established upper bounds 
 		for its time complexity.
 		</p>
@@ -2160,7 +2212,7 @@
         <br>        
              Esquemas de marca d'&aacute;gua permitem embarcar informa&ccedil;&otilde;es em artefatos digitais, de tal forma que as funcionalidades do 
 	     artefato hospedeiro permane&ccedil;am inalteradas. Uma marca d'&aacute;gua utilizada com o particular prop&oacute;sito de identificar unicamente
-	     o artefato digital no qual ela &eacute; embarcada recebe o nome de fingerprint. Mecanismos de fingerprinting s„o 
+	     o artefato digital no qual ela &eacute; embarcada recebe o nome de fingerprint. Mecanismos de fingerprinting s√£o 
 	     ferramentas importantes  na constru&ccedil;&atilde;o de m&eacute;todos de prote&ccedil;&atilde;o da propriedade intelectual. 
 	     No presente trabalho, apresentamos uma defini&ccedil;&atilde;o formal para o conceito de marca d'&aacute;gua digital e propomos o uso de um 
 	     protocolo modificado de oblivious transfer &#8212; associado a um m&eacute;todo de fingerprinting &#8212; para dirimir 

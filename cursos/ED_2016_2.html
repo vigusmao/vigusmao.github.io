@@ -1,0 +1,285 @@
+<html>
+
+  <head>
+    <script type="text/javascript" src="../language.js"></script>
+
+    <meta http-equiv="Content-Type"
+     content="text/html; charset=ISO-8859-1"><link type="text/css" rel="stylesheet"
+     href="../estilo.css"><title>Vin&iacute;cius Gusm&atilde;o Pereira de S&aacute;</title>
+
+  </head> 
+ 
+  <body onload="autoLanguage()">    
+
+    <h2>Estruturas de Dados / Organiza&ccedil;&atilde;o de Dados I&nbsp;  &#8212;  &nbsp;2016/2</h2>
+    
+    <p><a href="..">P&aacute;gina principal</a><br>
+                  
+<!--    <p>&nbsp;</p>  -->
+
+    <div><h3>Informa&ccedil;&otilde;es</h3></div>
+    
+    <ul>
+        <li><div>Local: Sala F2-014.<br>
+                        Hor&aacute;rio: 2as e 4as, das 8h &agrave;s 10h.<br>
+                        In&iacute;cio: 12 de setembro de 2016.<br><br>
+                        
+        <li>
+                        Reposit&oacute;rio do c&oacute;digo criado em sala de aula: <br><a target="_blank" href="https://github.com/vigusmao/ED_2016_2">https://github.com/vigusmao/ED_2016_2</a>
+                       <br><br>
+                       
+                      
+          <li>             Ementa aproximada:<br>
+                       - &nbsp; No&ccedil;&otilde;es de an&aacute;lise de complexidade de algoritmos;<br>
+                       - &nbsp; Listas lineares: aloca&ccedil;&atilde;o sequencial e aloca&ccedil;&atilde;o encadeada;<br>
+                       - &nbsp; Filas e pilhas;<br>
+                       - &nbsp; &Aacute;rvores, &aacute;rvore bin&aacute;ria de busca, &aacute;rvores bin&aacute;rias de busca balanceadas; <br>
+                       - &nbsp; Hashing;<br>
+                       - &nbsp; Programa&ccedil;&atilde;o din&acirc;mica e memoiza&ccedil;&atilde;o;<br>
+                       - &nbsp; Heaps;<br>
+                       - &nbsp; Algoritmos de ordena&ccedil;&atilde;o.
+
+
+
+                    <br><br>
+        <li>		Avalia&ccedil;&atilde;o:<br>
+                                     
+                        M = (P1 + P2 + P3 - min(P1, P2, P3)) / 2  (sem segunda chamada)<br>
+                        M >= 5.0 --> aprova&ccedil;&atilde;o; M < 5.0 --> reprova&ccedil;&atilde;o
+                        
+                        
+                    <br><br>
+                    
+            <li>
+                            <font color="black">Provas:<br>
+                            - &nbsp; P1: 07/11<br>
+                            - &nbsp; P2: 05/12<br>
+                            - &nbsp; PF: 12/12<br> </font>
+                    
+                    	<br>
+        <li>           <font color="red">Primeira lista de exerc&iacute;cios <a target="_blank" href="/../listas/ED_2016_2_Lista_1.pdf">aqui</a></font>.
+                        
+              <!--          	
+        <li>           <font color="red"><a target="_blank" href="/../listas/ED_2014_2_Lista_2.pdf">Segunda lista de exerc&iacute;cios</a></font>.
+                        <br><br>
+                        -->
+    </ul>
+
+
+    <div><h3>Bibliografia sugerida</h3></div>
+    
+    <table>  
+     
+        <tr>
+            <td><a target="_blank" href="http://www.livrariasaraiva.com.br/produto/3065790/estruturas-de-dados-e-seus-algoritmos-3-ed-2010/">Estruturas de Dados e seus Algoritmos</a></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><a target="_blank" href="http://books.google.com.br/books?id=NLngYyWFl_YC">Introduction to Algorithms</a></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr> 
+        <tr> 
+            <td>(J. L. Szwarcfiter, L. Markenzon)</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>(Cormen, Leiserson, Rivest &amp; Stein)</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td><a target="_blank" href="http://www.livrariasaraiva.com.br/produto/3065790/estruturas-de-dados-e-seus-algoritmos-3-ed-2010/"><img style="height: 180px" src="../images/books/estruturadedados.jpg"/></a></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><a target="_blank" href="http://books.google.com.br/books?id=NLngYyWFl_YC"><img style="height: 180px" src="../images/books/cormen.jpg"/></a></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+    </table>
+    
+<br><br>
+
+                      
+          
+                        
+ 
+<div><h3>Conte&uacute;do das aulas</h3></div>
+		
+
+<h4><font color="blue">12/09</font></h4>
+<br>
+Primeira conversa sobre o curso: derrotando o c&oacute;digo alheio.<br>
+Por que entender de estruturas de dados e complexidade de algoritmos? 
+<br>
+Probleminha pra quebrar o gelo: dados dois arrays (listas) de inteiros, encontrar sua interse&ccedil;&atilde;o.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">14/09</font></h4>
+<br>
+Lista linear: a estrutura mais simples. Aloca&ccedil;&atilde;o sequencial (arrays) e encadeada (listas encadeadas). <br>
+Opera&ccedil;&otilde;es mais comuns (nas duas implementa&ccedil;&otilde;es): 
+ler o <em>k</em>-&eacute;simo elemento da lista; 
+inserir no come&ccedil;o da lista; inserir no fim da lista (<em>append</em>);
+concatenar listas; remover um elemento.
+
+<br>Pol&iacute;ticas de crescimento de listas em aloca&ccedil;&atilde;o sequencial (arrays): crescimento em P.A. 
+(tempo total quadr&aacute;tico) e em P.G. (tempo total linear).
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+<h4><font color="blue">19/09</font></h4>
+<br>
+Busca de elemento em array ordenado: (1) parando entes de chegar ao fim; (2) busca bin&aacute;ria!
+<br><br>
+Implementa&ccedil;&atilde;o do problema da interse&ccedil;&atilde;o.<br>
+C&oacute;digo (em Python) feito em sala de aula no <a href="https://github.com/vigusmao/ED_2016_2/blob/master/intersecao.py" target="_blank">GitHub</a>.
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+	
+<h4><font color="blue">21/09</font></h4>
+<br>
+Comparando a ementa do curso com o <a target="_blank" href="google_interview_tips.pdf">e-mail do Google</a> com dicas para se preparar para uma entrevista para trabalhar com eles.
+<br><br>
+An&aacute;lise de algoritmos: discuss&atilde;o sobre o n&uacute;mero de &quot;passos&quot; de um programa, i.e., a quantidade de opera&ccedil;&otilde;es b&aacute;sicas que s&atilde;o executadas, 
+ou, equivalentemente, de blocos com n&uacute;mero constante de opera&ccedil;&otilde;es de tempo constante que s&atilde;o executados. Complexidade assint&oacute;tica. A nota&ccedil;&atilde;o <b>O</b>.
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+
+<h4><font color="blue">26/09</font></h4>
+<br>
+Implementa&ccedil;&atilde;o de listas encadeadas "from scratch" em C.
+C&oacute;digo feito em sala de aula no <a href="https://github.com/vigusmao/ED_2016_2/blob/master/listas_encadeadas.c" target="_blank">GitHub</a>.
+
+
+	&nbsp;<br>
+	&nbsp;<br>		
+
+<h4><font color="blue">28/09</font></h4>
+<br>
+Continua&ccedil;&atilde;o de listas encadeadas. Remo&ccedil;&atilde;o, concatena&ccedil;&atilde;o, etc.
+
+	&nbsp;<br>
+	&nbsp;<br>		
+
+<h4><font color="blue">03/10</font></h4>
+<br>
+Filas e pilhas. Implementa&ccedil;&atilde;o usando arrays e usando listas encadeadas.
+
+	&nbsp;<br>
+	&nbsp;<br>		
+
+<h4><font color="blue">05/10</font></h4>
+<br>
+    &Aacute;rvores. &Aacute;rvores bin&aacute;rias. <br>
+    Busca em &aacute;rvores. Percurso em pr&eacute;-ordem, p&oacute;s-ordem, ordem sim&eacute;trica, largura. Exemplos de aplica&ccedil;&atilde;o.
+    
+	&nbsp;<br>
+	&nbsp;<br>		
+
+	
+<h4><font color="blue">10/10</font></h4>
+<br>
+    Discuss&atilde;o sobre programas recursivos versus n&atilde;o-recursivos: nenhum problema
+    em usar recurs&atilde;o, desde que se evite resolver o mesmo subproblema in&uacute;meras vezes. Exemplo: Fibonacci.<br>
+    C&oacute;digo feito em sala de aula no <a href="https://github.com/vigusmao/ED_2016_2/blob/master/fib.py">GitHub</a>.<br><br>
+    &Aacute;rvore bin&aacute;ria de busca.
+
+	&nbsp;<br>
+	&nbsp;<br>		
+	
+	
+<h4><font color="blue">24/10</font></h4>
+<br>
+    Frequ&ecirc;ncias de acesso distintas. &Aacute;rvore bin&aacute;ria de busca &oacute;tima.
+
+	&nbsp;<br>
+	&nbsp;<br>		
+
+<h4><font color="blue">26/10</font></h4>
+<br>
+	Implementa&ccedil;&atilde;o recursiva (com memoiza&ccedil;&atilde;o) do algoritmo
+	da &aacute;rvore bin&aacute;ria de busca &oacute;tima.<br>
+	C&oacute;digo feito em sala de aula no <a href="https://github.com/vigusmao/ED_2016_2/blob/master/optbst.c" target="_blank">GitHub</a>.
+	<br><br>
+	&Aacute;rvores auto-balance&aacute;veis. &Aacute;rvore AVL.
+
+
+	&nbsp;<br>
+	&nbsp;<br>		
+	
+		
+	
+<h4><font color="blue">31/10</font></h4>
+<br>
+    Revis&atilde;o para a P1. Corre&ccedil;&atilde;o da primeira lista.
+		
+	&nbsp;<br>
+	&nbsp;<br>
+
+		
+	
+<h4><font color="blue">07/11</font></h4>
+<br>
+    P1.
+
+	&nbsp;<br>
+	&nbsp;<br>		
+	
+		
+	
+<h4><font color="blue">09/11</font></h4>
+<br>
+    Corre&ccedil;&atilde;o da P1 em sala de aula.
+
+	&nbsp;<br>
+	&nbsp;<br>		
+
+
+<h4><font color="blue">16/11</font></h4>
+<br>
+        Hashing. Tratamento de colis&otilde;es via encadeamento externo.
+	&nbsp;<br>
+	&nbsp;<br>
+	
+
+<h4><font color="blue">21/11</font></h4>
+<br>
+        Complexidade esperada para opera&ccedil;&otilde;es de dicion&aacute;rio. <br>
+	Outras formas de tratar colis&otilde;es.<br>
+	Cuckoo hashing.
+	&nbsp;<br>
+	&nbsp;<br>
+
+<h4><font color="blue">23/11</font></h4>
+<br>
+        Heaps.
+	&nbsp;<br>
+	&nbsp;<br>
+
+<h4><font color="blue">28/11</font></h4>
+<br>
+       Algoritmos de ordena&ccedil;&atilde;o. Tempo. Espa&ccedil;o. Estabilidade.<br>
+	Selection Sort. Insertion Sort. Bubble Sort. <br>
+	Merge Sort. Heap Sort. Quick Sort.
+	&nbsp;<br>
+	&nbsp;<br>
+
+<h4><font color="blue">30/11</font></h4>
+<br>
+       A complexidade de caso m&eacute;dio do Quick Sort. <br>
+	Ordenando em tempo O(log <em>n</em>). Count Sort.
+		
+	&nbsp;<br>
+	&nbsp;<br>
+		
+<h4><font color="blue">05/12</font></h4>
+<br>
+
+P2.
+	&nbsp;<br>
+	&nbsp;<br>
+
+	<p>
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="../seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+
+	
+		
+  </body>
+
+</html>
