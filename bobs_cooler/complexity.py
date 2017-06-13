@@ -4,25 +4,25 @@ def exponential(n):
     return 2**n
 
 def cubic(n):
-    return n**3
+    return 3 * n**3 + 100
     
 def quadratic(n):
-    return n**2
+    return 100 * n**2 + 4000
     
 def nlogn(n):
-    return n*ceil(log(n, 2))
+    return 200 * n*ceil(log(n, 2))
     
 def linear(n):
-    return n
+    return 1000*n + 10000
     
 def sqrtn(n):
-    return ceil(sqrt(n))
+    return 3000 * ceil(sqrt(n)) + 10000
     
 def logn(n):
-    return ceil(log(n, 2))
+    return 3000 * ceil(log(n, 2)) + 55000
     
 def constant(n):
-    return 1
+    return 500000
 
 def identity(n):
     return n
@@ -30,7 +30,7 @@ def identity(n):
 # maps each function to its Big-Oh notation  
 functions = [
     (identity, "n"),
-    (exponential, "O(2^n)"),
+##    (exponential, "O(2^n)"),
     (cubic, "O(n^3)"),
     (quadratic, "O(n^2)"),
     (nlogn, "O(n log n)"),
