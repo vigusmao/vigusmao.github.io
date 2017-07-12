@@ -9,7 +9,7 @@
 from random import randint
 
 # watermark stucture over a list
-VERTEX_COUNT = 0
+KEY_LENGTH = 0
 PATH_EDGES = 1
 BACK_EDGES = 2
 FW_EDGES = 3
@@ -25,7 +25,7 @@ def encode(key):
     # converts integer key to binary
     binary = bin(key)[2:]
     N = len(binary)
-    watermark[VERTEX_COUNT] = N
+    watermark[KEY_LENGTH] = N
 
     if VERBOSE:   
         print("B = %s (n = %d)" % (binary, N))
@@ -38,7 +38,8 @@ def encode(key):
     A = [0] + [None] * (N+1)  # records the size of S' by the time each vertex is added to S
     D = [0] * (N+2)           # keeps track of the number of incoming backedges
 
-    max_incoming_back_edges = randint(1, int(N**0.5))
+    #max_incoming_back_edges = randint(1, int(N**0.5))
+    max_incoming_back_edges = N
 
     bit_pos = 1
     v = 1
@@ -63,7 +64,9 @@ def encode(key):
             # We do not allow a vertex to have a back edge with the same head as
             # the back edge of its predecessor along the path
             size -= 1
-        
+
+        add_to_stack = True
+       
         if size > 0:
         # a back edge *may* be added
             
@@ -76,8 +79,8 @@ def encode(key):
                 else: 
                     j = None
                     # vertices v-1, v and v+1 will correspond to an if...then
-                    
-            j = randint(0, size-1)
+            else:       
+                j = randint(0, size-1)
 
             if j != None:
             # a back edge will be added
@@ -91,10 +94,10 @@ def encode(key):
             
                 S[stack_complement][A[w]:] = []
 
+                add_to_stack = False
+
         else:
         # no back edge can be added
-
-            add_to_stack = True
 
             if bit == 0:
             # bit "0"
@@ -116,9 +119,9 @@ def encode(key):
                 A += [None]
                 D += [0]
 
-            if add_to_stack:
-                S[vertex_parity] += [v]
-                A[v] = len(S[vertex_complement])
+        if add_to_stack:
+            S[vertex_parity] += [v]
+            A[v] = len(S[vertex_complement])
 
         bit_pos +=1
         v += 1
@@ -127,7 +130,7 @@ def encode(key):
 
 
 def decode(watermark):
-    N = watermark[VERTEX_COUNT]
+    N = watermark[KEY_LENGTH]
     bits = [0] * N
     bits[0] = 1
     key = 2**(N-1)
@@ -160,14 +163,14 @@ def decode(watermark):
 
 
 def print_watermark(watermark, print_edges):
-    vertex_count = len(watermark[PATH_EDGES])
+    KEY_LENGTH = len(watermark[PATH_EDGES])
 
     if print_edges:
 
         # prints the path edges 
         print("\nPath edges:\n")
         printed_some = False
-        for v in range(0, vertex_count):
+        for v in range(0, KEY_LENGTH):
             if watermark[PATH_EDGES][v]:
                 print("%3d ---> %d" % (v+1, v+2))
                 printed_some = True
@@ -177,7 +180,7 @@ def print_watermark(watermark, print_edges):
         # prints the back edges
         print("\nBack edges:\n")
         printed_some = False
-        for v in range(0, vertex_count):
+        for v in range(0, KEY_LENGTH):
             destination = watermark[BACK_EDGES][v]
             if destination != None:
                 print("%3d << %d" % (destination+1, v+1))
@@ -188,7 +191,7 @@ def print_watermark(watermark, print_edges):
         # prints the forward edges
         print("\nForward edges:\n")
         printed_some = False
-        for v in range(0, vertex_count):
+        for v in range(0, KEY_LENGTH):
             destination = watermark[FW_EDGES][v]
             if destination != None:
                 print("%3d >> %d" % (v+1, destination+1))
@@ -199,7 +202,7 @@ def print_watermark(watermark, print_edges):
 
     print("\nWatermark:\n")
     print("", end="")
-    for v in range(0, vertex_count):
+    for v in range(0, KEY_LENGTH):
         w = watermark[BACK_EDGES][v]
         if w != None:
             print(" "*(2 + len(str(v+1)) - len(str(w+1))) + "%d<<" % (w+1), end="")
@@ -207,16 +210,16 @@ def print_watermark(watermark, print_edges):
             print("", end=" "*(4 + len(str(v+1))))
                   
     print("\n    ", end="")
-    for v in range(0, vertex_count-1):
+    for v in range(0, KEY_LENGTH-1):
         print("%d" % (v+1), end="")
         if watermark[PATH_EDGES][v]:
             print("--->", end="")
         else:
             print("    ", end="")
-    print(vertex_count)
+    print(KEY_LENGTH)
 
     print("    ", end="")
-    for v in range(0, vertex_count):
+    for v in range(0, KEY_LENGTH):
         w = watermark[FW_EDGES][v]
         if w != None:
             print(">>%d" % (w+1), end=" "*(2 + len(str(v+1))-len(str(w+1))))
@@ -259,7 +262,7 @@ while True:
         watermark = encode(key)
 
         if VERBOSE:
-            print_watermark(watermark, False)
+            print_watermark(watermark, True)
             print("Testing decoding procedure...")
 
         retrieved_key = decode(watermark)
