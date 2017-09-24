@@ -92,7 +92,7 @@ Introdução às classes P e NP. O Problema do Milênio.
 <h4><font color="blue">25/08</font></h4>
 <br>
 	  Sorteando <em>k</em> elementos sem repetição, com uniformidade, em tempo <em>O(k)</em>. 
-Várias abordagens pouco eficientes. O paradigma do colecionador de coupons. Knuth shuffle (Fisher-Yates shuffle).<br><br>
+Várias abordagens pouco eficientes. O paradigma do colecionador de coupons. Linearidade da esperança. Knuth shuffle (Fisher-Yates shuffle).<br><br>
 Problema: listar todas as permutações dos <em>n</em> primeiros inteiros positivos.<br><br>	
 
 Discussão geral sobre backtracking. Implementação do problema proposto em Python. <br>
@@ -117,8 +117,9 @@ Problemas envolvendo hashing.<br><br>
 	  Problema 3: Dada uma lista de inteiros e uma função <em>f</em> nos inteiros, encontrar todas as tuplas de elementos distintos
 	  (<em>x, y, z, w</em>) que satisfaçam <em>f(x) + f(y) = f(z) + f(w)</em>.<br><br>
 	  
+	  Memoização. Memoização com limitação de memória (políticas de cache).<br><br>
 	  
-	  Trabalho 4: Seja <em>f(x) = x/2</em>, se <em>x</em> é par; e <em>f(x) = 3x+1</em>, se <em>x</em> é ímpar. 
+	  <b>Trabalho 4</b>: Seja <em>f(x) = x/2</em>, se <em>x</em> é par; e <em>f(x) = 3x+1</em>, se <em>x</em> é ímpar. 
 	  Seja <em>g(x)</em> o número de vezes que deve-se aplicar a função <em>x</em>, a partir de <em>x</em>, até que o resultado obtido seja 1. 
 	  Exemplo: g(10) = 6, correspondendo à sequência 10 - 5 - 16 - 8 - 4 - 2 - 1.
 	  Entrada do programa: dois inteiros, <em>min_x</em> e <em>max_x</em>. Saída: <em>x</em> e <em>g(x)</em>, para <em>x</em> que maximiza a função <em>g</em>, 
@@ -130,7 +131,15 @@ Problemas envolvendo hashing.<br><br>
 	  
 <h4><font color="blue">15/09</font></h4>
 <br>
-        
+	  <b>Trabalho 5</b>: Seja <em>X<sub>n,k</sub></em> uma variável aleatória definida como o número de vezes que se deve sortear
+	  (com reposição) uma <em>k</em>-upla de elementos distintos de <em>A</em> = {1, 2, ..., <em>n</em>} até que todas as <em>k!</em>
+	  permutações de <em>algum</em> subconjunto de <em>A</em> já tenham sido sorteadas. 
+	  Entrada do programa: um inteiro <em>n</em> e um inteiro <em>k</em>. 
+	  Saída: uma boa aproximação para a esperança de <em>X<sub>n,k</sub></em>, obtida por simulação.<br><br>
+	  
+	  Discussão sobre uso eficiente de memória. Como armazenar as tuplas sorteadas poupando espaço. <br>
+	  Problema incidental: dada uma tupla de <em>k</em> elementos, como saber sua posição na lista de todas as permutações
+	  (daqueles <em>k</em> elementos) ordenadas lexicograficamente?
 
 	&nbsp;<br>
 	&nbsp;<br>
