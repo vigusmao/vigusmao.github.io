@@ -1,52 +1,60 @@
+#
+#    All (multi-)graphs in this program will be given in the form of a list
+#       [n, m, dictionary {vertex: hash set {neighbor: multiplicity} of neighbors}],
+#       where `n` and `m` are the vertex count and edge count, respectively,
+#       and `multiplicity` indicates the number of edges from `vertex` to `neighbor`.
+#
+
+
 # readability constants
 N = 0
 M = 1
 ADJACENCY_LISTS = 2
 
+
 '''
-    G: a (multi-)graph in the form of a list
-       [n, m, dictionary {vertex: list of (repeated) neighbors}],
-       where n and m are the vertex count and edge count, respectively
+    G: a graph
 '''
 def findDoubleTracing(G):
 
     '''
-        currentPath: a list of vertices in the order they were visited
-        visitedEdges: a set of ordered pairs indicating which edges were visited
+        currentPath: a list of triples (v, w, label) in the order the edges were visited
+        visitedEdges: a set of triples (v, w, label) indicating the edges that were already visited
     '''
     def backtrack(currentPath, visitedEdges):
-        if len(currentPath) == 2 * G[M] + 1:
+        if len(currentPath) == 2 * G[M]:
             return True  # found a double tracing!
 
-        currentVertex = currentPath[-1]
+        latestEdge = currentPath[-1] if len(currentPath) > 0 else None
+        currentVertex = latestEdge[1] if latestEdge is not None else 1
+        
         neighbors = G[ADJACENCY_LISTS].get(currentVertex)
 
         if neighbors != None:
-            for nextVertex in neighbors:
-                if (currentVertex, nextVertex) in visitedEdges:
-                    continue  # edge already visited
-                if len(currentPath) > 1 and currentPath[-2] == nextVertex:
-                    continue  # avoiding U-turns
+            for nextVertex, multiplicity in neighbors.items():
+                for label in range(1, multiplicity + 1):
+                    edge = (currentVertex, nextVertex, label)
+                    if edge in visitedEdges:
+                        continue  # edge already visited
+                    if len(currentPath) > 1 and currentPath[-1] == (nextVertex, currentVertex, label):
+                        continue  # avoiding U-turns
 
-                # changes the current state
-                currentPath.append(nextVertex)
-                visitedEdges.add((currentVertex, nextVertex))
+                    # changes the current state
+                    currentPath.append(edge)
+                    visitedEdges.add(edge)
 
-                if backtrack(currentPath, visitedEdges) == True:
-                    return True
+                    if backtrack(currentPath, visitedEdges) == True:
+                        return True
 
-                # restores the previous state so we can move along to the next candidate state
-                currentPath.pop()
-                visitedEdges.remove((currentVertex, nextVertex))
+                    # restores the previous state so we can move along to the next candidate state
+                    currentPath.pop()
+                    visitedEdges.remove(edge)
 
         return False
     
     ###
 
-    if G[N] == 0:
-        return []
-    
-    currentPath = [1]
+    currentPath = []
     visitedEdges = set()
     return currentPath if backtrack(currentPath, visitedEdges) else None
     
@@ -63,9 +71,10 @@ def createGraph():
         def addNeighbor(v, w):
             neighbors = graph[ADJACENCY_LISTS].get(v)
             if neighbors == None:
-                neighbors = []
+                neighbors = {}
                 graph[ADJACENCY_LISTS][v] = neighbors
-            neighbors.append(w)
+
+            neighbors[w] = neighbors.get(w, 0) + 1
         ###
     
         addNeighbor(edge[0], edge[1])
@@ -91,14 +100,23 @@ def createGraph():
 
 
 '''
-    path: a list of vertices
+    G: a graph
+    path: a list of vertices representing a path in G
 '''
-def printPath(path):
+def printPath(G, path):
     if len(path) > 0:
-        for i in range(len(path) - 1):
-            print(path[i], ",", sep="", end="")
-        print(path[0])
-
+        print(path[0][0], end="")
+        for edge in path:
+            origin = edge[0]
+            destination = edge[1]
+            isMultiple = G[ADJACENCY_LISTS].get(origin).get(destination) > 1
+            print("--", end="") 
+            if isMultiple:
+                edgeLabel = chr(ord('a') + edge[2] - 1) 
+                print("(" + edgeLabel + ")--", end="")
+            print(destination, end="")
+    print()
+                
 
 ##### Main
 
@@ -106,13 +124,15 @@ while True:
     G = createGraph()
     if G is None:
         break
+
+    print()
     
     doubleTracing = findDoubleTracing(G)
     if doubleTracing is not None:
-        printPath(doubleTracing)
+        printPath(G, doubleTracing)
     else:
         print("The graph is NOT double-traceable.")
-    print("\n---------\n")
+    print("\n========\n")
 
 print("Bye!")
 
