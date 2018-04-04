@@ -21,12 +21,12 @@ def findDoubleTracing(G):
         currentPath: a list of triples (v, w, label) in the order the edges were visited
         visitedEdges: a set of triples (v, w, label) indicating the edges that were already visited
     '''
-    def backtrack(currentPath, visitedEdges):
+    def backtrack(currentPath, visitedEdges, initialVertex):
         if len(currentPath) == 2 * G[M]:
             return True  # found a double tracing!
 
         latestEdge = currentPath[-1] if len(currentPath) > 0 else None
-        currentVertex = latestEdge[1] if latestEdge is not None else 1
+        currentVertex = latestEdge[1] if latestEdge is not None else initialVertex
         
         neighbors = G[ADJACENCY_LISTS].get(currentVertex)
 
@@ -43,7 +43,7 @@ def findDoubleTracing(G):
                     currentPath.append(edge)
                     visitedEdges.add(edge)
 
-                    if backtrack(currentPath, visitedEdges) == True:
+                    if backtrack(currentPath, visitedEdges, initialVertex) == True:
                         return True
 
                     # restores the previous state so we can move along to the next candidate state
@@ -54,10 +54,14 @@ def findDoubleTracing(G):
     
     ###
 
-    currentPath = []
-    visitedEdges = set()
-    return currentPath if backtrack(currentPath, visitedEdges) else None
-    
+    for initialVertex in range(1, G[N] + 1):
+        currentPath = []
+        visitedEdges = set()
+        if backtrack(currentPath, visitedEdges, initialVertex):
+            return currentPath
+
+    return None    
+
 
 '''
     Reads graph from keyboard
