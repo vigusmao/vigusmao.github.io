@@ -36,7 +36,7 @@ def findDoubleTracing(G):
                     edge = (currentVertex, nextVertex, label)
                     if edge in visitedEdges:
                         continue  # edge already visited
-                    if len(currentPath) > 1 and currentPath[-1] == (nextVertex, currentVertex, label):
+                    if len(currentPath) > 0 and currentPath[-1] == (nextVertex, currentVertex, label):
                         continue  # avoiding U-turns
 
                     # changes the current state
