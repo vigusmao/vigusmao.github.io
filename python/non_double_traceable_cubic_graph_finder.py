@@ -119,10 +119,31 @@ def printPath(G, path):
     print()
                 
 
+def getNeighborsList(G, v):
+    return [w for w in G[ADJACENCY_LISTS].get(v, {}).keys()]
+
 def printGraph(G):
     for v in range(1, G[N] + 1):
-        neighbors = sorted([w for w in G[ADJACENCY_LISTS].get(v, {}).keys()])
+        neighbors = sorted(getNeighborsList(G, v))
         print(str(v) + " ---> " + str(neighbors))
+
+
+def isConnected(G):
+
+    def dfs(v, parent):
+        neighbors = getNeighborsList(G, v)
+        for w in neighbors:
+            if parent.get(w) is None:
+                parent[w] = v
+                dfs(w, parent)
+
+    parent = {v : None for v in range(1, G[N] + 1)}
+    dfs(1, parent)
+    for v in range(2, G[N] + 1):
+        if parent.get(v) is None:
+            return False
+    return True
+
 
 def generate_cubic_graph(n):
     points = [x for x in range(0, 3*n)]
@@ -172,7 +193,7 @@ def generate_cubic_graph(n):
                     cubic_graph = False
                     break
 
-            if cubic_graph:
+            if cubic_graph and isConnected(G):
                 return G
 
 
