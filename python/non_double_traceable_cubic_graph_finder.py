@@ -17,7 +17,7 @@ ADJACENCY_LISTS = 2
 '''
     G: a graph
 '''
-def findDoubleTracing(G):
+def findDoubleTracing(G, forcedInitialVertex=None):
 
     '''
         currentPath: a list of triples (v, w, label) in the order the edges were visited
@@ -56,7 +56,10 @@ def findDoubleTracing(G):
     
     ###
 
-    for initialVertex in range(1, G[N] + 1):
+    startVertex = 1 if forcedInitialVertex is None else forcedInitialVertex
+    endVertex = G[N] if forcedInitialVertex is None else forcedInitialVertex
+
+    for initialVertex in range(startVertex, endVertex + 1):
         currentPath = []
         visitedEdges = set()
         if backtrack(currentPath, visitedEdges, initialVertex):
@@ -254,16 +257,15 @@ count = 0
 
 while True:
     G = generate_cubic_graph_with_one_vertex_of_degree_two(n)
-    printGraph(G)
-    break
-##    doubleTracing = findDoubleTracing(G)
-##    if doubleTracing is not None:
-##        count += 1
-##        print("Double tracing ok (total so far = %d)" % count)
-##    else:
-##        print("Found a cubic graph that is NOT double-traceable!!!")
-##        printGraph(G)
-##        break
+
+    doubleTracing = findDoubleTracing(G, G[N])
+    if doubleTracing is not None:
+        count += 1
+        print("Double tracing ok (total so far = %d)" % count)
+    else:
+        print("Found an almost-cubic graph that is NOT double-traceable!!!")
+        printGraph(G)
+        break
 
 
 print("\nBye!")
