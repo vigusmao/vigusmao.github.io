@@ -71,7 +71,7 @@ def addEdge(graph, edge):
     ''' Adds w as an out-neigbor of v '''
     def addNeighbor(v, w):
         neighbors = graph[ADJACENCY_LISTS].get(v)
-        if neighbors == None:
+        if neighbors is None:
             neighbors = {}
             graph[ADJACENCY_LISTS][v] = neighbors
 
@@ -81,6 +81,25 @@ def addEdge(graph, edge):
     addNeighbor(edge[0], edge[1])
     addNeighbor(edge[1], edge[0])
     graph[M] += 1
+
+
+''' Removes an edge from the given graph '''
+def removeEdge(graph, edge):
+
+    def removeNeighbor(v, w):
+        neighbors = graph[ADJACENCY_LISTS].get(v)
+        if neighbors is not None:
+            neighborMultiplicity = neighbors.get(w, 0)
+            if neighborMultiplicity == 1:
+                del(neighbors[w])
+            elif neighborMultiplicity > 1:
+                neighbors.put(w, neighborMultiplicity - 1)
+    ###
+
+    removeNeighbor(edge[0], edge[1])
+    removeNeighbor(edge[1], edge[0])
+    graph[M] -= 1                   
+        
 
 '''
     Reads graph from keyboard
@@ -201,6 +220,31 @@ def generate_cubic_graph(n):
                 return G
 
 
+def generate_cubic_graph_with_one_vertex_of_degree_two(n):
+    G = generate_cubic_graph(n-1)
+    
+    chosenEdgeIndex = randrange(G[M])
+    chosenEdge = None
+    
+    steps = 0
+    while steps < G[M]:
+        for v, neighbors in G[ADJACENCY_LISTS].items():
+            if neighbors is None or len(neighbors) == 0:
+                continue
+            for w, neighborMultiplicity in neighbors.items():
+                if steps == chosenEdgeIndex:
+                    chosenEdge = (v, w)
+                    steps = G[M]
+                    break
+                steps += 1
+        
+    removeEdge(G, chosenEdge)
+    G[N] = n
+    addEdge(G, (n, chosenEdge[0]))
+    addEdge(G, (n, chosenEdge[1]))
+
+    return G    
+
 
 ##### Main
 
@@ -209,16 +253,17 @@ n = int(input("Quantos vertices? "))
 count = 0
 
 while True:
-    G = generate_cubic_graph(n)
-
-    doubleTracing = findDoubleTracing(G)
-    if doubleTracing is not None:
-        count += 1
-        print("Double tracing ok (total so far = %d)" % count)
-    else:
-        print("Found a cubic graph that is NOT double-traceable!!!")
-        printGraph(G)
-        break
+    G = generate_cubic_graph_with_one_vertex_of_degree_two(n)
+    printGraph(G)
+    break
+##    doubleTracing = findDoubleTracing(G)
+##    if doubleTracing is not None:
+##        count += 1
+##        print("Double tracing ok (total so far = %d)" % count)
+##    else:
+##        print("Found a cubic graph that is NOT double-traceable!!!")
+##        printGraph(G)
+##        break
 
 
 print("\nBye!")
