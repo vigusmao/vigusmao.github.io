@@ -1,0 +1,334 @@
+<html>
+
+  <head>
+    <script type="text/javascript" src="../language.js"></script>
+
+    <meta http-equiv="Content-Type"
+     content="text/html; charset=ISO-8859-1"><link type="text/css" rel="stylesheet"
+     href="../estilo.css"><title>Vin&iacute;cius Gusm&atilde;o Pereira de S&aacute;</title>
+
+  </head> 
+ 
+  <body onload="autoLanguage()">    
+
+    <h2>Computa&ccedil;&atilde;o 2&nbsp;  &#8212; &nbsp; Linguagem Java &nbsp; &#8212; &nbsp;2018/1</h2>
+    
+    <p><a href="..">P&aacute;gina principal</a><br>
+                  
+<!--    <p>&nbsp;</p>  -->
+
+    <div><h3>Informa&ccedil;&otilde;es</h3></div>
+    
+    <ul>
+     
+       <li>   <div>Local: LEP-1 (&agrave;s 2as) e sala F2-033 (&agrave;s 4as e 6as).<br>
+                        Hor&aacute;rio: das 8h &agrave;s 10h.<br>
+                        In&iacute;cio: 19 de mar&ccedil;o de 2018.<br>
+                        
+                        <br>
+       <li>                 Reposit&oacute;rio do c&oacute;digo criado em sala de aula: <br><a target="_blank" href="https://github.com/vigusmao/Comp2_2018_1">https://github.com/vigusmao/Comp2_2018_1</a>
+                       <br><br>
+<!--                        
+                       Ementa:<br>
+                       - &nbsp; Introdu&ccedil;&atilde;o &agrave; programa&ccedil;&atilde;o em linguagem C<br>
+                    <br><br>
+-->                       
+<!--                        
+                        <font color="black">Aulas extras (d&uacute;vidas):<br>
+                            - &nbsp; 11/10, &agrave;s 13h, na sala F2-030<br>
+                            - &nbsp; 27/11, &agrave;s 12h, na sala F2-030<br>
+                            - &nbsp; 10/12, &agrave;s 8h, na sala F2-030
+                            
+                        <br><br>
+-->                        
+                                                
+                        
+                        
+                        
+                        
+           <li> Material de apoio:         
+           <br>
+                        <a target="_blank" href="https://www.caelum.com.br/apostila-java-orientacao-objetos/">Apostila da Caelum</a><br>
+           
+                        
+   </ul>                     
+                        
+                        
+                    
+          
+                        <br>    
+                        
+ 
+<div><h3>Conte&uacute;do das aulas</h3></div>
+		
+
+<h4><font color="blue">19/03</font></h4>
+<br>
+Laborat&oacute;rio: conversa inicial sobre o curso.<br>
+Ambiente de programa&ccedil;&atilde;o: usar uma IDE (Eclipse, BlueJ, IntelliJ etc.) ou compilar diretamente um arquivo com o c&oacute;digo via linha de comando (modo Terminal).
+<br>
+O m&eacute;todo main: <b>public static void main(String[] args)</b>. Imprimindo na tela com <b>System.out.print()</b> e <b>System.out.println()</b>. <br>Primeiro programa (aka Hello World).
+
+	&nbsp;<br>
+	&nbsp;<br>
+	
+
+<h4><font color="blue">21/03</font></h4>
+<br>
+Sintaxe b&aacute;sica muito similar a C. Tipos primitivos, loops, condicionais, express&ocirc;es booleanas, operadores l&oacute;gicos e aritm&eacute;ticos. Arrays.
+<br>
+Imprimindo todos os divisores de um n&uacute;mero.
+	&nbsp;<br>
+	&nbsp;<br>
+
+
+<h4><font color="blue">23/03</font></h4>
+<br>
+Classes. Atributos e m&eacute;todos. Construtor. O operador <b>==</b> e o m&eacute;todo <b>equals()</b>. 
+<br>
+Uma primeira classe nossa: Fracao.
+        &nbsp;<br>
+	&nbsp;<br>	
+
+
+
+<h4><font color="blue">26/03</font></h4>
+<br>
+Laborat&oacute;rio: exerc&iacute;cios envolvendo a classe Fracao criada em sala de aula, e a nova classe MatematicaBasica.
+
+	&nbsp;<br>
+	&nbsp;<br>	
+	
+
+<h4><font color="blue">28/03</font></h4>
+<br>
+Strings em Java. Alguns m&eacute;todos &uacute;teis da classe String. StringBuffer e StringBuilder.
+	&nbsp;<br>
+	&nbsp;<br>	
+
+	
+<h4><font color="blue">02/04</font></h4>
+<br>
+Laborat&oacute;rio: exerc&iacute;cio com Strings (identificar pal&iacute;ndromos). Mais de uma classe no mesmo programa (classes Aluno e Escola). 
+	&nbsp;<br>
+	&nbsp;<br>	
+	       
+
+<h4><font color="blue">04/04</font></h4>
+<br>
+Encapsulamento, modificadores de visibilidade. <br>
+Exemplo: classe Album, para modelar o preenchimento de um álbum de figurinhas.
+	       
+	&nbsp;<br>
+	&nbsp;<br>	       
+	
+<h4><font color="blue">06/04</font></h4>
+<br>
+Getters e setters, consistência do estado interno. <br>
+Implementação em sala de aula da classe Album e de um programa que a utiliza para encontrar o número de médio de 
+figurinhas que precisa ser adquirido até que um álbum com <em>n</em> figurinhas distintas seja completado. 
+Código no <a href="https://github.com/vigusmao/Comp2_2018_1/blob/master/Album.java" target="_blank">GitHub</a>.
+	       
+	&nbsp;<br>
+	&nbsp;<br>	       
+
+<h4><font color="blue">09/04</font></h4>
+<br>
+Laboratório:<br>
+1) Baixe o arquivo Album.java do GitHub.<br>
+2) Modifique a classe Album da seguinte forma: ao invés de um atributo int[] figurinhas, passe a usar um atributo boolean[] figurinhas, 
+	       que indicará na j-ésima posição se a figurinha j pertence ao álbum; crie um atributo int[] repetidas, que indicará na 
+	       posição j a quantidade de repetidas daquela figurinha j.<br>
+3) Modifique toda a classe Album para manter as funcionalidades existentes após as modificaçes estruturais do item 2.<br>
+4) Crie uma classe Figurinha, com os atributos posicao (inteiro), urlDaImagem (texto) e frequenciaRelativa (inteiro de 1 a 20).
+	       O construtor deve receber os dois primeiros atributos como parâmetro. O valor default do terceiro atributo é 10.<br>
+5) Crie getters para os três atributos.<br>
+6) Crie um setter para o terceiro atributo.<br>
+7) Crie uma classe Editora, com os atributos totalDeFigurinhas (inteiro) e figurinhas (array para Figurinha). 
+	       O construtor deve receber o valor do primeiro atributo como parâmetro, e deve criar todas as figurinhas do álbum no.<br>
+8) Crie um método, em Editora, chamado fornecerFigurinhaAleatoria(), que retorna um objeto Figurinha escolhido uniformemente
+	       dentre todos aqueles do álbum completo que foi criado quando a Editora foi construída.<br>
+9) Modifique novamente a classe Album, trocando o atributo boolean[] figurinhas, criado por você no item 2, 
+	       pelo atributo Figurinha[] figurinhas.<br>
+10) Modifique toda a classe Album para funcionar corretamente com o novo atributo criado no item 9. 
+	       No main(), o sorteio de cada nova figurinha ser solicitado à Editora do album.	       
+	       
+	       
+	       
+	       
+	&nbsp;<br>
+	&nbsp;<br>	       
+
+
+	       
+<h4><font color="blue">11/04</font></h4>
+<br>
+Referências (objetos como ponteiros). Atribuições, passagem de objetos como parâmetros. <br>
+Objetos não mais referenciados. O Garbage Collector do Java.<br> 
+	&nbsp;<br>
+	&nbsp;<br>	       
+		       
+	       
+<h4><font color="blue">13/04</font></h4>
+<br>
+Herança e polimorfismo. Estendendo classes. Métodos abstratos e classes abstratas. Override e overload. <br>
+	       Exemplo: classes Veiculo, Carro extends Veiculo, Bicicleta extends Veiculo, CarroDeFormula1 extends Carro.
+	       
+	&nbsp;<br>
+	&nbsp;<br>	       
+	
+<h4><font color="blue">16/04</font></h4>
+<br>
+Laboratório:<br>
+	       1) Crie a classe Pessoa, com alguns atributos privados (cpf, nome, anoNascimento), getters e setters.<br>
+	       2) Crie a classe Aluno, herdando de Pessoa, com alguns atributos extras.<br>
+	       3) Crie um único construtor para Pessoa, recebendo cpf e anoNascimento como parâmetros.<br>
+	       4) Perceba que você será agora obrigado a criar um construtor em Aluno, explicando que parâmetros passar para o construtor único de Pessoa.<br>
+	       5) Faça um override em toString(), na classe Pessoa, formatando adequadamente seus atributos.<br>
+	       6) Idem para a classe Aluno, que deve chamar super.toString() e em seguida acrescentar os atributos extras à string que será retornada.<br>
+	       PS.: Nos itens 5 e 6, use StringBuffer ou StringBuilder para as concatenações.
+	       
+	&nbsp;<br>
+	&nbsp;<br>	       
+
+	       <h4><font color="blue">18/04</font></h4>
+<br>
+	       Revisão para a P1. <br><br>
+	       Explicando a hierarquia completa de visibilidade:<br> <b>private</b>: visível apenas na própria classe;<br>
+	       "package local" (não usa nenhum modificador): visível de qualquer lugar, desde que dentro do mesmo package;<br>
+	       <b>protected</b>: igual ao "package local", mas visível também de qualquer subclasse não importando o package;<br>
+	       <b>public</b>: visível de qualquer lugar.<br><br>
+	       Mais sobre polimorfismo e encapsulamento: por que devemos declarar variáveis usando o tipo mais genérico possível? Foco na interface (uso/funcionalidades), não na implementação concreta.
+	       <br>Métodos <b>abstract</b>: por quê? (1) Compromisso das subclasses concretas de implementá-los. (2) A própria classe abstrata já pode usá-los, sem sequer saber como serão implementados! 
+	       <br><br>Exemplo: implementação das classes Veiculo (abstract), Carro e Transportadora. 
+	       Código feito em sala de aula no <a href="https://github.com/vigusmao/Comp2_2018_1/tree/master/Transportadora/src" target="_blank">GitHub</a>.
+	&nbsp;<br>
+	&nbsp;<br>	
+	       
+	       <h4><font color="blue">20/04</font></h4>
+<br>
+P1.
+	&nbsp;<br>
+	&nbsp;<br>	       
+		
+	     
+	  <h4><font color="blue">25/04</font></h4>
+<br>
+Resolução da prova em sala de aula.<br>
+	       Composição versus agregação.
+	&nbsp;<br>
+	&nbsp;<br>	       
+		     
+	       
+	       <h4><font color="blue">27/04</font></h4>
+<br>
+Interfaces. <br>
+	       O exemplo do cofre para objetos que tenham "valor" e "volume".
+	&nbsp;<br>
+	&nbsp;<br>	       
+		
+	       
+	       
+	       <h4><font color="blue">02/05</font></h4>
+<br>
+De volta ao álbum de figurinhas. Queremos agora um álbum de selos, que lide com a classe Selo, ao invés de lidar com a classe Figurinha. Como fazer?<br>
+	   (1) CTRL-C, CTRL-V. Terrível, por vários motivos.<br>
+	       (2) Classe comum, da qual Figurinha e Selo herdariam. Pode ser filosoficamente ruim, pode não ser possível (por incorrer em herança múltipla),
+	       pode implicar um refactoring grande e indesejado. <br>
+	       (3) Uso de interface. Basta assegurar que tanto Figurinha quanto Selo tenham o comportamento exigido.
+	&nbsp;<br>
+	&nbsp;<br>	       
+		
+
+	      <h4><font color="blue">04/05</font></h4>
+<br>
+Generics em Java. O exemplo do álbum "genérico" sem os inconvenientes de se permitir colecionar figurinhas e selos no mesmo álbum, 
+	       e sem exigir type cast (possível RuntimeException).<br> 
+	&nbsp;<br>
+	&nbsp;<br>	       
+		
+	       
+	<h4><font color="blue">07/05</font></h4>
+<br>
+Laboratório:<br>
+	       Modele uma aplicação financeira, que recebe qualquer objeto que tenha valor como aporte inicial, e pode retorná-lo a qualquer instante.
+	       Essa aplicação precisa saber incorporar rendimento, descontar taxa de administração, aceitar novos depósitos e retiradas, 
+	       retornar saldo corrente e retornar o rendimento acumulado.
+	       Ela também precisa ter um titular, que pode ser uma pessoa física ou jurídica.
+	       Alguns tipos de aplicação são aplicação a juros simples, aplicação a juros compostos, aplicação a juros compostos com sorteio de bônus.
+	       <br>
+	       <br>
+	       Pense em dois casos: (1) a aplicação sempre receberá depósitos do mesmo tipo que o aporte inicial; 
+	       e (2) a aplicação aceita depósitos variados de qualquer tipo.<br>
+	       Como isso poderia alterar a modelagem?
+	       &nbsp;<br>
+	&nbsp;<br>	
+	       
+	      <h4><font color="blue">09/05</font></h4>
+<br>
+O package java.util. A interface List e a classe ArrayList. Implementação do álbum genérico usando ArrayList<T> ao invés de um array T[].
+	&nbsp;<br>
+	&nbsp;<br>	
+	       
+	       	      <h4><font color="blue">11/05</font></h4>
+<br>
+Ainda no package java.util. A interface Set e a classe HashSet. Noções de complexidade de algoritmos. O problema do par que soma <em>k</em>. 
+	&nbsp;<br>
+	&nbsp;<br>	
+		
+	  	      <h4><font color="blue">14/05</font></h4>
+<br>
+Laboratório:<br>
+	       Crie uma classe Bingo com os métodos públicos sortearProximo(), listarTodos() e zerar(), modelando sorteios de uma urna
+	       de bolas numeradas de um a <em>n</em> (passado no construtor), sem reposição. Pense em maneiras diferentes de implementar o que deseja. 
+	       Em pelo menos uma delas você deve usar exclusivamente ArrayLists, nada mais.
+	       <br>
+	       Na classe principal, simule, para vários valores de <em>n</em>, um jogo com <em>n</em>/2 sorteios, comparando suas diferentes implementações.
+	       
+	&nbsp;<br>
+	&nbsp;<br>
+	       	      <h4><font color="blue">16/05</font></h4>
+<br>
+Implementação em sala de aula de quatro estratégias diferentes para o problema do Bingo. Mais noções de complexidade. 
+	       O Knuth shuffle, implementado em Collections.<em>shuffle</em>(List<?>).<br><br>
+Código feito em sala de aula no <a href="https://github.com/vigusmao/Comp2_2018_1/tree/master/Bingo/src/com/company" target="_blank">GitHub</a>.
+	&nbsp;<br>
+	&nbsp;<br>	
+
+
+      	      <h4><font color="blue">18/05</font></h4>
+<br>
+     Sets com chaves inteiras implementados sobre arrays com endereçamento direto.<br>
+     A interface Map<K, V>. Hash maps.
+        &nbsp;<br>
+	&nbsp;<br>	
+
+      	      <h4><font color="blue">21/05</font></h4>
+<br>
+     Laboratório:<br>
+1) Implemente uma função para descobrir se duas Strings são anagramas uma da outra.<br>
+2) Implemente uma função que receba uma lista de Strings e retorne se há algum par de Strings na lista que são uma anagrama da outra.<br>
+3) Escreva testes unitários e testes de performance.
+        &nbsp;<br>
+	&nbsp;<br>
+
+      	      <h4><font color="blue">23/05</font></h4>
+<br>
+     Override da métodos não-abstratos da classe-mãe.<br>
+     Lazy instantiation.<br>
+     Unit tests. JUnit.
+
+        &nbsp;<br>
+	&nbsp;<br>	
+
+
+	<p>
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="../seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+
+
+
+	
+  </body>
+
+</html>
