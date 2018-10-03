@@ -305,10 +305,11 @@
 	       <a target="_blank" href="https://github.com/vigusmao/Comp2_2018_2/tree/master/Banco/src">GitHub</a>.<br>
 	       <br>
 	       Para casa: Modificar o main() da classe Banco para conseguir responder de forma eficiente (e não como está lá!)
-	                  se o magnata tem duas contas com exatamente o mesmo saldo. Dica: use um HashMap onde o saldo será a chave
-	                  e a conta será o valor. Isto é: para cada conta, pegue o saldo dela e veja se seu mapa já contém uma conta com
-	                  aquele saldo. Se sim, então você terá acabado de encontrar uma segunda conta com aquele saldo. Basta imprimir
-	                  e finalizar. Se não, coloque a conta no mapa (a chave será justamente o saldo dela).
+	                  se o magnata tem duas contas com exatamente o mesmo saldo. Dica: use um HashMap, inicialmente vazio, 
+	       onde a <em>chave</em> de cada registro será o saldo de uma conta, e o <em>valor</em> será a própria conta (o objeto Conta).
+	                  Isto é: para cada conta, pegue o saldo dela e veja se seu mapa já contém uma conta com
+	                  aquele saldo. Se sim, então você terá acabado de encontrar uma segunda conta com aquele saldo -- basta imprimir
+	                  e finalizar! Caso contrário, coloque a conta no mapa (a chave será justamente o saldo dela).
 	       
 	       
 	       
