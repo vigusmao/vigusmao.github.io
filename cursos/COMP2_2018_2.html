@@ -327,6 +327,46 @@
 	       duas contas com o mesmo saldo em um algoritmo linear que faz a mesma coisa.
 	       <br><br>
 	       
+	              	             	&nbsp;<br>
+	       &nbsp;<br>
+	       
+<h4><font color="blue">26/09</font></h4>
+<br>
+	       Laboratório 8. Mais listas, mapas e sets.<br><br>
+	       
+	       Como atualizar o valor associado a uma chave de um mapa? (1) Se você quiser apenas alterar o <em>conteúdo</em> do objeto (sendo um objeto mutável),
+	       então basta alterá-lo normalmente. Dê um mapa.get(), pegue o objeto e o altere. Não precisa dar outro put no mapa. 
+	       (2) Se o conteúdo do objeto não puder ser modificado (objeto imutável), ou se você quiser realmente colocar <em>outro objeto</em>
+	       associado àquela chave, você precisará fazer um outro put, isto é, um mapa.put(chave, novoObjeto), sobrescrevendo o valor anterior.<br><br>
+	       
+	       Como iterar por um mapa? Três maneiras: (1) pelas chaves; (2) pelos valores; (3) pelos pares (chave, valor).<br><br>
+	               Map<Integer, Integer> mapa = new HashMap<>();<br>
+        mapa.put(12, 120_000);<br>
+        mapa.put(34, 340_000);<br>
+        mapa.put(55, 550_000);<br>
+        mapa.put(18, 180_000);<br>
+<br>
+        for(Integer chave : mapa.keySet()) {<br>
+            System.out.println(chave);<br>
+        }<br>
+<br>
+        for(Integer valor : mapa.values()) {<br>
+            System.out.println(valor);<br>
+        }<br>
+<br>
+        for(Map.Entry<Integer, Integer> registro :<br>
+                mapa.entrySet()) {<br>
+            Integer chave = registro.getKey();<br>
+            Integer valor = registro.getValue();<br>
+            System.out.printf("chave: %d; valor: %d\n",
+                    chave, valor);<br>
+        }<br>
+<br>
+	       Exercício: descubra qual o elemento mais frequente numa lista dada. 
+	       Enunciado no <a target="_blank" href="https://github.com/vigusmao/Comp2_2018_2/blob/master/ConjuntosEMapas/Lab8.txt">GitHub</a>.<br>
+	       
+	       
+	       
 	       
 	<p>
         <a href=#><img title="Voltar ao topo" style="height: 35px" src="../seta_voltar.jpeg" alt="Voltar ao topo" ></a>
