@@ -1,0 +1,67 @@
+<html>
+
+  
+<head>
+    <script type="text/javascript" src="../language.js"></script>
+
+    <meta http-equiv="Content-Type"
+     content="text/html; charset=ISO-8859-1"><link type="text/css" rel="stylesheet"
+     href="../estilo.css"><title>Vin&iacute;cius Gusm&atilde;o Pereira de S&aacute;</title>
+
+  </head> 
+  
+  <body onload="autoLanguage()">  
+
+    <h2>T&oacute;picos Especiais em Programa&ccedil;&atilde;o  &#8212;  &nbsp;2019/2</h2>
+
+
+    <p class="en"><a href="..">Main page</a><br>
+    <p class="pt"><a href="..">P&aacute;gina principal</a><br>
+                  
+    <div><h3>Informa&ccedil;&otilde;es</h3></div>
+    
+    <ul>
+     
+       <li>   <div>Local: LAB 3<br>
+                        Hor&aacute;rio: segundas e quartas das 10h &agrave;s 12h<br>
+                        In&iacute;cio: 7 de agosto de 2019<br>
+                        Avaliações: trabalhos feitos em sala de aula (e possivelmente terminados em casa, a combinar)
+                        
+                        
+                        <br>
+       <li>                 Reposit&oacute;rio: <br><a target="_blank" href="https://github.com/vigusmao/TEP_2019_2">https://github.com/vigusmao/TEP_2019_2</a>
+                       <br>
+                       Problemas recomendados: <a href="http://hackerrank.com" target="_blank">hackerrank</a>
+
+                       <br><br>
+                       
+                            
+       
+                       
+
+                       </font>
+                       
+   </ul>                     
+                      
+
+
+<div><h3>Conte&uacute;do das aulas</h3></div>
+    
+    
+<h4><font color="blue">17/08</font></h4>
+<br>
+	  Conversa inicial sobre o curso. <a href="http://vigusmao.github.io/cursos/google_interview_tips.pdf" target="_blank">Google Interview Preparation Tips.</a><br>
+	  Complexidade assintótica: por que é imporante? <a href="https://github.com/vigusmao/TEP_2018_2/blob/master/complexity.py" target="_blank">por que</a> as constantes são desprezíveis?<br> 
+	  <br>
+    Brain teaser: o problema dos condenados encapuzados (paridade).
+	  &nbsp;<br>
+	  &nbsp;<br>
+
+		<p>
+        <a href=#><img title="Voltar ao topo" style="height: 35px" src="../seta_voltar.jpeg" alt="Voltar ao topo" ></a>
+        </p>
+	  
+		
+  </body>
+
+</html>
