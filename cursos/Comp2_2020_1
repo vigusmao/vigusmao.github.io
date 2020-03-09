@@ -23,13 +23,25 @@
        <li>   <div>Local: Laboratório LEP 1 (&agrave;s 2as) e sala F2-017 (&agrave;s 4as e 6as).<br>
                         Hor&aacute;rio: das 8h &agrave;s 10h.<br>
                         In&iacute;cio: 9 de março de 2020.<br>
-                        
+               
+	                <br>
+	       
+	       <li>Critérios de avaliação:<br>
+		      - duas provas (P1 e P2) escritas, com questões objetivas e/ou dissertativas, com pouco ou nenhum código a ser escrito;
+		      - média M = (P1 + P2) / 2
+		      - se M >= 6.0, aprovação direta; senão, faz a prova final PF;
+		      - prova final de puro código, feita no laboratório
+		      - se (PF + M) / 2 >= 5.0, aprovação; senão, reprovação;
+		      - prova de segunda chamada (2CH) no final de tudo, se perdeu alguma prova 
+		      - tente evitar a 2CH, definitivamente não é boa estratégia trocar qualquer prova por essa (#ficaadica)
+		
                         <br>
 	       
-	       <li>Provas:<br>
-		       - P1: <br>
-		       - P2: <br>
-		       - PF: 
+	       <li>Datas das provas:<br>
+		       - P1: a definir<br>
+		       - P2: a definir<br>
+		       - PF: a definitr<br>
+		       - 2CH: a definir
 		       
 		       <br><br>
        <li>                 Reposit&oacute;rio do c&oacute;digo criado em sala de aula: <br><a target="_blank" href="https://github.com/vigusmao/Comp2_2020_1">https://github.com/vigusmao/Comp2_2020_1</a>
@@ -56,7 +68,9 @@
 
 <h4><font color="blue">09/03</font></h4>
 <br>
-    
+    Introdução ao curso. Primeiro programa: o nefasto Hello World. Saída para o terminal via System.out.println() e System.out.printf().
+    Entrada (leitura do teclado) chamando o nextLine() de um Scanner(System.in). Conversa inicial sobre Orientação a Objeto. 
+    Classe vs struct. O racional do encapsulamento.
 
 	&nbsp;<br>
 	&nbsp;<br>
