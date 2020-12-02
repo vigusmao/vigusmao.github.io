@@ -25,7 +25,8 @@
 	                <br>
 	       
 	       <li>Critérios de avaliação:<br>
-		      - trabalhos semanais, enunciados nas aulas das sextas-feiras, e a serem entregues até a noite da terça-feira seguinte (50% da nota); e<br>
+		      - trabalhos semanais, enunciados nas aulas das sextas-feiras, e a serem entregues até a noite da terça-feira seguinte (50% da nota), 
+		       via e-mail para vigusmao@dcc.ufrj.br, com o assunto no formato "[Comp2_2020_1] LAB1" (sem as aspas, e com a numeração do lab de acordo: 1, 2, etc.); <br>
 		      - uma prova escrita (50% da nota).
 	 
 		      
@@ -46,7 +47,11 @@
                         <a target="_blank" href="https://www.caelum.com.br/apostila-java-orientacao-objetos/">Apostila da Caelum</a><br>
            
                         
-   </ul>                     
+		   <li>Programas necessários (a serem instalados):
+			   <br>
+			   - <a target="_blank" href="https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html">Java Development Kit</a> (Java 8 ou acima)<br>
+			   - uma IDE para Java (recomendo fortemente o <a target="_blank" href="https://www.jetbrains.com/help/idea/installation-guide.html">IntelliJ IDEA</a>, da JetBrains)<br>
+   </ul>                    
                         
                         
                     
@@ -114,7 +119,7 @@
     
 	       Primeiro programa: o nefasto Hello World. <br>
 	       Saída para o terminal via <b>System.out.println()</b> e <b>System.out.printf()</b>.<br>
-	       Entrada (leitura do teclado) chamando o <b>nextLine()</b> e o o <b>nextInt()</b> de um <b>Scanner(System.in)</b>.<br>
+	       Entrada (leitura do teclado) chamando o <b>nextLine()</b> e o o <b>nextInt()</b> de um <b>Scanner(System.in)</b>.
 	       
 	       <br><br>Código feito em aula no <a target="_blank" href="https://github.com/vigusmao/Comp2_2020_1/tree/master/HelloWorld">GitHub</a>.
 
@@ -122,6 +127,33 @@
 	&nbsp;<br>
 
 	       <h4><font color="blue">04/12</font></h4>
+	       
+	       LAB1.<br><br>
+	       Objetivo: escrever um primeiro programa em Java, apenas para se familiarizar com o ambiente, usando apenas uma classe Principal com métodos public static.<br><br>
+	       Intruções: Seu programa deve pedir para o usuário digitar várias linhas, cada uma contendo um long e um float. O long é o DRE do aluno; o float é sua média numa determinada disciplina. 
+	       Quando o usuário digitar uma média negativa qualquer, ele estará sinalizando que chegou ao fim da inserção das notas. Neste momento, seu programa deverá imprimir
+	       no console: (1) a quantidade de notas processadas; (2) a média da turma; (3) o DRE do aluno de maior média (se houver empate, pode ser qualquer um dos alunos de maior média).
+	     	<br><br> 
+	     Exemplo:<br><br>
+	       
+	       Entrada:<br>
+	       <em>
+	       1234 8.5<br>
+	       2222 3.5<br>
+	       3333 4<br>
+	       4567 9.2<br>
+	       0 -1<br><br>
+	       </em>
+	       
+	       Saída:<br>
+	       <em>
+	       4 notas digitadas<br>
+               Média da turma: 6.3
+	       DRE com maior média: 4567
+	       </em>	       
+		       
+	       
+	       
 	       
 	<p>
         <a href=#><img title="Voltar ao topo" style="height: 35px" src="../seta_voltar.jpeg" alt="Voltar ao topo" ></a>
