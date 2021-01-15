@@ -381,7 +381,24 @@
 	       Duas soluções para o LAB 4: <a href="https://github.com/vigusmao/Comp2_2020_1/commit/85b451aaf2c44d6b8332d9278297388f2363766f#diff-f05e840e0069d662c52ff5f007a1dd9a664b3fa0417b1e2cce7627a69fff5acc" target="_blank">uma</a> 
 	       com array e <a href="https://github.com/vigusmao/Comp2_2020_1/commit/a895869344fdf2828b21d703b219be9c9c6e1e18#diff-f05e840e0069d662c52ff5f007a1dd9a664b3fa0417b1e2cce7627a69fff5acc" target="_blank">uma</a> com ArrayList.<br><br>
 	       
-	       Mais sobre arrays e ArrayLists. Inicializando um ArrayList com chamadas consecutivas ao add(valorDefault) para que já contenha todas as posições 
+	       Mais sobre arrays e ArrayLists. 
+	       
+	       <br><br>Arrays:
+<br>- podem ser usados com tipos primitivos ou objetos;
+<br>- não precisam ser inicializados para que todas as suas posições (entre 0 e seu length - 1) estejam acessíveis para leitura e escrita;
+<br>- comportam no máximo a quantidade de elementos para a qual foram dimensionados; se precisar de mais espaço será preciso criar outro array e copiar tudo;
+<br>- não te permitem saber quantos elementos já foram de fato escritos no array; é preciso controlar com variável externa, ou usar algum tipo de esquema do tipo "o primeiro null encontrado indica que não há mais nenhuma posição ocupada a partir dali";
+<br>- para efetuar uma remoção física de elemento, sem deixar um "buraco" (preenchido com null ou outra coisa qualquer) na posição que continha o elemento removido, é necessário mover explicitamente todos os elementos à direita daquela posição um passo para a esquerda.
+
+<br><br>ArrayLists:
+<br>- armazenam apenas objetos, não tipos primitivos;
+<br>- aceitam add() de quantos elementos se desejar, sem que precisem ser pré-alocados (o redimensionamento ocorre transparentemente ao usuário do ArrayList);
+<br>- possuem um método size(), que retorna a quantidade exata de elementos adicionados ao ArrayList, sem necessidade de se controlar isso por variável externa;
+<br>- fazem remoção física de forma totalmente transparente para o usuário, isto é, o usuário jamais precisará se preocupar com o "shift left";
+<br>- não permitem acesso a uma posição com índice maior ou igual ao size() lógico do ArrayList; se isso for necessário, pode-se inicializar o ArrayList com a quantidade desejada de nulls;
+<br>- fornecem uma grande quantidade de métodos convenientes para cópia, concatenação, localização de objeto no ArrayList, etc.
+	       
+	       <br><br>Inicializando um ArrayList com chamadas consecutivas ao add(valorDefault) para que já contenha todas as posições 
 	       desejadas disponíveis para leitura/escrita. Esticando o tamanho lógico do ArrayList sob demanda.
 	       
 	       <br><br>Aula gravada no <a target="_blank" href="https://drive.google.com/file/d/1Mex7aVAOrtx-HVBavrR5z6s4Nw3bNr7w/view?usp=sharing">Google Meet</a>.
