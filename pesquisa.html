@@ -44,22 +44,40 @@
 
                   
     <p class="en"><button onclick="showAbstracts()" class="but"><img alt=""> Show/hide all abstracts </button>&nbsp;&nbsp;
-                  <button onclick="group_by()" class="but"><img alt=""> Group by year </button>
+                  <!--<button onclick="group_by()" class="but"><img alt=""> Group by year </button>-->
     <!-- &nbsp;<button onclick="showBibs()" class="but"><img src="bibtex.png" alt=""> Show/hide all bibs</button>-->
     </p>
     <p class="pt"><button onclick="showAbstracts()" class="but"><img alt=""> Mostrar/ocultar todos os abstracts </button>
-                  <button onclick="group_by()" class="but"><img alt=""> Agrupar por ano </button>
+                 <!-- <button onclick="group_by()" class="but"><img alt=""> Agrupar por ano </button>-->
     <!-- &nbsp;<button onclick="showBibs()" class="but"><img src="bibtex.png" alt=""> Mostrar/ocultar todos os bibs</button>-->
     </p>
 
 <br>
 	  
-<!--
+
     <h4 class="en" id="submitted"><font color="blue">Recently submitted</font></h4>
     <h4 class="pt" id="submetidos"><font color="blue">Submetidos recentemente</font></h4>
    
   <ol class="reversed"> 
-
+      <li> <a target="_blank" href="manuscripts/Cuckoo_Hashing_With_Perfect_Rehash.pdf"><b>Cuckoo Hashing with Perfect Rehash</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/Cuckoo_Hashing_With_Perfect_Rehash.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
+	<!--<a target="_blank" href="https://doi.org/10.1007/s00453-019-00557-w"><img src="doi.png" alt="DOI" title="DOI"></a>-->
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('CuckooHashingIPL2021')">
+        <div class="pt">Com Judismar Arpini Junior.</div>
+        <div class="en">With Judismar Arpini Junior.</div>	
+	      <div class="pt"><em>Submitted for journal publication in March, 2021.</em></div>	
+        <div class="en"><em>Submetido para publicação em periódico em março de 2021.</em></div>
+        <p id="CuckooHashingIPL2021" class="abstract">	
+               The worst-case time to insert a key in the classic cuckoo hashing scheme is a random variable that may assume arbitrarily big values, 
+		owing to the strictly positive probability that an endless sequence of rehashes take place. 
+		We propose a cuckoo hashing variant in which the worst-case insertion time is polynomial. 
+		To accomplish this, we use two basic ideas. 
+		The first is to employ a perfect hashing method on one of the tables whenever a rehash is called for. 
+		The second idea is to make it so that the number of underlying hash tables is no longer constant, 
+		but rather an appropriate function of the number of keys. 
+		The price to pay is a higher lookup time, which is no longer constant, but doubly logarithmic.	
+         </p>
+      </li>
   </ol>	
     
     <p class="pt">
@@ -68,7 +86,7 @@
         <p class="en">
         <a href=#><img title="Back to top" style="height: 35px" src="seta_voltar.jpeg" alt="Back to top" ></a>
     </p> 
- --> 
+ 
 
     <h4 class="en" id="journals"><font color="blue">Papers in refereed journals</font></h4>
     <h4 class="pt" id="periodicos"><font color="blue">Artigos em peri&oacute;dicos</font></h4>
