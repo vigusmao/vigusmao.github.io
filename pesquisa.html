@@ -26,7 +26,7 @@
       </p>
 
     <p class="en"><a href=".">Main page</a><br><br>
-                  <a href="#submitted">Recently submitted</a><br>
+                  <!--a href="#submitted">Recently submitted</a><br-->
                   <a href="#journals">Papers in refereed journals</a><br>
                   <a href="#conferences">Papers in refereed conferences</a><br>
                   <a href="#conferences_abstracts">Abstracts in refereed conferences</a><br>                  
@@ -35,7 +35,7 @@
 
 
     <p class="pt"><a href=".">P&aacute;gina principal</a><br><br>
-                  <a href="#submetidos">Submetidos recentemente</a><br> 
+                  <!--a href="#submetidos">Submetidos recentemente</a><br--> 
                   <a href="#periodicos">Artigos em peri&oacute;dicos</a><br>
                   <a href="#conferencias">Artigos em conferências</a><br>
                   <a href="#conferencias_resumos">Resumos em conferências</a><br>                  
@@ -54,31 +54,11 @@
 
 <br>
 	  
-
+<!--
     <h4 class="en" id="submitted"><font color="blue">Recently submitted</font></h4>
     <h4 class="pt" id="submetidos"><font color="blue">Submetidos recentemente</font></h4>
    
-  <ol class="reversed"> 
-      <li> <a target="_blank" href="manuscripts/Cuckoo_Hashing_With_Perfect_Rehash.pdf"><b>Cuckoo Hashing with Perfect Rehash</b></a>.&nbsp;
-        <a target="_blank" href="manuscripts/Cuckoo_Hashing_With_Perfect_Rehash.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
-	<!--<a target="_blank" href="https://doi.org/10.1007/s00453-019-00557-w"><img src="doi.png" alt="DOI" title="DOI"></a>-->
-        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('CuckooHashingIPL2021')">
-        <div class="pt">Com Judismar Arpini Junior.</div>
-        <div class="en">With Judismar Arpini Junior.</div>	
-	      <div class="en"><em>Submitted for journal publication.</em></div>	
-        <div class="pt"><em>Submetido para publicação em periódico.</em></div>
-        <p id="CuckooHashingIPL2021" class="abstract">	
-               The worst-case time to insert a key in the classic cuckoo hashing scheme is a random variable that may assume arbitrarily big values, 
-		owing to the strictly positive probability that an endless sequence of rehashes take place. 
-		We propose a cuckoo hashing variant in which the worst-case insertion time is polynomial. 
-		To accomplish this, we use two basic ideas. 
-		The first is to employ a perfect hashing method on one of the tables whenever a rehash is called for. 
-		The second idea is to make it so that the number of underlying hash tables is no longer constant, 
-		but rather an appropriate function of the number of keys. 
-		The price to pay is a higher lookup time, which is no longer constant, but doubly logarithmic.	
-         </p>
-      </li>
-  </ol>	
+  
     
     <p class="pt">
         <a href=#><img title="Voltar ao topo" style="height: 35px" src="seta_voltar.jpeg" alt="Voltar ao topo" ></a>
@@ -86,12 +66,37 @@
         <p class="en">
         <a href=#><img title="Back to top" style="height: 35px" src="seta_voltar.jpeg" alt="Back to top" ></a>
     </p> 
- 
+-->
+	  
 
     <h4 class="en" id="journals"><font color="blue">Papers in refereed journals</font></h4>
     <h4 class="pt" id="periodicos"><font color="blue">Artigos em peri&oacute;dicos</font></h4>
     
     <ol class="reversed"> 
+	    
+    <li> <a target="_blank" href="manuscripts/entropy_bidimensional.pdf"><b>Entropy estimation in bidimensional sequences</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/entropy_bidimensional.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
+	<a target="_blank" href="https://doi.org/10.1103/PhysRevE.105.054116"><img src="doi.png" alt="DOI" title="DOI"></a>   
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('entropy_bidimensional')">
+        <div class="pt">Com Flávio de Souza Filho e Edgardo Brigatti.</div>
+        <div class="en">With Flávio de Souza Filho and Edgardo Brigatt.</div>	
+	    <div class="pt"><em>Physical Review E</em> <b>105</b> 5 (2022), 054116.</div>	
+        <div class="en"><em>Physical Review E</em> <b>105</b> 5 (2022), 054116.</div>
+        <p id="entropy_bidimensional" class="abstract">
+	We investigate the performance of entropy estimation methods, based either on block entropies or compression approaches, 
+		in the case of bidimensional sequences. 
+		We introduce a validation data set made of images produced by a large number of different natural systems, 
+		in the vast majority characterized by long-range correlations, which produce a large spectrum of entropies. 
+		Results show that the framework based on lossless compressors applied to the one-dimensional projection 
+		of the considered data set leads to poor estimates. This is because higher dimensional correlations are lost 
+		in the projection operation. The adoption of compression methods which do not introduce dimensionality reduction 
+		improves the performance of this approach. 
+		By far, the best estimation of the asymptotic entropy is generated by the faster convergence 
+		of the traditional block-entropies method. As a by-product of our analysis, 
+		we show how a specific compressor method can be used as a potentially interesting technique 
+		for automatic detection of symmetries in textures and images.	
+         </p>
+    </li>    
 	    
     <li> <a target="_blank" href="manuscripts/watermarking_Algorithmica.pdf"><b>Full characterization of a class of graphs tailored for software watermarking</b></a>.&nbsp;
         <a target="_blank" href="manuscripts/watermarking_Algorithmica.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
