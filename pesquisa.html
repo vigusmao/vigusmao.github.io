@@ -1568,6 +1568,74 @@ Two agents, starting from distinct points and unaware of the position of one ano
     <h4 class="pt" id="conferencias_resumos"><font color="blue">Resumos em conferências</font></h4>
     <ol class="reversed">
  
+	    
+     <li> <a target="_blank" href="manuscripts/claio2022_resumo.pdf"><b>Monkey Hash Map: a highly performant thread-safe map without locks</b></a>.&nbsp;
+	<a target="_blank" href="manuscripts/claio2022_resumo.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
+        <!--a target="_blank" href="posters/poster_SBPO_2016.pdf"><img src="presentation.png" alt="poster" title="Poster"></a-->
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('claio2022')">
+        <div class="pt">Com Judismar Arpini Junior.</div>
+        <div class="en">With Judismar Arpini Junior.</div>	
+        <div class="pt">Anais do <em>XXI Latin Ibero-American Conference on Operations Research</em> (<a target="_blank" href="https://claio2022.dc.uba.ar/">CLAIO'22</a>, Buenos Aires, Argentina, 12-15/12/22).</div>	
+        <div class="en">Proceedings of the <em>XXI Latin Ibero-American Conference on Operations Research</em> (<a target="_blank" href="https://claio2022.dc.uba.ar/">CLAIO 2022</a>, Buenos Aires, Argentina, December 12-15, 2022).</div>	        
+        <p id="claio2022" class="abstract">
+             The time to insert a key in the classic cuckoo hashing scheme is a random variable that may assume
+arbitrarily big values, owing to the strictly positive probability that an endless sequence of rehashes
+take place --- the worst-case is infinite. We propose a cuckoo hashing variant in which the worst-case
+insertion time is polynomial. To accomplish this, we use two basic ideas. The first is to employ a
+perfect hashing method on one of the tables whenever a rehash is called for (a perfect rehash, so to
+speak). The second idea is to make it so that the number of underlying hash tables is no longer
+constant, but rather an appropriate function of the number of keys. The price to pay is a larger lookup
+time, which is no longer constant, but doubly logarithmic. Preventing infinite worst-case times is not
+new in the literature, e.g. a Las Vegas algorithm can be converted into a Monte Carlo algorithm to
+yield finite predictable time, for the price of some positive, albeit controllable, error probability. Our
+insertion algorithm follows a random walk approach. When a predefined limit of iterations is reached,
+we pick a table with some empty slot and rehash all its entries in perfect fashion, including the new
+key being inserted. With the perfect rehash approach, all cuckoo hashing operations become
+predictable and finite. Our variant is not dominated by any existing data structure we know of (e.g.,
+the classical cuckoo hashing, the standard hashing with collision handling via synonym lists, or even,
+say, self-balancing binary search trees). While it cannot be claimed to be an undisputed improvement
+over those traditional data structures (and it surely has disadvantages as well as advantages when
+compared to each one of them), it may suit well applications where a highly competitive averagecase performance for lookup and insertion operations is desired, without prescinding from a
+predictable, polynomial bound for their worst-case behavior.
+        </p>        
+      </li>	
+	    
+	    
+	    
+	    
+     <li> <a target="_blank" href="manuscripts/lawcg2022_resumo.pdf"><b>Monkey Hash Map: a highly performant thread-safe map without locks</b></a>.&nbsp;
+	<a target="_blank" href="manuscripts/lawcg2022_resumo.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
+        <!--a target="_blank" href="posters/poster_SBPO_2016.pdf"><img src="presentation.png" alt="poster" title="Poster"></a-->
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('lawcg2022')">
+        <div class="pt">Com Judismar Arpini Junior.</div>
+        <div class="en">With Judismar Arpini Junior.</div>	
+        <div class="pt">Anais do <em>X Workshop on Cliques in Graphs</em> (<a target="_blank" href="https://www.lawcg.mat.br/lawcg22/">LAWCG'22</a>, Curitiba/PR, Brasil, 16-19/10/22).</div>	
+        <div class="en">Proceedings of the <em>X Workshop on Cliques in Graphs</em> (<a target="_blank" href="https://www.lawcg.mat.br/lawcg22/">LAWCG'22</a>, Curitiba/PR, Brazil, October 16-19, 2022).</div>	        
+        <p id="lawcg2022" class="abstract">
+             Hash tables are arguably the most powerful data structures ever known. A
+shared data structure is lock-free if infinitely often some thread completes
+its task within a finite number of steps. A shared data structure is wait-free
+if each thread completes its execution within a finite number of steps.
+We exploit multiple-choice hashing to create a high-performance, waitfree hashing scheme with O(1) worst-case time for lookup, getValue, insert,
+update and remove operations, a hash table that provides thread-safety
+without requiring any kind of thread synchronization. In short, our monkey
+hashing scheme consists of a single hash table and a family of k ≥ 1 hash
+functions, meaning multiple alternative locations for each key in the same
+table. Unlike what happens in the well-known cuckoo hashing, elements
+will never be evicted from where they first landed, so new keys being
+inserted must always find an unoccupied spot to call their own. The actual
+counts of hash functions in use are kept track of, making it possible that
+lookups of absent keys fail before the entire family of hash functions has
+been exhausted. Dynamic memory allocation—and its inherent pauses,
+e.g. garbage collection—is avoided via a key-value object pool, and threadsafe is attained via (i) pre-allocation of the underlying array, meaning no
+rehashing will ever take place, and (ii) the fact that no collision-handling
+lists are called for, by design.
+The proposed scheme works particularly well in scenarios with a single writer and multiple reader threads, dramatically outperforming popular solutions such as ConcurrentHashMap (Java) and Intel TBB concurrent_hash_map (C++) in heavily concurrent test scenarios. The prices to
+pay are (i) eventual consistency, which is dealt with well in numerous concurrent settings, and (ii) a non-zero probability that an insertion might fail,
+which can be made small enough, though, to suit all imaginable applications.
+        </p>        
+      </li>	
+	    
 	  
      <li> <a target="_blank" href="manuscripts/sbpo2016_resumo.pdf"><b>Cuckoo hashing com perfect rehash</b></a>.&nbsp;
 	<a target="_blank" href="manuscripts/sbpo2016_resumo.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
@@ -1575,8 +1643,8 @@ Two agents, starting from distinct points and unaware of the position of one ano
         <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('sbpo2016')">
         <div class="pt">Com Judismar Arpini Junior.</div>
         <div class="en">With Judismar Arpini Junior.</div>	
-        <div class="pt">Anais do <em>XLVIII Simp&oacute;sio Brasileiro de Pesquisa Operacional</em> (<a target="_blank" href="http://sbpo2016.ufes.br//">SBPO'16</a>, Vitória/ES, 27-30/09/16).</div>	
-        <div class="en">Proceedings of the <em>XLVIII Simp&oacute;sio Brasileiro de Pesquisa Operacional</em> (<a target="_blank" href="http://sbpo2016.ufes.br//">SBPO 2016</a>, Vitória/ES, Brazil, September 27-30, 2016).</div>	        
+        <div class="pt">Anais do <em>XLVIII Simp&oacute;sio Brasileiro de Pesquisa Operacional</em> (<a target="_blank" href="http://sbpo2016.ufes.br//">SBPO'16</a>, Vitória/ES, Brasil, 27-30/09/16).</div>	
+        <div class="en">Proceedings of the <em>XLVIII Simp&oacute;sio Brasileiro de Pesquisa Operacional</em> (<a target="_blank" href="http://sbpo2016.ufes.br//">SBPO'16</a>, Vitória/ES, Brazil, September 27-30, 2016).</div>	        
         <p id="sbpo2016" class="abstract">
              Apresentamos uma variante do Cuckoo Hashing tradicional em que o tempo de pior caso 
 		para a operação de inserção é O(sqrt(n)), ao contrário do esquema clássico, que, 
@@ -1590,8 +1658,8 @@ Two agents, starting from distinct points and unaware of the position of one ano
         <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('gco2016')">
         <div class="pt">Com Lucila Bento, Davidson Boccardo, Raphael Machado e Jayme Szwarcfiter.</div>
         <div class="en">With Lucila Bento, Davidson Boccardo, Raphael Machado and Jayme Szwarcfiter.</div>
-        <div class="pt">Livro de abstracts do <em>II Workshop Franco-brasileiro de Grafos e Otimiza&ccedil;&atilde;o Combinat&oacute;ria</em> (<a href="http://www.lia.ufc.br/GCO2016/index_br.php" target="_blank">GCO'16</a>, Praia da Redonda/CE, 28/03-01/04/16).</div>	
-        <div class="en">Book of abstracts of the <em>II Workshop Franco-brasileiro de Grafos e Otimiza&ccedil;&atilde;o Combinat&oacute;ria</em> (<a href="http://www.lia.ufc.br/GCO2016/index_br.php" target="_blank">GCO'16</a>, Praia da Redonda/CE, 28/03-01/04/16).</div>	
+        <div class="pt">Livro de abstracts do <em>II Workshop Franco-brasileiro de Grafos e Otimiza&ccedil;&atilde;o Combinat&oacute;ria</em> (<a href="http://www.lia.ufc.br/GCO2016/index_br.php" target="_blank">GCO'16</a>, Praia da Redonda/CE, Brasil, 28/03-01/04/16).</div>	
+        <div class="en">Book of abstracts of the <em>II Workshop Franco-brasileiro de Grafos e Otimiza&ccedil;&atilde;o Combinat&oacute;ria</em> (<a href="http://www.lia.ufc.br/GCO2016/index_br.php" target="_blank">GCO'16</a>, Praia da Redonda/CE, Brazil, 28/03-01/04/16).</div>	
         <p id="gco2016" class="abstract">
              We propose a new codec for graph-based software watermarking.  The encoding algorithm employs randomization
              to produce distinct watermarks for the same key upon different executions. This feature makes it less
@@ -1611,7 +1679,7 @@ Two agents, starting from distinct points and unaware of the position of one ano
         <div class="pt">Com Anne Federici Marinho.</div>
         <div class="en">With Anne Federici Marinho.</div>	
         <div class="pt">Livro de Abstracts do <em>VI Latin-American Workshop on Cliques in Graphs</em> (<a href="http://www.inf.ufg.br/lawcg14/" target="_blank">LAWCG'14</a>, Piren&oacute;polis/GO, Brasil, 09-12/11/14).<br></div>
-        <div class="en">Book of Abstracts of the <em>6th Latin-American Workshop on Cliques in Graphs</em> (<a href="http://www.inf.ufg.br/lawcg14/" target="_blank">LAWCG'14</a>, Piren&oacute;polis/GO, Brasil, November 09-12, 2014).<br></div>
+        <div class="en">Book of Abstracts of the <em>6th Latin-American Workshop on Cliques in Graphs</em> (<a href="http://www.inf.ufg.br/lawcg14/" target="_blank">LAWCG'14</a>, Piren&oacute;polis/GO, Brazil, November 09-12, 2014).<br></div>
         <p id="lawcg2014_certifying" class="abstract">
              Um <em>algoritmo certificador</em> para um problema &Pi; exibe, 
 			para uma inst&acirc;ncia <em>x</em> de &Pi;, 
