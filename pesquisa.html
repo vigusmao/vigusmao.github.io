@@ -59,7 +59,47 @@
     <h4 class="pt" id="submetidos"><font color="blue">Submetidos recentemente</font></h4>
 	  
 <ol class="reversed"> 
-   
+       <li> <a target="_blank" href="manuscripts/StructuredWatermark.pdf"><b>Structured watermarks for structured software</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/StructuredWatermark.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
+	<!--a target="_blank" href="https://doi.org/10.1007/s00453-019-00557-w"><img src="doi.png" alt="DOI" title="DOI"></a-->   
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('StructuredWatermark')">
+        <div class="pt">Com Lucila Bento, Davidson Boccardo, Raphael Machado e Jayme Szwarcfiter.</div>
+        <div class="en">With Lucila Bento, Davidson Boccardo, Raphael Machado and Jayme Szwarcfiter.</div>	
+	<!--div class="pt"><em>Algorithmica</em> <b>81</b> 7 (2019), 2899-2916.</div>	
+        <div class="en"><em>Algorithmica</em> <b>81</b> 7 (2019), 2899-2916.</div-->
+	<div class="pt"><em>Submetido em maio de 2023.</em></div>	
+	<div class="en"><em>Submitted in May, 2023.</em></div>	       
+        <p id="StructuredWatermark" class="abstract">
+	Software watermarking is the act of embedding an identifier within the software binary.  
+	The identifier can be timely retrieved to reveal authorship/ownership, discouraging piracy.
+	Software watermarking schemes based on embedding some encoded identifier into the control flow graph of the program 
+	have been suggested in the literature. We propose a novel graph-based watermarking scheme with four principal features: 
+	it is randomized; encoding and decoding can both be implemented to run in linear time; 
+	it is small in size; and, more importantly, the watermarks it produces conform to structured code.
+	The diversity granted by the ability to encode the same identifier as different subgraphs and the absence of awkward ``GOTO''-like substructures 
+	provide our watermarks with greater stealthiness, making them more resilient to common forms of attack.	
+         </p>
+      </li>
+	
+   <li> <a target="_blank" href="manuscripts/CHPR.pdf"><b>A cuckoo hashing scheme with bounded insertion time</b></a>.&nbsp;
+        <a target="_blank" href="manuscripts/CHPR.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
+	<!--a target="_blank" href="https://doi.org/10.1103/PhysRevE.105.054116"><img src="doi.png" alt="DOI" title="DOI"></a-->   
+        <img src="preview.png" alt="Abstract" title="Abstract" class="but" onClick="toggleBlock('chpr')">
+        <div class="pt">Com Judismar Arpini Junior.</div>
+        <div class="en">With Judismar Arpini Junior.</div>	
+	<!--div class="pt"><em>Physical Review E</em> <b>105</b> 5 (2022), 054116.</div-->	
+	<!--div class="en"><em>Physical Review E</em> <b>105</b> 5 (2022), 054116.</div-->
+	   <div class="pt"><em>Submetido em abril de 2023.</em></div>	
+	   <div class="en"><em>Submitted in April, 2023.</em></div>	
+        <p id="chpr" class="abstract">
+	 The time to insert a key in the classic cuckoo hashing scheme is a random variable that may assume arbitrarily big values, 
+		owing to a strictly positive probability that any (finite) long sequence of rehashes takes place. 
+		In other words, its worst-case execution time is unbounded. 
+		We propose a cuckoo hashing variant in which the worst-case insertion time is polynomially bounded, 
+		while retaining competitive time complexities for lookup, deletion and average-case insertion. 
+         </p>
+    </li>    
+	
    <li> <a target="_blank" href="manuscripts/MonkeyHash.pdf"><b>Monkey Hashing: a wait-free hashing scheme with worst-case constant-time operations</b></a>.&nbsp;
         <a target="_blank" href="manuscripts/MonkeyHash.pdf"><img src="pdf.png" alt="PDF" title="PDF"></a>
 	<!--a target="_blank" href="https://doi.org/10.1103/PhysRevE.105.054116"><img src="doi.png" alt="DOI" title="DOI"></a-->   
@@ -68,8 +108,8 @@
         <div class="en">With Judismar Arpini Junior.</div>	
 	<!--div class="pt"><em>Physical Review E</em> <b>105</b> 5 (2022), 054116.</div-->	
 	<!--div class="en"><em>Physical Review E</em> <b>105</b> 5 (2022), 054116.</div-->
-	   <div class="pt"><em>Submetido para publicação em periódico em março de 2023.</em></div>	
-	   <div class="en"><em>Submitted for journal publication in March, 2023.</em></div>	
+	   <div class="pt"><em>Submetido em março de 2023.</em></div>	
+	   <div class="en"><em>Submitted in March, 2023.</em></div>	
         <p id="monkey" class="abstract">
 	 We exploit multiple-choice hashing to create a concurrent hashing scheme with O(1) worst-case time for lookup, insert, update and remove operations, an eventually consistent hash map that does not use any kind of synchronization for thread-safety. It works particularly well in scenarios with a single writer  
          and multiple reader threads, significantly outperforming popular solutions such as ConcurrentHashMap (Java) and Intel TBB concurrent_hash_map (C++) in heavily concurrent stress test scenarios. 
