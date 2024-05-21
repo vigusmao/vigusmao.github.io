@@ -117,14 +117,18 @@
 	<div class="pt"><em>Aceito em maio de 2024 para publicação no periódico SN Computer Science.</em></div>	
 	<div class="en"><em>Accepted in May 2024 for publication on journal SN Computer Science.</em></div>	       
         <p id="StructuredWatermark" class="abstract">
-	Software watermarking is the act of embedding an identifier within the software binary.  
-	The identifier can be timely retrieved to reveal authorship/ownership, discouraging piracy.
-	Software watermarking schemes based on embedding some encoded identifier into the control flow graph of the program 
-	have been suggested in the literature. We propose a novel graph-based watermarking scheme with four principal features: 
-	it is randomized; encoding and decoding can both be implemented to run in linear time; 
-	it is small in size; and, more importantly, the watermarks it produces conform to structured code.
-	The diversity granted by the ability to encode the same identifier as different subgraphs and the absence of awkward &quot;GOTO&quot;-like substructures 
-	provide our watermarks with greater stealthiness, making them more resilient to common forms of attack.	
+	Software watermarking involves integrating an identifier within the software,
+       enabling timely retrieval to disclose authorship/ownership and deter piracy.   
+	Various software watermarking schemes have been proposed in the literature, many
+       of which involve statically embedding an encoded identifier into the control flow
+       graph of the program. In this paper, we propose novel embedding and extraction algorithms characterized by four key features: randomization, generating
+       watermarks with a size closely matching the number of bits in the identifier,
+       implementing both encoding and decoding with linear time complexity, and, most
+       importantly, generating watermarks that conform to structured code. 
+       We emphasize the capability to encode the same identifier as distinct graphs, coupled with
+       the absence of cumbersome “GOTO”-like substructures, as enhancements to the
+       stealthiness of our watermarks. This feature makes them more resilient to common forms of attack, 
+	contributing to their effectiveness in safeguarding software integrity and discouraging unauthorized use.
          </p>
       </li>
 	    
